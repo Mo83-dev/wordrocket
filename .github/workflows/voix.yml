@@ -2,9 +2,7 @@ name: Fabriquer les voix
 
 on:
   push:
-    paths:
-      - "words.json"
-      - "tools/generate_audio.py"
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -18,28 +16,77 @@ jobs:
   voix:
     runs-on: ubuntu-latest
     steps:
-      - name: Récupérer le dépôt
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Installer Python
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Installer la synthèse vocale
-        run: pip install --quiet gTTS
+      - run: pip install --quiet gTTS
 
-      - name: Générer les mots manquants
-        run: python tools/generate_audio.py
+      - name: Fabriquer les voix manquantes
+        run: |
+          mkdir -p audio
+          python - <<'FIN'
+          import json, os, re, time
+          from gtts import gTTS
 
-      - name: Déposer les nouveaux fichiers
+          TLD = "co.uk"   # "com" pour l'accent americain
+
+          def slug(w):
+              return re.sub(r"(^-|-$)", "", re.sub(r"[^a-z0-9]+", "-", w.lower()))
+
+          data = json.load(open("words.json", encoding="utf-8"))
+          mots, vus = [], set()
+          for niveau in data.values():
+              for e in niveau:
+                  if e["en"] not in vus:
+                      vus.add(e["en"])
+                      mots.append(e["en"])
+
+          faits = sautes = 0
+          echecs = []
+          for mot in mots:
+              chemin = os.path.join("audio", slug(mot) + ".mp3")
+              if os.path.exists(chemin) and os.path.getsize(chemin) > 0:
+                  sautes += 1
+                  continue
+              for essai in range(3):
+                  try:
+                      gTTS(mot, lang="en", tld=TLD).save(chemin)
+                      faits += 1
+                      print("ok : " + mot, flush=True)
+                      time.sleep(0.4)
+                      break
+                  except Exception as exc:
+                      if os.path.exists(chemin) and os.path.getsize(chemin) == 0:
+                          os.remove(chemin)
+                      if essai == 2:
+                          echecs.append((mot, str(exc)[:100]))
+                      else:
+                          time.sleep(3)
+
+          voulus = {slug(m) + ".mp3" for m in mots}
+          retires = 0
+          for nom in os.listdir("audio"):
+              if nom.endswith(".mp3") and nom not in voulus:
+                  os.remove(os.path.join("audio", nom))
+                  retires += 1
+
+          print("\n%d creees, %d deja la, %d retirees, %d en echec"
+                % (faits, sautes, retires, len(echecs)))
+          for mot, err in echecs:
+              print("  echec : %s -> %s" % (mot, err))
+          FIN
+
+      - name: Deposer les fichiers
         run: |
           git config user.name "Word Rocket"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add audio
+          git add -A audio
           if git diff --staged --quiet; then
-            echo "Rien de nouveau : aucune voix à ajouter."
+            echo "Rien de nouveau."
           else
-            git commit -m "Voix mises à jour"
+            git commit -m "Voix mises a jour"
             git push
           fi

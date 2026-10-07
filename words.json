@@ -453,42 +453,2012 @@
   {
    "en": "ball",
    "fr": "le ballon",
-   "cat": "Jouets"
+   "cat": "Jouets et loisirs"
   },
   {
    "en": "doll",
    "fr": "la poupée",
-   "cat": "Jouets"
+   "cat": "Jouets et loisirs"
   },
   {
    "en": "bike",
    "fr": "le vélo",
-   "cat": "Jouets"
+   "cat": "Jouets et loisirs"
   },
   {
    "en": "kite",
    "fr": "le cerf-volant",
-   "cat": "Jouets"
+   "cat": "Jouets et loisirs"
   },
   {
    "en": "game",
    "fr": "le jeu",
-   "cat": "Jouets"
+   "cat": "Jouets et loisirs"
   },
   {
    "en": "boat",
    "fr": "le bateau",
-   "cat": "Jouets"
+   "cat": "Jouets et loisirs"
   },
   {
    "en": "car",
    "fr": "la voiture",
-   "cat": "Jouets"
+   "cat": "Jouets et loisirs"
   },
   {
    "en": "plane",
    "fr": "l'avion",
-   "cat": "Jouets"
+   "cat": "Jouets et loisirs"
+  },
+  {
+   "en": "pig",
+   "fr": "le cochon",
+   "cat": "Animaux"
+  },
+  {
+   "en": "goat",
+   "fr": "la chèvre",
+   "cat": "Animaux"
+  },
+  {
+   "en": "hen",
+   "fr": "la poule",
+   "cat": "Animaux"
+  },
+  {
+   "en": "donkey",
+   "fr": "l'âne",
+   "cat": "Animaux"
+  },
+  {
+   "en": "wolf",
+   "fr": "le loup",
+   "cat": "Animaux"
+  },
+  {
+   "en": "fox",
+   "fr": "le renard",
+   "cat": "Animaux"
+  },
+  {
+   "en": "deer",
+   "fr": "le cerf",
+   "cat": "Animaux"
+  },
+  {
+   "en": "squirrel",
+   "fr": "l'écureuil",
+   "cat": "Animaux"
+  },
+  {
+   "en": "hedgehog",
+   "fr": "le hérisson",
+   "cat": "Animaux"
+  },
+  {
+   "en": "owl",
+   "fr": "le hibou",
+   "cat": "Animaux"
+  },
+  {
+   "en": "eagle",
+   "fr": "l'aigle",
+   "cat": "Animaux"
+  },
+  {
+   "en": "snake",
+   "fr": "le serpent",
+   "cat": "Animaux"
+  },
+  {
+   "en": "turtle",
+   "fr": "la tortue",
+   "cat": "Animaux"
+  },
+  {
+   "en": "dolphin",
+   "fr": "le dauphin",
+   "cat": "Animaux"
+  },
+  {
+   "en": "whale",
+   "fr": "la baleine",
+   "cat": "Animaux"
+  },
+  {
+   "en": "shark",
+   "fr": "le requin",
+   "cat": "Animaux"
+  },
+  {
+   "en": "crab",
+   "fr": "le crabe",
+   "cat": "Animaux"
+  },
+  {
+   "en": "butterfly",
+   "fr": "le papillon",
+   "cat": "Animaux"
+  },
+  {
+   "en": "bee",
+   "fr": "l'abeille",
+   "cat": "Animaux"
+  },
+  {
+   "en": "spider",
+   "fr": "l'araignée",
+   "cat": "Animaux"
+  },
+  {
+   "en": "snail",
+   "fr": "l'escargot",
+   "cat": "Animaux"
+  },
+  {
+   "en": "ant",
+   "fr": "la fourmi",
+   "cat": "Animaux"
+  },
+  {
+   "en": "goose",
+   "fr": "l'oie",
+   "cat": "Animaux"
+  },
+  {
+   "en": "lion",
+   "fr": "le lion",
+   "cat": "Animaux"
+  },
+  {
+   "en": "elephant",
+   "fr": "l'éléphant",
+   "cat": "Animaux"
+  },
+  {
+   "en": "monkey",
+   "fr": "le singe",
+   "cat": "Animaux"
+  },
+  {
+   "en": "tiger",
+   "fr": "le tigre",
+   "cat": "Animaux"
+  },
+  {
+   "en": "kitten",
+   "fr": "le chaton",
+   "cat": "Animaux"
+  },
+  {
+   "en": "puppy",
+   "fr": "le chiot",
+   "cat": "Animaux"
+  },
+  {
+   "en": "feather",
+   "fr": "la plume",
+   "cat": "Animaux"
+  },
+  {
+   "en": "grey",
+   "fr": "gris",
+   "cat": "Couleurs"
+  },
+  {
+   "en": "gold",
+   "fr": "doré",
+   "cat": "Couleurs"
+  },
+  {
+   "en": "silver",
+   "fr": "argenté",
+   "cat": "Couleurs"
+  },
+  {
+   "en": "dark",
+   "fr": "foncé",
+   "cat": "Couleurs"
+  },
+  {
+   "en": "light",
+   "fr": "clair",
+   "cat": "Couleurs"
+  },
+  {
+   "en": "colour",
+   "fr": "la couleur",
+   "cat": "Couleurs"
+  },
+  {
+   "en": "son",
+   "fr": "le fils",
+   "cat": "Famille"
+  },
+  {
+   "en": "daughter",
+   "fr": "la fille",
+   "cat": "Famille"
+  },
+  {
+   "en": "parents",
+   "fr": "les parents",
+   "cat": "Famille"
+  },
+  {
+   "en": "husband",
+   "fr": "le mari",
+   "cat": "Famille"
+  },
+  {
+   "en": "wife",
+   "fr": "la femme (épouse)",
+   "cat": "Famille"
+  },
+  {
+   "en": "nephew",
+   "fr": "le neveu",
+   "cat": "Famille"
+  },
+  {
+   "en": "niece",
+   "fr": "la nièce",
+   "cat": "Famille"
+  },
+  {
+   "en": "grandparents",
+   "fr": "les grands-parents",
+   "cat": "Famille"
+  },
+  {
+   "en": "twins",
+   "fr": "les jumeaux",
+   "cat": "Famille"
+  },
+  {
+   "en": "family",
+   "fr": "la famille",
+   "cat": "Famille"
+  },
+  {
+   "en": "child",
+   "fr": "l'enfant",
+   "cat": "Famille"
+  },
+  {
+   "en": "children",
+   "fr": "les enfants",
+   "cat": "Famille"
+  },
+  {
+   "en": "rice",
+   "fr": "le riz",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "pasta",
+   "fr": "les pâtes",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "potato",
+   "fr": "la pomme de terre",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "tomato",
+   "fr": "la tomate",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "carrot",
+   "fr": "la carotte",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "onion",
+   "fr": "l'oignon",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "salad",
+   "fr": "la salade",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "meat",
+   "fr": "la viande",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "sausage",
+   "fr": "la saucisse",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "ham",
+   "fr": "le jambon",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "jam",
+   "fr": "la confiture",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "sugar",
+   "fr": "le sucre",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "salt",
+   "fr": "le sel",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "pepper",
+   "fr": "le poivre",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "chocolate",
+   "fr": "le chocolat",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "biscuit",
+   "fr": "le biscuit",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "ice cream",
+   "fr": "la glace",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "juice",
+   "fr": "le jus",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "tea",
+   "fr": "le thé",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "coffee",
+   "fr": "le café",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "pancake",
+   "fr": "la crêpe",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "yoghurt",
+   "fr": "le yaourt",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "flour",
+   "fr": "la farine",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "sandwich",
+   "fr": "le sandwich",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "pear",
+   "fr": "la poire",
+   "cat": "Fruits et légumes"
+  },
+  {
+   "en": "banana",
+   "fr": "la banane",
+   "cat": "Fruits et légumes"
+  },
+  {
+   "en": "lemon",
+   "fr": "le citron",
+   "cat": "Fruits et légumes"
+  },
+  {
+   "en": "peach",
+   "fr": "la pêche",
+   "cat": "Fruits et légumes"
+  },
+  {
+   "en": "cherry",
+   "fr": "la cerise",
+   "cat": "Fruits et légumes"
+  },
+  {
+   "en": "grape",
+   "fr": "le raisin",
+   "cat": "Fruits et légumes"
+  },
+  {
+   "en": "melon",
+   "fr": "le melon",
+   "cat": "Fruits et légumes"
+  },
+  {
+   "en": "pineapple",
+   "fr": "l'ananas",
+   "cat": "Fruits et légumes"
+  },
+  {
+   "en": "cabbage",
+   "fr": "le chou",
+   "cat": "Fruits et légumes"
+  },
+  {
+   "en": "pea",
+   "fr": "le petit pois",
+   "cat": "Fruits et légumes"
+  },
+  {
+   "en": "bean",
+   "fr": "le haricot",
+   "cat": "Fruits et légumes"
+  },
+  {
+   "en": "mushroom",
+   "fr": "le champignon",
+   "cat": "Fruits et légumes"
+  },
+  {
+   "en": "cucumber",
+   "fr": "le concombre",
+   "cat": "Fruits et légumes"
+  },
+  {
+   "en": "pumpkin",
+   "fr": "la citrouille",
+   "cat": "Fruits et légumes"
+  },
+  {
+   "en": "plum",
+   "fr": "la prune",
+   "cat": "Fruits et légumes"
+  },
+  {
+   "en": "nut",
+   "fr": "la noix",
+   "cat": "Fruits et légumes"
+  },
+  {
+   "en": "finger",
+   "fr": "le doigt",
+   "cat": "Le corps"
+  },
+  {
+   "en": "toe",
+   "fr": "l'orteil",
+   "cat": "Le corps"
+  },
+  {
+   "en": "knee",
+   "fr": "le genou",
+   "cat": "Le corps"
+  },
+  {
+   "en": "elbow",
+   "fr": "le coude",
+   "cat": "Le corps"
+  },
+  {
+   "en": "shoulder",
+   "fr": "l'épaule",
+   "cat": "Le corps"
+  },
+  {
+   "en": "back",
+   "fr": "le dos",
+   "cat": "Le corps"
+  },
+  {
+   "en": "tooth",
+   "fr": "la dent",
+   "cat": "Le corps"
+  },
+  {
+   "en": "tongue",
+   "fr": "la langue",
+   "cat": "Le corps"
+  },
+  {
+   "en": "neck",
+   "fr": "le cou",
+   "cat": "Le corps"
+  },
+  {
+   "en": "chest",
+   "fr": "la poitrine",
+   "cat": "Le corps"
+  },
+  {
+   "en": "face",
+   "fr": "le visage",
+   "cat": "Le corps"
+  },
+  {
+   "en": "heart",
+   "fr": "le cœur",
+   "cat": "Le corps"
+  },
+  {
+   "en": "skin",
+   "fr": "la peau",
+   "cat": "Le corps"
+  },
+  {
+   "en": "bone",
+   "fr": "l'os",
+   "cat": "Le corps"
+  },
+  {
+   "en": "thumb",
+   "fr": "le pouce",
+   "cat": "Le corps"
+  },
+  {
+   "en": "cheek",
+   "fr": "la joue",
+   "cat": "Le corps"
+  },
+  {
+   "en": "classroom",
+   "fr": "la salle de classe",
+   "cat": "L'école"
+  },
+  {
+   "en": "pupil",
+   "fr": "l'élève",
+   "cat": "L'école"
+  },
+  {
+   "en": "lesson",
+   "fr": "la leçon",
+   "cat": "L'école"
+  },
+  {
+   "en": "break",
+   "fr": "la récréation",
+   "cat": "L'école"
+  },
+  {
+   "en": "rubber",
+   "fr": "la gomme",
+   "cat": "L'école"
+  },
+  {
+   "en": "scissors",
+   "fr": "les ciseaux",
+   "cat": "L'école"
+  },
+  {
+   "en": "glue",
+   "fr": "la colle",
+   "cat": "L'école"
+  },
+  {
+   "en": "notebook",
+   "fr": "le cahier",
+   "cat": "L'école"
+  },
+  {
+   "en": "board",
+   "fr": "le tableau",
+   "cat": "L'école"
+  },
+  {
+   "en": "desk",
+   "fr": "le bureau",
+   "cat": "L'école"
+  },
+  {
+   "en": "bell",
+   "fr": "la sonnerie",
+   "cat": "L'école"
+  },
+  {
+   "en": "friend",
+   "fr": "l'ami",
+   "cat": "L'école"
+  },
+  {
+   "en": "question",
+   "fr": "la question",
+   "cat": "L'école"
+  },
+  {
+   "en": "answer",
+   "fr": "la réponse",
+   "cat": "L'école"
+  },
+  {
+   "en": "homework",
+   "fr": "les devoirs",
+   "cat": "L'école"
+  },
+  {
+   "en": "holidays",
+   "fr": "les vacances",
+   "cat": "L'école"
+  },
+  {
+   "en": "bathroom",
+   "fr": "la salle de bains",
+   "cat": "La maison"
+  },
+  {
+   "en": "bedroom",
+   "fr": "la chambre",
+   "cat": "La maison"
+  },
+  {
+   "en": "living room",
+   "fr": "le salon",
+   "cat": "La maison"
+  },
+  {
+   "en": "stairs",
+   "fr": "l'escalier",
+   "cat": "La maison"
+  },
+  {
+   "en": "roof",
+   "fr": "le toit",
+   "cat": "La maison"
+  },
+  {
+   "en": "wall",
+   "fr": "le mur",
+   "cat": "La maison"
+  },
+  {
+   "en": "floor",
+   "fr": "le sol",
+   "cat": "La maison"
+  },
+  {
+   "en": "lamp",
+   "fr": "la lampe",
+   "cat": "La maison"
+  },
+  {
+   "en": "sofa",
+   "fr": "le canapé",
+   "cat": "La maison"
+  },
+  {
+   "en": "mirror",
+   "fr": "le miroir",
+   "cat": "La maison"
+  },
+  {
+   "en": "towel",
+   "fr": "la serviette",
+   "cat": "La maison"
+  },
+  {
+   "en": "soap",
+   "fr": "le savon",
+   "cat": "La maison"
+  },
+  {
+   "en": "fridge",
+   "fr": "le réfrigérateur",
+   "cat": "La maison"
+  },
+  {
+   "en": "oven",
+   "fr": "le four",
+   "cat": "La maison"
+  },
+  {
+   "en": "plate",
+   "fr": "l'assiette",
+   "cat": "La maison"
+  },
+  {
+   "en": "spoon",
+   "fr": "la cuillère",
+   "cat": "La maison"
+  },
+  {
+   "en": "fork",
+   "fr": "la fourchette",
+   "cat": "La maison"
+  },
+  {
+   "en": "knife",
+   "fr": "le couteau",
+   "cat": "La maison"
+  },
+  {
+   "en": "cup",
+   "fr": "la tasse",
+   "cat": "La maison"
+  },
+  {
+   "en": "glass",
+   "fr": "le verre",
+   "cat": "La maison"
+  },
+  {
+   "en": "blanket",
+   "fr": "la couverture",
+   "cat": "La maison"
+  },
+  {
+   "en": "pillow",
+   "fr": "l'oreiller",
+   "cat": "La maison"
+  },
+  {
+   "en": "to drink",
+   "fr": "boire",
+   "cat": "Actions"
+  },
+  {
+   "en": "to speak",
+   "fr": "parler",
+   "cat": "Actions"
+  },
+  {
+   "en": "to listen",
+   "fr": "écouter",
+   "cat": "Actions"
+  },
+  {
+   "en": "to look",
+   "fr": "regarder",
+   "cat": "Actions"
+  },
+  {
+   "en": "to open",
+   "fr": "ouvrir",
+   "cat": "Actions"
+  },
+  {
+   "en": "to close",
+   "fr": "fermer",
+   "cat": "Actions"
+  },
+  {
+   "en": "to give",
+   "fr": "donner",
+   "cat": "Actions"
+  },
+  {
+   "en": "to take",
+   "fr": "prendre",
+   "cat": "Actions"
+  },
+  {
+   "en": "to come",
+   "fr": "venir",
+   "cat": "Actions"
+  },
+  {
+   "en": "to go",
+   "fr": "aller",
+   "cat": "Actions"
+  },
+  {
+   "en": "to help",
+   "fr": "aider",
+   "cat": "Actions"
+  },
+  {
+   "en": "to wash",
+   "fr": "laver",
+   "cat": "Actions"
+  },
+  {
+   "en": "to draw",
+   "fr": "dessiner",
+   "cat": "Actions"
+  },
+  {
+   "en": "to cut",
+   "fr": "couper",
+   "cat": "Actions"
+  },
+  {
+   "en": "to carry",
+   "fr": "porter",
+   "cat": "Actions"
+  },
+  {
+   "en": "to climb",
+   "fr": "grimper",
+   "cat": "Actions"
+  },
+  {
+   "en": "to fall",
+   "fr": "tomber",
+   "cat": "Actions"
+  },
+  {
+   "en": "to laugh",
+   "fr": "rire",
+   "cat": "Actions"
+  },
+  {
+   "en": "to cry",
+   "fr": "pleurer",
+   "cat": "Actions"
+  },
+  {
+   "en": "to smile",
+   "fr": "sourire",
+   "cat": "Actions"
+  },
+  {
+   "en": "to wait",
+   "fr": "attendre",
+   "cat": "Actions"
+  },
+  {
+   "en": "to find",
+   "fr": "trouver",
+   "cat": "Actions"
+  },
+  {
+   "en": "to lose",
+   "fr": "perdre",
+   "cat": "Actions"
+  },
+  {
+   "en": "to buy",
+   "fr": "acheter",
+   "cat": "Actions"
+  },
+  {
+   "en": "to pay",
+   "fr": "payer",
+   "cat": "Actions"
+  },
+  {
+   "en": "to think",
+   "fr": "penser",
+   "cat": "Actions"
+  },
+  {
+   "en": "to know",
+   "fr": "savoir",
+   "cat": "Actions"
+  },
+  {
+   "en": "to want",
+   "fr": "vouloir",
+   "cat": "Actions"
+  },
+  {
+   "en": "to need",
+   "fr": "avoir besoin de",
+   "cat": "Actions"
+  },
+  {
+   "en": "to live",
+   "fr": "vivre, habiter",
+   "cat": "Actions"
+  },
+  {
+   "en": "fog",
+   "fr": "le brouillard",
+   "cat": "Le temps"
+  },
+  {
+   "en": "ice",
+   "fr": "la glace (gel)",
+   "cat": "Le temps"
+  },
+  {
+   "en": "thunder",
+   "fr": "le tonnerre",
+   "cat": "Le temps"
+  },
+  {
+   "en": "lightning",
+   "fr": "l'éclair",
+   "cat": "Le temps"
+  },
+  {
+   "en": "rainbow",
+   "fr": "l'arc-en-ciel",
+   "cat": "Le temps"
+  },
+  {
+   "en": "warm",
+   "fr": "tiède, doux",
+   "cat": "Le temps"
+  },
+  {
+   "en": "wet",
+   "fr": "mouillé",
+   "cat": "Le temps"
+  },
+  {
+   "en": "dry",
+   "fr": "sec",
+   "cat": "Le temps"
+  },
+  {
+   "en": "windy",
+   "fr": "venteux",
+   "cat": "Le temps"
+  },
+  {
+   "en": "cloudy",
+   "fr": "nuageux",
+   "cat": "Le temps"
+  },
+  {
+   "en": "sunny",
+   "fr": "ensoleillé",
+   "cat": "Le temps"
+  },
+  {
+   "en": "season",
+   "fr": "la saison",
+   "cat": "Le temps"
+  },
+  {
+   "en": "spring",
+   "fr": "le printemps",
+   "cat": "Le temps"
+  },
+  {
+   "en": "summer",
+   "fr": "l'été",
+   "cat": "Le temps"
+  },
+  {
+   "en": "autumn",
+   "fr": "l'automne",
+   "cat": "Le temps"
+  },
+  {
+   "en": "winter",
+   "fr": "l'hiver",
+   "cat": "Le temps"
+  },
+  {
+   "en": "puzzle",
+   "fr": "le puzzle",
+   "cat": "Jouets et loisirs"
+  },
+  {
+   "en": "drum",
+   "fr": "le tambour",
+   "cat": "Jouets et loisirs"
+  },
+  {
+   "en": "guitar",
+   "fr": "la guitare",
+   "cat": "Jouets et loisirs"
+  },
+  {
+   "en": "swing",
+   "fr": "la balançoire",
+   "cat": "Jouets et loisirs"
+  },
+  {
+   "en": "slide",
+   "fr": "le toboggan",
+   "cat": "Jouets et loisirs"
+  },
+  {
+   "en": "balloon",
+   "fr": "le ballon de baudruche",
+   "cat": "Jouets et loisirs"
+  },
+  {
+   "en": "teddy bear",
+   "fr": "l'ours en peluche",
+   "cat": "Jouets et loisirs"
+  },
+  {
+   "en": "skateboard",
+   "fr": "la planche à roulettes",
+   "cat": "Jouets et loisirs"
+  },
+  {
+   "en": "robot",
+   "fr": "le robot",
+   "cat": "Jouets et loisirs"
+  },
+  {
+   "en": "marble",
+   "fr": "la bille",
+   "cat": "Jouets et loisirs"
+  },
+  {
+   "en": "card",
+   "fr": "la carte",
+   "cat": "Jouets et loisirs"
+  },
+  {
+   "en": "drawing",
+   "fr": "le dessin",
+   "cat": "Jouets et loisirs"
+  },
+  {
+   "en": "story",
+   "fr": "l'histoire",
+   "cat": "Jouets et loisirs"
+  },
+  {
+   "en": "song",
+   "fr": "la chanson",
+   "cat": "Jouets et loisirs"
+  },
+  {
+   "en": "zero",
+   "fr": "zéro",
+   "cat": "Les nombres"
+  },
+  {
+   "en": "one",
+   "fr": "un",
+   "cat": "Les nombres"
+  },
+  {
+   "en": "two",
+   "fr": "deux",
+   "cat": "Les nombres"
+  },
+  {
+   "en": "three",
+   "fr": "trois",
+   "cat": "Les nombres"
+  },
+  {
+   "en": "four",
+   "fr": "quatre",
+   "cat": "Les nombres"
+  },
+  {
+   "en": "five",
+   "fr": "cinq",
+   "cat": "Les nombres"
+  },
+  {
+   "en": "six",
+   "fr": "six",
+   "cat": "Les nombres"
+  },
+  {
+   "en": "seven",
+   "fr": "sept",
+   "cat": "Les nombres"
+  },
+  {
+   "en": "eight",
+   "fr": "huit",
+   "cat": "Les nombres"
+  },
+  {
+   "en": "nine",
+   "fr": "neuf",
+   "cat": "Les nombres"
+  },
+  {
+   "en": "ten",
+   "fr": "dix",
+   "cat": "Les nombres"
+  },
+  {
+   "en": "eleven",
+   "fr": "onze",
+   "cat": "Les nombres"
+  },
+  {
+   "en": "twelve",
+   "fr": "douze",
+   "cat": "Les nombres"
+  },
+  {
+   "en": "twenty",
+   "fr": "vingt",
+   "cat": "Les nombres"
+  },
+  {
+   "en": "thirty",
+   "fr": "trente",
+   "cat": "Les nombres"
+  },
+  {
+   "en": "a hundred",
+   "fr": "cent",
+   "cat": "Les nombres"
+  },
+  {
+   "en": "a thousand",
+   "fr": "mille",
+   "cat": "Les nombres"
+  },
+  {
+   "en": "first",
+   "fr": "premier",
+   "cat": "Les nombres"
+  },
+  {
+   "en": "second",
+   "fr": "deuxième",
+   "cat": "Les nombres"
+  },
+  {
+   "en": "third",
+   "fr": "troisième",
+   "cat": "Les nombres"
+  },
+  {
+   "en": "half",
+   "fr": "la moitié",
+   "cat": "Les nombres"
+  },
+  {
+   "en": "a number",
+   "fr": "un nombre",
+   "cat": "Les nombres"
+  },
+  {
+   "en": "shirt",
+   "fr": "la chemise",
+   "cat": "Les vêtements"
+  },
+  {
+   "en": "trousers",
+   "fr": "le pantalon",
+   "cat": "Les vêtements"
+  },
+  {
+   "en": "dress",
+   "fr": "la robe",
+   "cat": "Les vêtements"
+  },
+  {
+   "en": "skirt",
+   "fr": "la jupe",
+   "cat": "Les vêtements"
+  },
+  {
+   "en": "shoes",
+   "fr": "les chaussures",
+   "cat": "Les vêtements"
+  },
+  {
+   "en": "socks",
+   "fr": "les chaussettes",
+   "cat": "Les vêtements"
+  },
+  {
+   "en": "coat",
+   "fr": "le manteau",
+   "cat": "Les vêtements"
+  },
+  {
+   "en": "jacket",
+   "fr": "la veste",
+   "cat": "Les vêtements"
+  },
+  {
+   "en": "scarf",
+   "fr": "l'écharpe",
+   "cat": "Les vêtements"
+  },
+  {
+   "en": "gloves",
+   "fr": "les gants",
+   "cat": "Les vêtements"
+  },
+  {
+   "en": "boots",
+   "fr": "les bottes",
+   "cat": "Les vêtements"
+  },
+  {
+   "en": "jumper",
+   "fr": "le pull",
+   "cat": "Les vêtements"
+  },
+  {
+   "en": "pyjamas",
+   "fr": "le pyjama",
+   "cat": "Les vêtements"
+  },
+  {
+   "en": "belt",
+   "fr": "la ceinture",
+   "cat": "Les vêtements"
+  },
+  {
+   "en": "pocket",
+   "fr": "la poche",
+   "cat": "Les vêtements"
+  },
+  {
+   "en": "button",
+   "fr": "le bouton",
+   "cat": "Les vêtements"
+  },
+  {
+   "en": "umbrella",
+   "fr": "le parapluie",
+   "cat": "Les vêtements"
+  },
+  {
+   "en": "cap",
+   "fr": "la casquette",
+   "cat": "Les vêtements"
+  },
+  {
+   "en": "street",
+   "fr": "la rue",
+   "cat": "La ville"
+  },
+  {
+   "en": "shop",
+   "fr": "le magasin",
+   "cat": "La ville"
+  },
+  {
+   "en": "bank",
+   "fr": "la banque",
+   "cat": "La ville"
+  },
+  {
+   "en": "post office",
+   "fr": "la poste",
+   "cat": "La ville"
+  },
+  {
+   "en": "hospital",
+   "fr": "l'hôpital",
+   "cat": "La ville"
+  },
+  {
+   "en": "station",
+   "fr": "la gare",
+   "cat": "La ville"
+  },
+  {
+   "en": "airport",
+   "fr": "l'aéroport",
+   "cat": "La ville"
+  },
+  {
+   "en": "bridge",
+   "fr": "le pont",
+   "cat": "La ville"
+  },
+  {
+   "en": "church",
+   "fr": "l'église",
+   "cat": "La ville"
+  },
+  {
+   "en": "park",
+   "fr": "le parc",
+   "cat": "La ville"
+  },
+  {
+   "en": "market",
+   "fr": "le marché",
+   "cat": "La ville"
+  },
+  {
+   "en": "cinema",
+   "fr": "le cinéma",
+   "cat": "La ville"
+  },
+  {
+   "en": "library",
+   "fr": "la bibliothèque",
+   "cat": "La ville"
+  },
+  {
+   "en": "museum",
+   "fr": "le musée",
+   "cat": "La ville"
+  },
+  {
+   "en": "restaurant",
+   "fr": "le restaurant",
+   "cat": "La ville"
+  },
+  {
+   "en": "swimming pool",
+   "fr": "la piscine",
+   "cat": "La ville"
+  },
+  {
+   "en": "baker's",
+   "fr": "la boulangerie",
+   "cat": "La ville"
+  },
+  {
+   "en": "square",
+   "fr": "la place",
+   "cat": "La ville"
+  },
+  {
+   "en": "bus",
+   "fr": "le bus",
+   "cat": "Les transports"
+  },
+  {
+   "en": "train",
+   "fr": "le train",
+   "cat": "Les transports"
+  },
+  {
+   "en": "lorry",
+   "fr": "le camion",
+   "cat": "Les transports"
+  },
+  {
+   "en": "taxi",
+   "fr": "le taxi",
+   "cat": "Les transports"
+  },
+  {
+   "en": "helicopter",
+   "fr": "l'hélicoptère",
+   "cat": "Les transports"
+  },
+  {
+   "en": "ship",
+   "fr": "le navire",
+   "cat": "Les transports"
+  },
+  {
+   "en": "scooter",
+   "fr": "la trottinette",
+   "cat": "Les transports"
+  },
+  {
+   "en": "tram",
+   "fr": "le tramway",
+   "cat": "Les transports"
+  },
+  {
+   "en": "ticket",
+   "fr": "le billet",
+   "cat": "Les transports"
+  },
+  {
+   "en": "road",
+   "fr": "la route",
+   "cat": "Les transports"
+  },
+  {
+   "en": "wheel",
+   "fr": "la roue",
+   "cat": "Les transports"
+  },
+  {
+   "en": "driver",
+   "fr": "le conducteur",
+   "cat": "Les transports"
+  },
+  {
+   "en": "tree",
+   "fr": "l'arbre",
+   "cat": "La nature"
+  },
+  {
+   "en": "flower",
+   "fr": "la fleur",
+   "cat": "La nature"
+  },
+  {
+   "en": "grass",
+   "fr": "l'herbe",
+   "cat": "La nature"
+  },
+  {
+   "en": "leaf",
+   "fr": "la feuille",
+   "cat": "La nature"
+  },
+  {
+   "en": "stone",
+   "fr": "la pierre",
+   "cat": "La nature"
+  },
+  {
+   "en": "river",
+   "fr": "la rivière",
+   "cat": "La nature"
+  },
+  {
+   "en": "sea",
+   "fr": "la mer",
+   "cat": "La nature"
+  },
+  {
+   "en": "mountain",
+   "fr": "la montagne",
+   "cat": "La nature"
+  },
+  {
+   "en": "forest",
+   "fr": "la forêt",
+   "cat": "La nature"
+  },
+  {
+   "en": "field",
+   "fr": "le champ",
+   "cat": "La nature"
+  },
+  {
+   "en": "star",
+   "fr": "l'étoile",
+   "cat": "La nature"
+  },
+  {
+   "en": "moon",
+   "fr": "la lune",
+   "cat": "La nature"
+  },
+  {
+   "en": "sand",
+   "fr": "le sable",
+   "cat": "La nature"
+  },
+  {
+   "en": "hill",
+   "fr": "la colline",
+   "cat": "La nature"
+  },
+  {
+   "en": "island",
+   "fr": "l'île",
+   "cat": "La nature"
+  },
+  {
+   "en": "beach",
+   "fr": "la plage",
+   "cat": "La nature"
+  },
+  {
+   "en": "Monday",
+   "fr": "lundi",
+   "cat": "Jours et moments"
+  },
+  {
+   "en": "Tuesday",
+   "fr": "mardi",
+   "cat": "Jours et moments"
+  },
+  {
+   "en": "Wednesday",
+   "fr": "mercredi",
+   "cat": "Jours et moments"
+  },
+  {
+   "en": "Thursday",
+   "fr": "jeudi",
+   "cat": "Jours et moments"
+  },
+  {
+   "en": "Friday",
+   "fr": "vendredi",
+   "cat": "Jours et moments"
+  },
+  {
+   "en": "Saturday",
+   "fr": "samedi",
+   "cat": "Jours et moments"
+  },
+  {
+   "en": "Sunday",
+   "fr": "dimanche",
+   "cat": "Jours et moments"
+  },
+  {
+   "en": "today",
+   "fr": "aujourd'hui",
+   "cat": "Jours et moments"
+  },
+  {
+   "en": "tomorrow",
+   "fr": "demain",
+   "cat": "Jours et moments"
+  },
+  {
+   "en": "yesterday",
+   "fr": "hier",
+   "cat": "Jours et moments"
+  },
+  {
+   "en": "morning",
+   "fr": "le matin",
+   "cat": "Jours et moments"
+  },
+  {
+   "en": "afternoon",
+   "fr": "l'après-midi",
+   "cat": "Jours et moments"
+  },
+  {
+   "en": "evening",
+   "fr": "le soir",
+   "cat": "Jours et moments"
+  },
+  {
+   "en": "night",
+   "fr": "la nuit",
+   "cat": "Jours et moments"
+  },
+  {
+   "en": "week",
+   "fr": "la semaine",
+   "cat": "Jours et moments"
+  },
+  {
+   "en": "month",
+   "fr": "le mois",
+   "cat": "Jours et moments"
+  },
+  {
+   "en": "year",
+   "fr": "l'année",
+   "cat": "Jours et moments"
+  },
+  {
+   "en": "birthday",
+   "fr": "l'anniversaire",
+   "cat": "Jours et moments"
+  },
+  {
+   "en": "yes",
+   "fr": "oui",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "no",
+   "fr": "non",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "please",
+   "fr": "s'il te plaît",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "thank you",
+   "fr": "merci",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "hello",
+   "fr": "bonjour",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "goodbye",
+   "fr": "au revoir",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "here",
+   "fr": "ici",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "there",
+   "fr": "là-bas",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "now",
+   "fr": "maintenant",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "always",
+   "fr": "toujours",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "never",
+   "fr": "jamais",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "often",
+   "fr": "souvent",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "sometimes",
+   "fr": "parfois",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "under",
+   "fr": "sous",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "behind",
+   "fr": "derrière",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "next to",
+   "fr": "à côté de",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "between",
+   "fr": "entre",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "in front of",
+   "fr": "devant",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "because",
+   "fr": "parce que",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "but",
+   "fr": "mais",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "with",
+   "fr": "avec",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "without",
+   "fr": "sans",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "happy",
+   "fr": "heureux",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "sad",
+   "fr": "triste",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "good",
+   "fr": "bon",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "bad",
+   "fr": "mauvais",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "new",
+   "fr": "neuf",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "old",
+   "fr": "vieux",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "young",
+   "fr": "jeune",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "tall",
+   "fr": "grand (taille)",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "short",
+   "fr": "court, petit",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "fast",
+   "fr": "rapide",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "slow",
+   "fr": "lent",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "easy",
+   "fr": "facile",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "difficult",
+   "fr": "difficile",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "clean",
+   "fr": "propre",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "dirty",
+   "fr": "sale",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "full",
+   "fr": "plein",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "empty",
+   "fr": "vide",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "strong",
+   "fr": "fort",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "weak",
+   "fr": "faible",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "pretty",
+   "fr": "joli",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "heavy",
+   "fr": "lourd",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "quiet",
+   "fr": "calme",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "football",
+   "fr": "le football",
+   "cat": "Le sport"
+  },
+  {
+   "en": "basketball",
+   "fr": "le basket",
+   "cat": "Le sport"
+  },
+  {
+   "en": "tennis",
+   "fr": "le tennis",
+   "cat": "Le sport"
+  },
+  {
+   "en": "swimming",
+   "fr": "la natation",
+   "cat": "Le sport"
+  },
+  {
+   "en": "running",
+   "fr": "la course",
+   "cat": "Le sport"
+  },
+  {
+   "en": "judo",
+   "fr": "le judo",
+   "cat": "Le sport"
+  },
+  {
+   "en": "team",
+   "fr": "l'équipe",
+   "cat": "Le sport"
+  },
+  {
+   "en": "goal",
+   "fr": "le but",
+   "cat": "Le sport"
+  },
+  {
+   "en": "to win",
+   "fr": "gagner",
+   "cat": "Le sport"
+  },
+  {
+   "en": "to lose a game",
+   "fr": "perdre un match",
+   "cat": "Le sport"
+  },
+  {
+   "en": "match",
+   "fr": "le match",
+   "cat": "Le sport"
+  },
+  {
+   "en": "coach",
+   "fr": "l'entraîneur",
+   "cat": "Le sport"
+  },
+  {
+   "en": "breakfast",
+   "fr": "le petit-déjeuner",
+   "cat": "À table"
+  },
+  {
+   "en": "lunch",
+   "fr": "le déjeuner",
+   "cat": "À table"
+  },
+  {
+   "en": "dinner",
+   "fr": "le dîner",
+   "cat": "À table"
+  },
+  {
+   "en": "hungry",
+   "fr": "affamé",
+   "cat": "À table"
+  },
+  {
+   "en": "thirsty",
+   "fr": "assoiffé",
+   "cat": "À table"
+  },
+  {
+   "en": "delicious",
+   "fr": "délicieux",
+   "cat": "À table"
+  },
+  {
+   "en": "meal",
+   "fr": "le repas",
+   "cat": "À table"
+  },
+  {
+   "en": "to cook",
+   "fr": "cuisiner",
+   "cat": "À table"
+  },
+  {
+   "en": "to taste",
+   "fr": "goûter",
+   "cat": "À table"
+  },
+  {
+   "en": "napkin",
+   "fr": "la serviette de table",
+   "cat": "À table"
+  },
+  {
+   "en": "doctor",
+   "fr": "le médecin",
+   "cat": "Les métiers"
+  },
+  {
+   "en": "farmer",
+   "fr": "l'agriculteur",
+   "cat": "Les métiers"
+  },
+  {
+   "en": "baker",
+   "fr": "le boulanger",
+   "cat": "Les métiers"
+  },
+  {
+   "en": "police officer",
+   "fr": "le policier",
+   "cat": "Les métiers"
+  },
+  {
+   "en": "firefighter",
+   "fr": "le pompier",
+   "cat": "Les métiers"
+  },
+  {
+   "en": "cook",
+   "fr": "le cuisinier",
+   "cat": "Les métiers"
+  },
+  {
+   "en": "dentist",
+   "fr": "le dentiste",
+   "cat": "Les métiers"
+  },
+  {
+   "en": "vet",
+   "fr": "le vétérinaire",
+   "cat": "Les métiers"
+  },
+  {
+   "en": "pilot",
+   "fr": "le pilote",
+   "cat": "Les métiers"
+  },
+  {
+   "en": "singer",
+   "fr": "le chanteur",
+   "cat": "Les métiers"
+  },
+  {
+   "en": "painter",
+   "fr": "le peintre",
+   "cat": "Les métiers"
+  },
+  {
+   "en": "postman",
+   "fr": "le facteur",
+   "cat": "Les métiers"
+  },
+  {
+   "en": "afraid",
+   "fr": "effrayé",
+   "cat": "Les sentiments"
+  },
+  {
+   "en": "angry",
+   "fr": "en colère",
+   "cat": "Les sentiments"
+  },
+  {
+   "en": "surprised",
+   "fr": "surpris",
+   "cat": "Les sentiments"
+  },
+  {
+   "en": "bored",
+   "fr": "qui s'ennuie",
+   "cat": "Les sentiments"
+  },
+  {
+   "en": "excited",
+   "fr": "tout excité",
+   "cat": "Les sentiments"
+  },
+  {
+   "en": "proud",
+   "fr": "fier",
+   "cat": "Les sentiments"
+  },
+  {
+   "en": "kind",
+   "fr": "gentil",
+   "cat": "Les sentiments"
+  },
+  {
+   "en": "friendly",
+   "fr": "amical",
+   "cat": "Les sentiments"
+  },
+  {
+   "en": "shy",
+   "fr": "timide",
+   "cat": "Les sentiments"
+  },
+  {
+   "en": "brave",
+   "fr": "courageux",
+   "cat": "Les sentiments"
   }
  ],
  "2": [
@@ -991,6 +2961,2046 @@
    "en": "whether",
    "fr": "si (ou non)",
    "cat": "Petits mots"
+  },
+  {
+   "en": "to suggest",
+   "fr": "suggérer",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to refuse",
+   "fr": "refuser",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to accept",
+   "fr": "accepter",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to admit",
+   "fr": "reconnaître, admettre",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to deny",
+   "fr": "nier",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to expect",
+   "fr": "s'attendre à",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to realise",
+   "fr": "se rendre compte",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to remind",
+   "fr": "rappeler à quelqu'un",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to allow",
+   "fr": "autoriser",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to avoid",
+   "fr": "éviter",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to manage",
+   "fr": "réussir à, gérer",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to succeed",
+   "fr": "réussir",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to fail",
+   "fr": "échouer",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to deserve",
+   "fr": "mériter",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to owe",
+   "fr": "devoir (de l'argent)",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to spend",
+   "fr": "passer du temps, dépenser",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to waste",
+   "fr": "gaspiller",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to save",
+   "fr": "économiser, sauver",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to earn",
+   "fr": "gagner (sa vie)",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to hire",
+   "fr": "embaucher, louer",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to apply",
+   "fr": "postuler",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to postpone",
+   "fr": "reporter",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to cancel",
+   "fr": "annuler",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to warn",
+   "fr": "avertir",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to blame",
+   "fr": "reprocher",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to begin",
+   "fr": "commencer — began, begun",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to drive",
+   "fr": "conduire — drove, driven",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to feel",
+   "fr": "ressentir — felt, felt",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to fly",
+   "fr": "voler — flew, flown",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to forgive",
+   "fr": "pardonner — forgave, forgiven",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to hold",
+   "fr": "tenir — held, held",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to keep",
+   "fr": "garder — kept, kept",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to lead",
+   "fr": "mener — led, led",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to mean",
+   "fr": "signifier — meant, meant",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to meet",
+   "fr": "rencontrer — met, met",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to ride",
+   "fr": "monter — rode, ridden",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to rise",
+   "fr": "s'élever — rose, risen",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to seek",
+   "fr": "rechercher — sought, sought",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to sell",
+   "fr": "vendre — sold, sold",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to send",
+   "fr": "envoyer — sent, sent",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to shake",
+   "fr": "secouer — shook, shaken",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to shine",
+   "fr": "briller — shone, shone",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to speak",
+   "fr": "parler — spoke, spoken",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to steal",
+   "fr": "voler — stole, stolen",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to swear",
+   "fr": "jurer — swore, sworn",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to wear",
+   "fr": "porter — wore, worn",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to win",
+   "fr": "gagner — won, won",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to beat",
+   "fr": "battre — beat, beaten",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to bite",
+   "fr": "mordre — bit, bitten",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to look after",
+   "fr": "s'occuper de",
+   "cat": "Verbes à particule"
+  },
+  {
+   "en": "to look for",
+   "fr": "chercher",
+   "cat": "Verbes à particule"
+  },
+  {
+   "en": "to look up",
+   "fr": "chercher dans",
+   "cat": "Verbes à particule"
+  },
+  {
+   "en": "to put off",
+   "fr": "remettre à plus tard",
+   "cat": "Verbes à particule"
+  },
+  {
+   "en": "to put up with",
+   "fr": "supporter",
+   "cat": "Verbes à particule"
+  },
+  {
+   "en": "to carry on",
+   "fr": "continuer",
+   "cat": "Verbes à particule"
+  },
+  {
+   "en": "to come across",
+   "fr": "tomber sur",
+   "cat": "Verbes à particule"
+  },
+  {
+   "en": "to get on with",
+   "fr": "bien s'entendre avec",
+   "cat": "Verbes à particule"
+  },
+  {
+   "en": "to run out of",
+   "fr": "être à court de",
+   "cat": "Verbes à particule"
+  },
+  {
+   "en": "to turn down",
+   "fr": "refuser, baisser",
+   "cat": "Verbes à particule"
+  },
+  {
+   "en": "to turn up",
+   "fr": "arriver, se pointer",
+   "cat": "Verbes à particule"
+  },
+  {
+   "en": "to take over",
+   "fr": "reprendre, prendre le contrôle",
+   "cat": "Verbes à particule"
+  },
+  {
+   "en": "to take after",
+   "fr": "tenir de (quelqu'un)",
+   "cat": "Verbes à particule"
+  },
+  {
+   "en": "to bring up",
+   "fr": "élever, aborder un sujet",
+   "cat": "Verbes à particule"
+  },
+  {
+   "en": "to break down",
+   "fr": "tomber en panne",
+   "cat": "Verbes à particule"
+  },
+  {
+   "en": "to set up",
+   "fr": "mettre en place",
+   "cat": "Verbes à particule"
+  },
+  {
+   "en": "to call off",
+   "fr": "annuler",
+   "cat": "Verbes à particule"
+  },
+  {
+   "en": "to figure out",
+   "fr": "comprendre",
+   "cat": "Verbes à particule"
+  },
+  {
+   "en": "to work out",
+   "fr": "s'arranger, calculer",
+   "cat": "Verbes à particule"
+  },
+  {
+   "en": "to go through",
+   "fr": "traverser, examiner",
+   "cat": "Verbes à particule"
+  },
+  {
+   "en": "to hand in",
+   "fr": "rendre, remettre",
+   "cat": "Verbes à particule"
+  },
+  {
+   "en": "to make up",
+   "fr": "inventer, se réconcilier",
+   "cat": "Verbes à particule"
+  },
+  {
+   "en": "reliable",
+   "fr": "fiable",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "thoughtful",
+   "fr": "prévenant",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "selfish",
+   "fr": "égoïste",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "cautious",
+   "fr": "prudent",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "reckless",
+   "fr": "imprudent",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "ambitious",
+   "fr": "ambitieux",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "modest",
+   "fr": "modeste",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "arrogant",
+   "fr": "arrogant",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "patient",
+   "fr": "patient",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "impatient",
+   "fr": "impatient",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "gloomy",
+   "fr": "sombre, morose",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "sincere",
+   "fr": "sincère",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "loyal",
+   "fr": "loyal",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "greedy",
+   "fr": "avide, gourmand",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "awkward",
+   "fr": "gênant, maladroit",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "embarrassed",
+   "fr": "gêné",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "reluctant",
+   "fr": "réticent",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "eager",
+   "fr": "impatient de, avide",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "stubborn as a mule",
+   "fr": "têtu comme une mule",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "harmless",
+   "fr": "inoffensif",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "worthwhile",
+   "fr": "qui en vaut la peine",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "thorough",
+   "fr": "minutieux",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "nevertheless",
+   "fr": "néanmoins",
+   "cat": "Adverbes et connecteurs"
+  },
+  {
+   "en": "therefore",
+   "fr": "par conséquent",
+   "cat": "Adverbes et connecteurs"
+  },
+  {
+   "en": "moreover",
+   "fr": "de plus",
+   "cat": "Adverbes et connecteurs"
+  },
+  {
+   "en": "besides",
+   "fr": "d'ailleurs",
+   "cat": "Adverbes et connecteurs"
+  },
+  {
+   "en": "meanwhile",
+   "fr": "pendant ce temps",
+   "cat": "Adverbes et connecteurs"
+  },
+  {
+   "en": "otherwise",
+   "fr": "sinon",
+   "cat": "Adverbes et connecteurs"
+  },
+  {
+   "en": "indeed",
+   "fr": "en effet",
+   "cat": "Adverbes et connecteurs"
+  },
+  {
+   "en": "rather",
+   "fr": "plutôt",
+   "cat": "Adverbes et connecteurs"
+  },
+  {
+   "en": "quite",
+   "fr": "assez, tout à fait",
+   "cat": "Adverbes et connecteurs"
+  },
+  {
+   "en": "barely",
+   "fr": "à peine",
+   "cat": "Adverbes et connecteurs"
+  },
+  {
+   "en": "seldom",
+   "fr": "rarement",
+   "cat": "Adverbes et connecteurs"
+  },
+  {
+   "en": "gradually",
+   "fr": "peu à peu",
+   "cat": "Adverbes et connecteurs"
+  },
+  {
+   "en": "suddenly",
+   "fr": "soudain",
+   "cat": "Adverbes et connecteurs"
+  },
+  {
+   "en": "roughly",
+   "fr": "à peu près",
+   "cat": "Adverbes et connecteurs"
+  },
+  {
+   "en": "likely",
+   "fr": "probable",
+   "cat": "Adverbes et connecteurs"
+  },
+  {
+   "en": "unlikely",
+   "fr": "peu probable",
+   "cat": "Adverbes et connecteurs"
+  },
+  {
+   "en": "obviously",
+   "fr": "manifestement",
+   "cat": "Adverbes et connecteurs"
+  },
+  {
+   "en": "apparently",
+   "fr": "apparemment",
+   "cat": "Adverbes et connecteurs"
+  },
+  {
+   "en": "surprisingly",
+   "fr": "étonnamment",
+   "cat": "Adverbes et connecteurs"
+  },
+  {
+   "en": "on the contrary",
+   "fr": "au contraire",
+   "cat": "Adverbes et connecteurs"
+  },
+  {
+   "en": "as a result",
+   "fr": "de ce fait",
+   "cat": "Adverbes et connecteurs"
+  },
+  {
+   "en": "in short",
+   "fr": "en bref",
+   "cat": "Adverbes et connecteurs"
+  },
+  {
+   "en": "a headache",
+   "fr": "un mal de tête",
+   "cat": "Le corps et la santé"
+  },
+  {
+   "en": "a fever",
+   "fr": "de la fièvre",
+   "cat": "Le corps et la santé"
+  },
+  {
+   "en": "a bruise",
+   "fr": "un bleu",
+   "cat": "Le corps et la santé"
+  },
+  {
+   "en": "a scar",
+   "fr": "une cicatrice",
+   "cat": "Le corps et la santé"
+  },
+  {
+   "en": "to sneeze",
+   "fr": "éternuer",
+   "cat": "Le corps et la santé"
+  },
+  {
+   "en": "to cough",
+   "fr": "tousser",
+   "cat": "Le corps et la santé"
+  },
+  {
+   "en": "to breathe",
+   "fr": "respirer",
+   "cat": "Le corps et la santé"
+  },
+  {
+   "en": "a plaster",
+   "fr": "un pansement",
+   "cat": "Le corps et la santé"
+  },
+  {
+   "en": "a bandage",
+   "fr": "un bandage",
+   "cat": "Le corps et la santé"
+  },
+  {
+   "en": "an injury",
+   "fr": "une blessure",
+   "cat": "Le corps et la santé"
+  },
+  {
+   "en": "dizzy",
+   "fr": "pris de vertige",
+   "cat": "Le corps et la santé"
+  },
+  {
+   "en": "exhausted",
+   "fr": "épuisé",
+   "cat": "Le corps et la santé"
+  },
+  {
+   "en": "to recover",
+   "fr": "se rétablir",
+   "cat": "Le corps et la santé"
+  },
+  {
+   "en": "a chemist",
+   "fr": "une pharmacie",
+   "cat": "Le corps et la santé"
+  },
+  {
+   "en": "a surgeon",
+   "fr": "un chirurgien",
+   "cat": "Le corps et la santé"
+  },
+  {
+   "en": "an ambulance",
+   "fr": "une ambulance",
+   "cat": "Le corps et la santé"
+  },
+  {
+   "en": "treatment",
+   "fr": "un traitement",
+   "cat": "Le corps et la santé"
+  },
+  {
+   "en": "a check-up",
+   "fr": "un bilan",
+   "cat": "Le corps et la santé"
+  },
+  {
+   "en": "an experiment",
+   "fr": "une expérience",
+   "cat": "Les sciences"
+  },
+  {
+   "en": "a measurement",
+   "fr": "une mesure",
+   "cat": "Les sciences"
+  },
+  {
+   "en": "weight",
+   "fr": "le poids",
+   "cat": "Les sciences"
+  },
+  {
+   "en": "height",
+   "fr": "la hauteur",
+   "cat": "Les sciences"
+  },
+  {
+   "en": "length",
+   "fr": "la longueur",
+   "cat": "Les sciences"
+  },
+  {
+   "en": "speed",
+   "fr": "la vitesse",
+   "cat": "Les sciences"
+  },
+  {
+   "en": "gravity",
+   "fr": "la gravité",
+   "cat": "Les sciences"
+  },
+  {
+   "en": "an atom",
+   "fr": "un atome",
+   "cat": "Les sciences"
+  },
+  {
+   "en": "a cell",
+   "fr": "une cellule",
+   "cat": "Les sciences"
+  },
+  {
+   "en": "a species",
+   "fr": "une espèce",
+   "cat": "Les sciences"
+  },
+  {
+   "en": "a discovery",
+   "fr": "une découverte",
+   "cat": "Les sciences"
+  },
+  {
+   "en": "a theory",
+   "fr": "une théorie",
+   "cat": "Les sciences"
+  },
+  {
+   "en": "research",
+   "fr": "la recherche",
+   "cat": "Les sciences"
+  },
+  {
+   "en": "a sample",
+   "fr": "un échantillon",
+   "cat": "Les sciences"
+  },
+  {
+   "en": "to melt",
+   "fr": "fondre",
+   "cat": "Les sciences"
+  },
+  {
+   "en": "to freeze",
+   "fr": "geler",
+   "cat": "Les sciences"
+  },
+  {
+   "en": "to boil",
+   "fr": "bouillir",
+   "cat": "Les sciences"
+  },
+  {
+   "en": "to dissolve",
+   "fr": "dissoudre",
+   "cat": "Les sciences"
+  },
+  {
+   "en": "pollution",
+   "fr": "la pollution",
+   "cat": "L'environnement"
+  },
+  {
+   "en": "waste",
+   "fr": "les déchets",
+   "cat": "L'environnement"
+  },
+  {
+   "en": "to recycle",
+   "fr": "recycler",
+   "cat": "L'environnement"
+  },
+  {
+   "en": "a resource",
+   "fr": "une ressource",
+   "cat": "L'environnement"
+  },
+  {
+   "en": "energy",
+   "fr": "l'énergie",
+   "cat": "L'environnement"
+  },
+  {
+   "en": "fuel",
+   "fr": "le carburant",
+   "cat": "L'environnement"
+  },
+  {
+   "en": "a drought",
+   "fr": "une sécheresse",
+   "cat": "L'environnement"
+  },
+  {
+   "en": "a flood",
+   "fr": "une inondation",
+   "cat": "L'environnement"
+  },
+  {
+   "en": "endangered",
+   "fr": "menacé",
+   "cat": "L'environnement"
+  },
+  {
+   "en": "the climate",
+   "fr": "le climat",
+   "cat": "L'environnement"
+  },
+  {
+   "en": "to pollute",
+   "fr": "polluer",
+   "cat": "L'environnement"
+  },
+  {
+   "en": "sustainable",
+   "fr": "durable",
+   "cat": "L'environnement"
+  },
+  {
+   "en": "a harvest",
+   "fr": "une récolte",
+   "cat": "L'environnement"
+  },
+  {
+   "en": "soil",
+   "fr": "le sol, la terre",
+   "cat": "L'environnement"
+  },
+  {
+   "en": "a wildfire",
+   "fr": "un incendie de forêt",
+   "cat": "L'environnement"
+  },
+  {
+   "en": "a shortage",
+   "fr": "une pénurie",
+   "cat": "L'environnement"
+  },
+  {
+   "en": "a newspaper",
+   "fr": "un journal",
+   "cat": "Les médias"
+  },
+  {
+   "en": "an article",
+   "fr": "un article",
+   "cat": "Les médias"
+  },
+  {
+   "en": "a headline",
+   "fr": "un gros titre",
+   "cat": "Les médias"
+  },
+  {
+   "en": "a broadcast",
+   "fr": "une émission",
+   "cat": "Les médias"
+  },
+  {
+   "en": "an advertisement",
+   "fr": "une publicité",
+   "cat": "Les médias"
+  },
+  {
+   "en": "an audience",
+   "fr": "un public",
+   "cat": "Les médias"
+  },
+  {
+   "en": "a survey",
+   "fr": "un sondage",
+   "cat": "Les médias"
+  },
+  {
+   "en": "a rumour",
+   "fr": "une rumeur",
+   "cat": "Les médias"
+  },
+  {
+   "en": "a source",
+   "fr": "une source",
+   "cat": "Les médias"
+  },
+  {
+   "en": "to report",
+   "fr": "rapporter",
+   "cat": "Les médias"
+  },
+  {
+   "en": "an interview",
+   "fr": "un entretien",
+   "cat": "Les médias"
+  },
+  {
+   "en": "coverage",
+   "fr": "la couverture médiatique",
+   "cat": "Les médias"
+  },
+  {
+   "en": "bias",
+   "fr": "le parti pris",
+   "cat": "Les médias"
+  },
+  {
+   "en": "a statement",
+   "fr": "une déclaration",
+   "cat": "Les médias"
+  },
+  {
+   "en": "accurate",
+   "fr": "exact",
+   "cat": "Les médias"
+  },
+  {
+   "en": "misleading",
+   "fr": "trompeur",
+   "cat": "Les médias"
+  },
+  {
+   "en": "a decade",
+   "fr": "une décennie",
+   "cat": "Le temps qui passe"
+  },
+  {
+   "en": "a century",
+   "fr": "un siècle",
+   "cat": "Le temps qui passe"
+  },
+  {
+   "en": "a fortnight",
+   "fr": "quinze jours",
+   "cat": "Le temps qui passe"
+  },
+  {
+   "en": "a schedule",
+   "fr": "un emploi du temps",
+   "cat": "Le temps qui passe"
+  },
+  {
+   "en": "overnight",
+   "fr": "du jour au lendemain",
+   "cat": "Le temps qui passe"
+  },
+  {
+   "en": "afterwards",
+   "fr": "ensuite",
+   "cat": "Le temps qui passe"
+  },
+  {
+   "en": "previously",
+   "fr": "auparavant",
+   "cat": "Le temps qui passe"
+  },
+  {
+   "en": "nowadays",
+   "fr": "de nos jours",
+   "cat": "Le temps qui passe"
+  },
+  {
+   "en": "lately",
+   "fr": "dernièrement",
+   "cat": "Le temps qui passe"
+  },
+  {
+   "en": "shortly",
+   "fr": "sous peu",
+   "cat": "Le temps qui passe"
+  },
+  {
+   "en": "permanently",
+   "fr": "définitivement",
+   "cat": "Le temps qui passe"
+  },
+  {
+   "en": "temporarily",
+   "fr": "provisoirement",
+   "cat": "Le temps qui passe"
+  },
+  {
+   "en": "a delay",
+   "fr": "un retard",
+   "cat": "Le temps qui passe"
+  },
+  {
+   "en": "on time",
+   "fr": "à l'heure",
+   "cat": "Le temps qui passe"
+  },
+  {
+   "en": "in advance",
+   "fr": "à l'avance",
+   "cat": "Le temps qui passe"
+  },
+  {
+   "en": "from now on",
+   "fr": "désormais",
+   "cat": "Le temps qui passe"
+  },
+  {
+   "en": "to make up one's mind",
+   "fr": "se décider",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "to keep in touch",
+   "fr": "rester en contact",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "to take part in",
+   "fr": "participer à",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "to pay attention",
+   "fr": "faire attention",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "to make sense",
+   "fr": "avoir du sens",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "to take place",
+   "fr": "avoir lieu",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "to come true",
+   "fr": "se réaliser",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "to get rid of",
+   "fr": "se débarrasser de",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "to be in charge of",
+   "fr": "être responsable de",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "to be worth",
+   "fr": "valoir",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "on purpose",
+   "fr": "exprès",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "by mistake",
+   "fr": "par erreur",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "at once",
+   "fr": "tout de suite",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "as usual",
+   "fr": "comme d'habitude",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "in a hurry",
+   "fr": "pressé",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "out of order",
+   "fr": "hors service",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "for good",
+   "fr": "pour de bon",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "by heart",
+   "fr": "par cœur",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "on the whole",
+   "fr": "dans l'ensemble",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "as far as I know",
+   "fr": "pour autant que je sache",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "it is up to you",
+   "fr": "c'est à toi de voir",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "never mind",
+   "fr": "peu importe",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "a cupboard",
+   "fr": "un placard",
+   "cat": "La maison"
+  },
+  {
+   "en": "a drawer",
+   "fr": "un tiroir",
+   "cat": "La maison"
+  },
+  {
+   "en": "a shelf",
+   "fr": "une étagère",
+   "cat": "La maison"
+  },
+  {
+   "en": "a wardrobe",
+   "fr": "une armoire",
+   "cat": "La maison"
+  },
+  {
+   "en": "a cushion",
+   "fr": "un coussin",
+   "cat": "La maison"
+  },
+  {
+   "en": "a blanket",
+   "fr": "une couverture",
+   "cat": "La maison"
+  },
+  {
+   "en": "a curtain",
+   "fr": "un rideau",
+   "cat": "La maison"
+  },
+  {
+   "en": "a carpet",
+   "fr": "un tapis",
+   "cat": "La maison"
+  },
+  {
+   "en": "a basement",
+   "fr": "un sous-sol",
+   "cat": "La maison"
+  },
+  {
+   "en": "an attic",
+   "fr": "un grenier",
+   "cat": "La maison"
+  },
+  {
+   "en": "a corridor",
+   "fr": "un couloir",
+   "cat": "La maison"
+  },
+  {
+   "en": "a fireplace",
+   "fr": "une cheminée",
+   "cat": "La maison"
+  },
+  {
+   "en": "a tap",
+   "fr": "un robinet",
+   "cat": "La maison"
+  },
+  {
+   "en": "a sink",
+   "fr": "un évier",
+   "cat": "La maison"
+  },
+  {
+   "en": "a kettle",
+   "fr": "une bouilloire",
+   "cat": "La maison"
+  },
+  {
+   "en": "a dishwasher",
+   "fr": "un lave-vaisselle",
+   "cat": "La maison"
+  },
+  {
+   "en": "an employer",
+   "fr": "un employeur",
+   "cat": "Le travail"
+  },
+  {
+   "en": "an employee",
+   "fr": "un salarié",
+   "cat": "Le travail"
+  },
+  {
+   "en": "a colleague",
+   "fr": "un collègue",
+   "cat": "Le travail"
+  },
+  {
+   "en": "a meeting",
+   "fr": "une réunion",
+   "cat": "Le travail"
+  },
+  {
+   "en": "a contract",
+   "fr": "un contrat",
+   "cat": "Le travail"
+  },
+  {
+   "en": "a trainee",
+   "fr": "un stagiaire",
+   "cat": "Le travail"
+  },
+  {
+   "en": "to apply for",
+   "fr": "postuler à",
+   "cat": "Le travail"
+  },
+  {
+   "en": "to resign",
+   "fr": "démissionner",
+   "cat": "Le travail"
+  },
+  {
+   "en": "a shift",
+   "fr": "une garde, un poste",
+   "cat": "Le travail"
+  },
+  {
+   "en": "overtime",
+   "fr": "les heures supplémentaires",
+   "cat": "Le travail"
+  },
+  {
+   "en": "a workshop",
+   "fr": "un atelier",
+   "cat": "Le travail"
+  },
+  {
+   "en": "an achievement",
+   "fr": "une réussite",
+   "cat": "Le travail"
+  },
+  {
+   "en": "a career",
+   "fr": "une carrière",
+   "cat": "Le travail"
+  },
+  {
+   "en": "a duty",
+   "fr": "un devoir",
+   "cat": "Le travail"
+  },
+  {
+   "en": "a task",
+   "fr": "une tâche",
+   "cat": "Le travail"
+  },
+  {
+   "en": "a skill",
+   "fr": "une compétence",
+   "cat": "Le travail"
+  },
+  {
+   "en": "to argue",
+   "fr": "soutenir, se disputer",
+   "cat": "Opinions et débat"
+  },
+  {
+   "en": "to claim",
+   "fr": "prétendre, affirmer",
+   "cat": "Opinions et débat"
+  },
+  {
+   "en": "to object",
+   "fr": "objecter",
+   "cat": "Opinions et débat"
+  },
+  {
+   "en": "to disagree",
+   "fr": "ne pas être d'accord",
+   "cat": "Opinions et débat"
+  },
+  {
+   "en": "a point of view",
+   "fr": "un point de vue",
+   "cat": "Opinions et débat"
+  },
+  {
+   "en": "an argument",
+   "fr": "un argument",
+   "cat": "Opinions et débat"
+  },
+  {
+   "en": "a reason",
+   "fr": "une raison",
+   "cat": "Opinions et débat"
+  },
+  {
+   "en": "to convince",
+   "fr": "convaincre",
+   "cat": "Opinions et débat"
+  },
+  {
+   "en": "to persuade",
+   "fr": "persuader",
+   "cat": "Opinions et débat"
+  },
+  {
+   "en": "to doubt",
+   "fr": "douter",
+   "cat": "Opinions et débat"
+  },
+  {
+   "en": "biased",
+   "fr": "partial",
+   "cat": "Opinions et débat"
+  },
+  {
+   "en": "fair",
+   "fr": "juste, équitable",
+   "cat": "Opinions et débat"
+  },
+  {
+   "en": "an issue",
+   "fr": "une question, un problème",
+   "cat": "Opinions et débat"
+  },
+  {
+   "en": "to raise a question",
+   "fr": "soulever une question",
+   "cat": "Opinions et débat"
+  },
+  {
+   "en": "a compromise",
+   "fr": "un compromis",
+   "cat": "Opinions et débat"
+  },
+  {
+   "en": "on the one hand",
+   "fr": "d'une part",
+   "cat": "Opinions et débat"
+  },
+  {
+   "en": "on the other hand",
+   "fr": "d'autre part",
+   "cat": "Opinions et débat"
+  },
+  {
+   "en": "it depends",
+   "fr": "ça dépend",
+   "cat": "Opinions et débat"
+  },
+  {
+   "en": "plenty of",
+   "fr": "beaucoup de",
+   "cat": "Quantité et mesure"
+  },
+  {
+   "en": "a great deal of",
+   "fr": "une grande quantité de",
+   "cat": "Quantité et mesure"
+  },
+  {
+   "en": "a handful",
+   "fr": "une poignée",
+   "cat": "Quantité et mesure"
+  },
+  {
+   "en": "several",
+   "fr": "plusieurs",
+   "cat": "Quantité et mesure"
+  },
+  {
+   "en": "hardly any",
+   "fr": "presque pas de",
+   "cat": "Quantité et mesure"
+  },
+  {
+   "en": "a dozen",
+   "fr": "une douzaine",
+   "cat": "Quantité et mesure"
+  },
+  {
+   "en": "a slice",
+   "fr": "une tranche",
+   "cat": "Quantité et mesure"
+  },
+  {
+   "en": "a spoonful",
+   "fr": "une cuillerée",
+   "cat": "Quantité et mesure"
+  },
+  {
+   "en": "to weigh",
+   "fr": "peser",
+   "cat": "Quantité et mesure"
+  },
+  {
+   "en": "to measure",
+   "fr": "mesurer",
+   "cat": "Quantité et mesure"
+  },
+  {
+   "en": "too much",
+   "fr": "trop",
+   "cat": "Quantité et mesure"
+  },
+  {
+   "en": "a quarter",
+   "fr": "un quart",
+   "cat": "Quantité et mesure"
+  },
+  {
+   "en": "a third",
+   "fr": "un tiers",
+   "cat": "Quantité et mesure"
+  },
+  {
+   "en": "twice",
+   "fr": "deux fois",
+   "cat": "Quantité et mesure"
+  },
+  {
+   "en": "at least",
+   "fr": "au moins",
+   "cat": "Quantité et mesure"
+  },
+  {
+   "en": "at most",
+   "fr": "tout au plus",
+   "cat": "Quantité et mesure"
+  },
+  {
+   "en": "a border",
+   "fr": "une frontière",
+   "cat": "Voyage"
+  },
+  {
+   "en": "customs",
+   "fr": "la douane",
+   "cat": "Voyage"
+  },
+  {
+   "en": "a passport",
+   "fr": "un passeport",
+   "cat": "Voyage"
+  },
+  {
+   "en": "a visa",
+   "fr": "un visa",
+   "cat": "Voyage"
+  },
+  {
+   "en": "a departure",
+   "fr": "un départ",
+   "cat": "Voyage"
+  },
+  {
+   "en": "an arrival",
+   "fr": "une arrivée",
+   "cat": "Voyage"
+  },
+  {
+   "en": "a connection",
+   "fr": "une correspondance",
+   "cat": "Voyage"
+  },
+  {
+   "en": "accommodation",
+   "fr": "l'hébergement",
+   "cat": "Voyage"
+  },
+  {
+   "en": "a landmark",
+   "fr": "un monument, un repère",
+   "cat": "Voyage"
+  },
+  {
+   "en": "a souvenir",
+   "fr": "un souvenir (objet)",
+   "cat": "Voyage"
+  },
+  {
+   "en": "to book",
+   "fr": "réserver",
+   "cat": "Voyage"
+  },
+  {
+   "en": "to pack",
+   "fr": "faire ses bagages",
+   "cat": "Voyage"
+  },
+  {
+   "en": "to board",
+   "fr": "embarquer",
+   "cat": "Voyage"
+  },
+  {
+   "en": "a delay at the airport",
+   "fr": "un retard à l'aéroport",
+   "cat": "Voyage"
+  },
+  {
+   "en": "a round trip",
+   "fr": "un aller-retour",
+   "cat": "Voyage"
+  },
+  {
+   "en": "a guidebook",
+   "fr": "un guide",
+   "cat": "Voyage"
+  },
+  {
+   "en": "a crossroads",
+   "fr": "un carrefour",
+   "cat": "En ville"
+  },
+  {
+   "en": "a roundabout",
+   "fr": "un rond-point",
+   "cat": "En ville"
+  },
+  {
+   "en": "a traffic jam",
+   "fr": "un embouteillage",
+   "cat": "En ville"
+  },
+  {
+   "en": "a pedestrian",
+   "fr": "un piéton",
+   "cat": "En ville"
+  },
+  {
+   "en": "a lane",
+   "fr": "une voie",
+   "cat": "En ville"
+  },
+  {
+   "en": "a council",
+   "fr": "un conseil municipal",
+   "cat": "En ville"
+  },
+  {
+   "en": "a suburb",
+   "fr": "une banlieue",
+   "cat": "En ville"
+  },
+  {
+   "en": "a district",
+   "fr": "un quartier",
+   "cat": "En ville"
+  },
+  {
+   "en": "a town hall",
+   "fr": "une mairie",
+   "cat": "En ville"
+  },
+  {
+   "en": "a fountain",
+   "fr": "une fontaine",
+   "cat": "En ville"
+  },
+  {
+   "en": "a gate",
+   "fr": "un portail",
+   "cat": "En ville"
+  },
+  {
+   "en": "a yard",
+   "fr": "une cour",
+   "cat": "En ville"
+  },
+  {
+   "en": "a shelter",
+   "fr": "un abri",
+   "cat": "En ville"
+  },
+  {
+   "en": "a warehouse",
+   "fr": "un entrepôt",
+   "cat": "En ville"
+  },
+  {
+   "en": "a lift",
+   "fr": "un ascenseur",
+   "cat": "En ville"
+  },
+  {
+   "en": "a queue",
+   "fr": "une file d'attente",
+   "cat": "En ville"
+  },
+  {
+   "en": "a term",
+   "fr": "un trimestre",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "a report",
+   "fr": "un bulletin",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "a grade",
+   "fr": "une note",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "a degree",
+   "fr": "un diplôme universitaire",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "a lecture",
+   "fr": "un cours magistral",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "revision",
+   "fr": "les révisions",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "an exam",
+   "fr": "un examen",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "to pass an exam",
+   "fr": "réussir un examen",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "to revise",
+   "fr": "réviser",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "a tutor",
+   "fr": "un professeur particulier",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "a boarding school",
+   "fr": "un internat",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "a deadline for the essay",
+   "fr": "une date limite pour le devoir",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "a classmate",
+   "fr": "un camarade de classe",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "to cheat",
+   "fr": "tricher",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "a valley",
+   "fr": "une vallée",
+   "cat": "La nature"
+  },
+  {
+   "en": "a glacier",
+   "fr": "un glacier",
+   "cat": "La nature"
+  },
+  {
+   "en": "a meadow",
+   "fr": "une prairie",
+   "cat": "La nature"
+  },
+  {
+   "en": "a thorn",
+   "fr": "une épine",
+   "cat": "La nature"
+  },
+  {
+   "en": "a root",
+   "fr": "une racine",
+   "cat": "La nature"
+  },
+  {
+   "en": "a trunk",
+   "fr": "un tronc",
+   "cat": "La nature"
+  },
+  {
+   "en": "a seed",
+   "fr": "une graine",
+   "cat": "La nature"
+  },
+  {
+   "en": "a flock",
+   "fr": "un troupeau d'oiseaux",
+   "cat": "La nature"
+  },
+  {
+   "en": "a herd",
+   "fr": "un troupeau",
+   "cat": "La nature"
+  },
+  {
+   "en": "a nest",
+   "fr": "un nid",
+   "cat": "La nature"
+  },
+  {
+   "en": "prey",
+   "fr": "une proie",
+   "cat": "La nature"
+  },
+  {
+   "en": "a predator",
+   "fr": "un prédateur",
+   "cat": "La nature"
+  },
+  {
+   "en": "a path",
+   "fr": "un sentier",
+   "cat": "La nature"
+  },
+  {
+   "en": "a peak",
+   "fr": "un sommet",
+   "cat": "La nature"
+  },
+  {
+   "en": "a pond",
+   "fr": "un étang",
+   "cat": "La nature"
+  },
+  {
+   "en": "mud",
+   "fr": "la boue",
+   "cat": "La nature"
+  },
+  {
+   "en": "actually",
+   "fr": "en fait (et non actuellement)",
+   "cat": "Faux amis"
+  },
+  {
+   "en": "eventually",
+   "fr": "finalement (et non éventuellement)",
+   "cat": "Faux amis"
+  },
+  {
+   "en": "to attend",
+   "fr": "assister à (et non attendre)",
+   "cat": "Faux amis"
+  },
+  {
+   "en": "sensitive",
+   "fr": "sensible (et non sensé)",
+   "cat": "Faux amis"
+  },
+  {
+   "en": "to assist",
+   "fr": "aider (et non assister à)",
+   "cat": "Faux amis"
+  },
+  {
+   "en": "a deception",
+   "fr": "une tromperie (et non une déception)",
+   "cat": "Faux amis"
+  },
+  {
+   "en": "to resume",
+   "fr": "reprendre (et non résumer)",
+   "cat": "Faux amis"
+  },
+  {
+   "en": "large",
+   "fr": "vaste (et non large)",
+   "cat": "Faux amis"
+  },
+  {
+   "en": "a notice",
+   "fr": "un avis (et non une notice)",
+   "cat": "Faux amis"
+  },
+  {
+   "en": "to support",
+   "fr": "soutenir (et non supporter)",
+   "cat": "Faux amis"
+  },
+  {
+   "en": "currently",
+   "fr": "actuellement",
+   "cat": "Faux amis"
+  },
+  {
+   "en": "a conference",
+   "fr": "un congrès (et non une conférence)",
+   "cat": "Faux amis"
+  },
+  {
+   "en": "to ignore",
+   "fr": "passer outre (et non ignorer)",
+   "cat": "Faux amis"
+  },
+  {
+   "en": "a chance",
+   "fr": "une occasion (et non seulement un hasard)",
+   "cat": "Faux amis"
+  },
+  {
+   "en": "an engine",
+   "fr": "un moteur (et non un engin)",
+   "cat": "Faux amis"
+  },
+  {
+   "en": "a phrase",
+   "fr": "une expression (et non une phrase)",
+   "cat": "Faux amis"
+  },
+  {
+   "en": "to rest",
+   "fr": "se reposer (et non rester)",
+   "cat": "Faux amis"
+  },
+  {
+   "en": "a law",
+   "fr": "une loi",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "a debate",
+   "fr": "un débat",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "a court",
+   "fr": "un tribunal",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "a witness",
+   "fr": "un témoin",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "a trial",
+   "fr": "un procès",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "a right",
+   "fr": "un droit",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "a citizen",
+   "fr": "un citoyen",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "an election",
+   "fr": "une élection",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "to vote",
+   "fr": "voter",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "a mayor",
+   "fr": "un maire",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "a government",
+   "fr": "un gouvernement",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "a parliament",
+   "fr": "un parlement",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "a rule",
+   "fr": "une règle",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "to forbid",
+   "fr": "interdire",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "a fine",
+   "fr": "une amende",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "a punishment",
+   "fr": "une punition",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "justice",
+   "fr": "la justice",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "equality",
+   "fr": "l'égalité",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "freedom",
+   "fr": "la liberté",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "a victim",
+   "fr": "une victime",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "an oath",
+   "fr": "un serment",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "a jury",
+   "fr": "un jury",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "guilty",
+   "fr": "coupable",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "innocent",
+   "fr": "innocent",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "a hearing",
+   "fr": "une audience",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "to appeal",
+   "fr": "faire appel",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "a complaint",
+   "fr": "une plainte",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "a neighbour",
+   "fr": "un voisin",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "a community",
+   "fr": "une communauté",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "a charity",
+   "fr": "une association caritative",
+   "cat": "Vie civique"
+  },
+  {
+   "en": "anxious",
+   "fr": "anxieux",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "confident",
+   "fr": "sûr de soi",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "disappointed",
+   "fr": "déçu",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "grateful",
+   "fr": "reconnaissant",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "jealous",
+   "fr": "jaloux",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "nervous",
+   "fr": "nerveux",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "relieved to hear it",
+   "fr": "soulagé de l'entendre",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "ashamed",
+   "fr": "honteux",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "delighted",
+   "fr": "ravi",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "frustrated",
+   "fr": "frustré",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "curious",
+   "fr": "curieux",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "overwhelmed",
+   "fr": "dépassé",
+   "cat": "Sentiments"
   }
  ],
  "p1": [

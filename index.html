@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Word Rocket">
+<meta name="theme-color" content="#0E0A24">
+<title>Word Rocket</title>
+<style>
+:root{
+  --void:#0E0A24; --deep:#190F3D; --panel:#251656; --edge:#3B2780;
+  --cyan:#3EE8D8; --amber:#FFC14D; --coral:#FF6B7A; --violet:#B48CFF;
+  --cream:#F2EEFF; --dim:#9D8FD4;
+  --round: ui-rounded,"SF Pro Rounded","Hiragino Maru Gothic ProN",-apple-system,
+           BlinkMacSystemFont,"Segoe UI Variable Display","Segoe UI",system-ui,sans-serif;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;margin:0;padding:0}
+html{height:100%}
+body{
+  min-height:100%;font-family:var(--round);color:var(--cream);background:var(--void);
+  background-image:
+    radial-gradient(2px 2px at 12% 18%, #fff6 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 78% 9%, #fff5 50%, transparent 51%),
+    radial-gradient(2px 2px at 64% 34%, #fff4 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 24% 52%, #fff5 50%, transparent 51%),
+    radial-gradient(2px 2px at 88% 61%, #fff4 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 42% 77%, #fff5 50%, transparent 51%),
+    radial-gradient(2px 2px at 8% 88%, #fff4 50%, transparent 51%),
+    radial-gradient(1.5px 1.5px at 70% 93%, #fff5 50%, transparent 51%),
+    radial-gradient(ellipse at 50% -10%, #2E1B6B 0%, transparent 60%),
+    linear-gradient(#0E0A24,#140C30);
+  background-attachment:fixed;
+  -webkit-font-smoothing:antialiased;overscroll-behavior:none;
+}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;font-family:var(--round)}
+.wrap{max-width:560px;margin:0 auto;padding:calc(env(safe-area-inset-top) + 14px) 16px
+      calc(env(safe-area-inset-bottom) + 22px)}
+.screen{display:none} .screen.on{display:block}
+
+/* ---------- blocs ---------- */
+.bar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:18px}
+.brand{font-size:19px;font-weight:800;letter-spacing:-.02em}
+.brand em{font-style:normal;color:var(--cyan)}
+.icon-btn{width:40px;height:40px;border-radius:13px;background:var(--panel);
+  border:2px solid var(--edge);display:grid;place-items:center;font-size:17px}
+
+.pill{display:inline-flex;align-items:center;gap:6px;background:var(--panel);
+  border:2px solid var(--edge);border-radius:999px;padding:5px 12px;font-size:13.5px;font-weight:600}
+
+/* fusée */
+.gauge{position:relative;height:120px;margin:4px 0 22px;border-radius:20px;
+  background:linear-gradient(#1C1047,#120A33);border:2px solid var(--edge);overflow:hidden}
+.gauge .fill{position:absolute;left:0;bottom:0;top:0;background:
+  linear-gradient(90deg,#2A1A63,#3B2585);transition:width .7s cubic-bezier(.3,1.4,.5,1)}
+.gauge .rocket{position:absolute;bottom:0;top:0;display:grid;place-items:center;
+  font-size:34px;transition:left .7s cubic-bezier(.3,1.4,.5,1);transform:translateX(-50%)}
+.gauge .lbl{position:absolute;left:14px;top:12px;font-size:13px;color:var(--dim);font-weight:600}
+.gauge .num{position:absolute;left:14px;bottom:12px;font-size:30px;font-weight:800;letter-spacing:-.03em}
+.gauge .num small{font-size:14px;font-weight:600;color:var(--dim)}
+
+/* joueurs */
+.players{display:flex;gap:10px;margin-bottom:18px}
+.pcard{flex:1;border-radius:18px;padding:13px;border:3px solid var(--edge);
+  background:var(--panel);text-align:left;position:relative;transition:transform .12s}
+.pcard:active{transform:scale(.97)}
+.pcard.on{border-color:var(--cyan);background:#1E3F5C}
+.pcard .nm{font-weight:800;font-size:16.5px;margin-bottom:2px}
+.pcard .lv{font-size:12.5px;color:var(--dim);font-weight:600}
+.pcard .st{position:absolute;right:12px;top:12px;font-size:13px;font-weight:700;color:var(--amber)}
+
+/* modes */
+.modes{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.mode{border-radius:20px;padding:16px 14px;text-align:left;border:3px solid transparent;
+  transition:transform .12s;min-height:104px;display:flex;flex-direction:column;justify-content:space-between}
+.mode:active{transform:scale(.96)}
+.mode .em{font-size:27px;line-height:1}
+.mode b{display:block;font-size:16.5px;font-weight:800;margin-top:8px}
+.mode small{display:block;font-size:12.5px;opacity:.82;font-weight:600;line-height:1.3}
+.m1{background:#1D3A6B;border-color:#2E5AA8}
+.m2{background:#5A2340;border-color:#9B3A68}
+.m3{background:#1C4A42;border-color:#2C7A68}
+.m4{background:#4A2A6B;border-color:#7A48AB}
+.m5{background:#5E3A14;border-color:#9B6220;grid-column:1 / -1;min-height:auto;
+  flex-direction:row;align-items:center;gap:14px}
+.m5 b{margin-top:0}
+
+/* jeu */
+.hud{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;gap:10px}
+.track{flex:1;height:10px;border-radius:99px;background:#2A1A5E;overflow:hidden}
+.track i{display:block;height:100%;background:var(--cyan);transition:width .3s;border-radius:99px}
+.timer{font-size:20px;font-weight:800;font-variant-numeric:tabular-nums}
+.timer.low{color:var(--coral)}
+
+.turnbar{text-align:center;font-weight:800;font-size:15px;padding:9px;border-radius:14px;
+  margin-bottom:14px;border:2px solid}
+.t0{background:#1D3A6B;border-color:#2E5AA8} .t1{background:#5A2340;border-color:#9B3A68}
+
+.stage{border-radius:24px;background:linear-gradient(#22144F,#1A0F3E);
+  border:3px solid var(--edge);padding:26px 18px;text-align:center;margin-bottom:14px}
+.ask{font-size:13px;color:var(--dim);font-weight:700;margin-bottom:10px}
+.word{font-size:38px;font-weight:800;letter-spacing:-.025em;line-height:1.1;word-break:break-word}
+.word.fr{font-size:30px;color:var(--amber)}
+.speak{margin-top:16px;width:68px;height:68px;border-radius:50%;background:var(--cyan);
+  color:#06201D;font-size:28px;display:inline-grid;place-items:center;
+  box-shadow:0 5px 0 #1FA396;transition:transform .1s,box-shadow .1s}
+.speak:active{transform:translateY(4px);box-shadow:0 1px 0 #1FA396}
+.speak.big{width:104px;height:104px;font-size:44px}
+
+.opts{display:grid;gap:10px}
+.opt{border-radius:17px;padding:15px 16px;font-size:18px;font-weight:700;text-align:center;
+  background:var(--panel);border:3px solid var(--edge);box-shadow:0 4px 0 #130B33;
+  transition:transform .09s,box-shadow .09s}
+.opt:active{transform:translateY(3px);box-shadow:0 1px 0 #130B33}
+.opt.good{background:#1C5B3C;border-color:var(--cyan);box-shadow:0 4px 0 #0E3B26}
+.opt.bad{background:#5B1C2B;border-color:var(--coral);box-shadow:0 4px 0 #3B0E19;opacity:.85}
+.opt[disabled]{cursor:default}
+
+/* paires */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.tile{border-radius:15px;padding:16px 8px;min-height:72px;display:grid;place-items:center;
+  text-align:center;font-weight:700;font-size:15.5px;background:var(--panel);
+  border:3px solid var(--edge);box-shadow:0 4px 0 #130B33;line-height:1.25}
+.tile.sel{border-color:var(--amber);background:#4A3410}
+.tile.done{opacity:.25;box-shadow:none;border-style:dashed}
+.tile.bad{background:#5B1C2B;border-color:var(--coral)}
+.tile.en{font-size:17px}
+
+/* fin */
+.result{text-align:center;padding:14px 0 4px}
+.result .big{font-size:66px;line-height:1.1}
+.result h2{font-size:28px;font-weight:800;margin:8px 0 6px;letter-spacing:-.02em}
+.result p{color:var(--dim);font-size:15.5px;font-weight:600;margin-bottom:18px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:20px}
+.tag{background:var(--panel);border:2px solid var(--edge);border-radius:999px;
+  padding:7px 13px;font-size:13.5px;font-weight:700}
+.tag.up{border-color:var(--cyan);color:var(--cyan)}
+
+.review{text-align:left;margin:18px 0}
+.review h3{font-size:14px;color:var(--dim);margin-bottom:9px;font-weight:700}
+.rrow{display:flex;align-items:center;gap:11px;padding:10px 12px;border-radius:14px;
+  background:#2A1A5E;margin-bottom:7px}
+.rrow b{font-size:16.5px;font-weight:800;flex:1}
+.rrow span{font-size:14px;color:var(--amber);font-weight:600;text-align:right}
+.rrow .mini{width:34px;height:34px;border-radius:50%;background:var(--cyan);color:#06201D;
+  display:grid;place-items:center;font-size:15px;flex:0 0 auto}
+
+.cta{width:100%;border-radius:18px;padding:16px;font-size:18px;font-weight:800;
+  background:var(--amber);color:#2A1A00;box-shadow:0 5px 0 #B8862A;margin-top:4px;
+  transition:transform .1s,box-shadow .1s}
+.cta:active{transform:translateY(4px);box-shadow:0 1px 0 #B8862A}
+.cta.ghost{background:transparent;color:var(--dim);box-shadow:none;border:2px solid var(--edge);
+  font-size:15.5px;padding:13px;margin-top:10px}
+.cta.ghost:active{transform:none}
+
+/* réglages */
+.field{margin-bottom:16px}
+.field label{display:block;font-size:13px;color:var(--dim);font-weight:700;margin-bottom:7px}
+.field input,.field select{width:100%;padding:13px;border-radius:14px;background:var(--panel);
+  border:2px solid var(--edge);color:var(--cream);font-size:16px;font-family:var(--round);font-weight:600}
+.note{background:#2A1A5E;border-radius:16px;padding:14px;font-size:14px;line-height:1.5;
+  color:var(--dim);font-weight:500;margin-bottom:18px}
+.note b{color:var(--cream)}
+.empty{text-align:center;color:var(--dim);font-weight:600;padding:30px 10px;font-size:15.5px;line-height:1.5}
+
+@keyframes pop{0%{transform:scale(.9);opacity:0}100%{transform:scale(1);opacity:1}}
+@media (prefers-reduced-motion:no-preference){.stage,.result{animation:pop .22s ease-out}}
+@keyframes shake{10%,90%{transform:translateX(-3px)}30%,70%{transform:translateX(5px)}50%{transform:translateX(-5px)}}
+.shake{animation:shake .32s}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ================= ACCUEIL ================= -->
+<section class="screen on" id="s-home">
+  <div class="bar">
+    <div class="brand">Word <em>Rocket</em></div>
+    <button class="icon-btn" id="toSettings" aria-label="Réglages">⚙</button>
+  </div>
+
+  <div class="gauge">
+    <div class="fill" id="gFill"></div>
+    <div class="rocket" id="gRocket">🚀</div>
+    <div class="lbl" id="gLbl">Mots maîtrisés</div>
+    <div class="num" id="gNum"></div>
+  </div>
+
+  <div class="players" id="players"></div>
+  <div class="modes" id="modes">
+    <button class="mode m1" data-mode="quiz">
+      <span class="em">🎯</span><span><b>Entraînement</b><small>Dix mots, à ton rythme</small></span></button>
+    <button class="mode m3" data-mode="listen">
+      <span class="em">👂</span><span><b>Oreille</b><small>Écoute et reconnais</small></span></button>
+    <button class="mode m2" data-mode="chrono">
+      <span class="em">⏱</span><span><b>Chrono</b><small>Un maximum en 60 s</small></span></button>
+    <button class="mode m4" data-mode="pairs">
+      <span class="em">🧩</span><span><b>Paires</b><small>Relie les deux langues</small></span></button>
+    <button class="mode m5" data-mode="duel">
+      <span class="em">⚔️</span><span><b>Duel</b><small>Un contre un sur le même téléphone</small></span></button>
+  </div>
+  <p id="homeMsg" class="note" style="margin-top:18px;display:none"></p>
+</section>
+
+<!-- ================= JEU ================= -->
+<section class="screen" id="s-game">
+  <div class="bar">
+    <button class="icon-btn" id="quit" aria-label="Quitter">✕</button>
+    <div class="track"><i id="prog"></i></div>
+    <div class="timer" id="timer"></div>
+  </div>
+  <div id="turnbar"></div>
+  <div id="play"></div>
+</section>
+
+<!-- ================= FIN ================= -->
+<section class="screen" id="s-end">
+  <div class="result" id="endBox"></div>
+</section>
+
+<!-- ================= RÉGLAGES ================= -->
+<section class="screen" id="s-set">
+  <div class="bar">
+    <button class="icon-btn" id="backHome" aria-label="Retour">←</button>
+    <div class="brand">Réglages</div>
+    <div style="width:40px"></div>
+  </div>
+
+  <div id="pForm"></div>
+
+  <div class="note" id="audioNote"></div>
+  <button class="cta ghost" id="testAudio">Tester le son</button>
+  <button class="cta ghost" id="resetAll">Tout remettre à zéro</button>
+</section>
+
+</div>
+
+<script>
+/* ========================================================= */
+/* Stockage                                                  */
+/* ========================================================= */
+const mem={};
+const S={
+  get(k,d){try{const v=localStorage.getItem('wr_'+k);return v===null?d:JSON.parse(v)}catch(e){return k in mem?mem[k]:d}},
+  set(k,v){try{localStorage.setItem('wr_'+k,JSON.stringify(v))}catch(e){mem[k]=v}}
+};
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const today=()=>Math.floor(Date.now()/864e5);
+const shuffle=a=>a.slice().sort(()=>Math.random()-.5);
+const slug=w=>w.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+
+/* ========================================================= */
+/* Son : fichiers d'abord, voix du téléphone en secours      */
+/* ========================================================= */
+const AUDIO_DIR='audio/';
+const el=new Audio(); el.preload='auto';
+let audioUnlocked=false, packWorks=null;
+
+function unlockAudio(){
+  if(audioUnlocked)return; audioUnlocked=true;
+  try{el.src='data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4LjEyLjEwMAAAAAAAAAAAAAAA//tAwAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAACAAABhgC7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7vd3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d//////////////////////////8AAAAATGF2YzU4LjIyAAAAAAAAAAAAAAAAJAQKAAAAAAAAAYZgjqkSAAAAAAD/+xDEAAPAAAGkAAAAIAAANIAAAARMQU1FMy4xMDBVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV';
+      el.play().then(()=>{el.pause()}).catch(()=>{});}catch(e){}
+  try{if(!ac)ac=new (window.AudioContext||window.webkitAudioContext)();}catch(e){}
+}
+
+let sayToken=0;
+function say(word){
+  unlockAudio();
+  const token=++sayToken;
+  let fell=false;
+  const back=()=>{ if(fell||token!==sayToken)return; fell=true; packWorks=false; voice(word); };
+  el.onerror=back;
+  try{
+    el.src=AUDIO_DIR+slug(word)+'.mp3';
+    const p=el.play();
+    if(p&&p.catch)p.catch(back); else packWorks=true;
+  }catch(e){back()}
+}
+function voice(word){
+  try{
+    const u=new SpeechSynthesisUtterance(word.replace(/^(to|a|an|the)\s+/i,''));
+    const vs=speechSynthesis.getVoices();
+    const v=vs.find(x=>/en-GB/i.test(x.lang))||vs.find(x=>/^en/i.test(x.lang));
+    if(v)u.voice=v; u.lang=(v&&v.lang)||'en-GB'; u.rate=.9;
+    speechSynthesis.cancel(); speechSynthesis.speak(u);
+  }catch(e){}
+}
+try{speechSynthesis.onvoiceschanged=()=>{}}catch(e){}
+
+/* petits bruitages synthétisés : aucun fichier, jamais de surprise */
+let ac=null;
+function tone(f,d,type,delay,gain){
+  if(!ac)return;
+  try{
+    const o=ac.createOscillator(),g=ac.createGain(),t=ac.currentTime+(delay||0);
+    o.type=type||'sine'; o.frequency.setValueAtTime(f,t);
+    g.gain.setValueAtTime(0,t);
+    g.gain.linearRampToValueAtTime(gain||.14,t+.012);
+    g.gain.exponentialRampToValueAtTime(.0001,t+d);
+    o.connect(g); g.connect(ac.destination); o.start(t); o.stop(t+d+.03);
+  }catch(e){}
+}
+const sfxGood=()=>{tone(680,.09,'triangle',0,.13);tone(1020,.14,'triangle',.08,.11)};
+const sfxBad =()=>{tone(180,.2,'square',0,.07);tone(140,.22,'square',.06,.06)};
+const sfxWin =()=>[523,659,784,1047,1319].forEach((f,i)=>tone(f,.18,'triangle',i*.095,.12));
+const sfxTick=()=>tone(440,.05,'sine',0,.05);
+
+/* ========================================================= */
+/* Données                                                   */
+/* ========================================================= */
+let WORDS={1:[],2:[]};
+const defaultPlayers=[
+  {name:'Joueur 1',level:1,srs:{},stars:0,streak:0,last:0},
+  {name:'Joueur 2',level:2,srs:{},stars:0,streak:0,last:0}
+];
+let P=S.get('players',null)||defaultPlayers;
+let who=S.get('who',0);
+
+function save(){S.set('players',P);S.set('who',who)}
+function me(){return P[who]}
+function pool(p){return WORDS[String(p.level)]||[]}
+
+/* Leitner : 5 cases, revue à 0 / 1 / 3 / 7 / 16 jours */
+const STEPS=[0,1,3,7,16];
+function box(p,w){const s=p.srs[w.en];return s?s.b:-1}
+function due(p,w){const s=p.srs[w.en];return !s||s.d<=today()}
+function mastered(p){return pool(p).filter(w=>box(p,w)>=3).length}
+
+function grade(p,w,ok){
+  const s=p.srs[w.en]||{b:0,d:0};
+  s.b=ok?Math.min(4,s.b+1):0;
+  s.d=today()+STEPS[s.b];
+  p.srs[w.en]=s;
+  return s.b;
+}
+function touchStreak(p){
+  const t=today();
+  if(p.last===t)return;
+  p.streak=(p.last===t-1)?p.streak+1:1;
+  p.last=t;
+}
+
+/* file de révision : ce qui est dû d'abord, puis du neuf, jamais du déjà su */
+function queue(p,n){
+  const all=pool(p);
+  if(!all.length)return [];
+  const seen=all.filter(w=>p.srs[w.en]);
+  const fresh=all.filter(w=>!p.srs[w.en]);
+  const ready=shuffle(seen.filter(w=>due(p,w)));
+  const q=ready.slice(0,n);
+  for(const w of shuffle(fresh)){ if(q.length>=n)break; q.push(w); }
+  if(q.length<n)for(const w of shuffle(seen)){ if(q.length>=n)break; if(!q.includes(w))q.push(w); }
+  return shuffle(q);
+}
+function distractors(p,w,k,field){
+  const all=pool(p);
+  const same=shuffle(all.filter(x=>x.cat===w.cat&&x.en!==w.en));
+  const rest=shuffle(all.filter(x=>x.cat!==w.cat&&x.en!==w.en));
+  const out=[];
+  for(const x of same.concat(rest)){
+    if(out.length>=k)break;
+    if(!out.some(y=>y[field]===x[field])&&x[field]!==w[field])out.push(x);
+  }
+  return out;
+}
+
+/* ========================================================= */
+/* Navigation                                                */
+/* ========================================================= */
+const screens=['s-home','s-game','s-end','s-set'];
+function show(id){screens.forEach(s=>document.getElementById(s).classList.toggle('on',s===id));window.scrollTo(0,0)}
+document.getElementById('toSettings').onclick=()=>{renderSettings();show('s-set')};
+document.getElementById('backHome').onclick=()=>{renderHome();show('s-home')};
+document.getElementById('quit').onclick=()=>{stopTimer();renderHome();show('s-home')};
+
+/* ========================================================= */
+/* Accueil                                                   */
+/* ========================================================= */
+function renderHome(){
+  const p=me(),n=pool(p).length,m=mastered(p);
+  const pct=n?Math.round(m/n*100):0;
+  document.getElementById('gFill').style.width=pct+'%';
+  document.getElementById('gRocket').style.left=Math.max(8,Math.min(94,pct))+'%';
+  document.getElementById('gNum').innerHTML=`${m} <small>/ ${n} mots · niveau ${p.level}</small>`;
+  document.getElementById('gLbl').textContent=
+    p.streak>1?`${p.name} · ${p.streak} jours d'affilée 🔥`:`${p.name} · mots maîtrisés`;
+
+  document.getElementById('players').innerHTML=P.map((x,i)=>
+    `<button class="pcard${i===who?' on':''}" data-p="${i}">
+       <div class="nm">${esc(x.name)}</div>
+       <div class="lv">Niveau ${x.level} · ${mastered(x)} mots</div>
+       <div class="st">${x.stars||0}★</div></button>`).join('');
+
+  const msg=document.getElementById('homeMsg');
+  if(!n){msg.style.display='block';
+    msg.innerHTML="La liste de mots n'a pas pu être chargée. Ouvre l'application depuis son adresse internet, pas directement depuis le fichier.";}
+  else msg.style.display='none';
+}
+document.getElementById('players').onclick=e=>{
+  const b=e.target.closest('[data-p]');if(!b)return;
+  who=+b.dataset.p;save();unlockAudio();renderHome();
+};
+document.getElementById('modes').onclick=e=>{
+  const b=e.target.closest('[data-mode]');if(!b)return;
+  unlockAudio();start(b.dataset.mode);
+};
+
+/* ========================================================= */
+/* Moteur de jeu                                             */
+/* ========================================================= */
+let G=null, tId=null;
+const playEl=document.getElementById('play');
+const turnEl=document.getElementById('turnbar');
+
+function stopTimer(){if(tId){clearInterval(tId);tId=null}document.getElementById('timer').textContent=''}
+
+function start(mode){
+  if(!pool(me()).length){renderHome();return}
+  if(mode==='duel'&&P.length<2){return}
+  G={mode,i:0,ok:0,ko:0,wrong:[],ups:[],t0:Date.now(),
+     duel:mode==='duel'?{turn:0,score:[0,0]}:null};
+
+  if(mode==='pairs'){G.pairs=queue(me(),5);}
+  else if(mode==='chrono'){G.q=queue(me(),60);G.n=60;}
+  else if(mode==='duel'){G.qa=queue(P[0],5);G.qb=queue(P[1],5);G.n=10;}
+  else {G.q=queue(me(),10);G.n=10;}
+
+  show('s-game');
+  if(mode==='chrono')runChrono(); else stopTimer();
+  step();
+}
+
+function progress(frac){document.getElementById('prog').style.width=Math.round(frac*100)+'%'}
+
+function runChrono(){
+  let left=60;
+  document.getElementById('timer').textContent=left;
+  tId=setInterval(()=>{
+    left--;
+    const t=document.getElementById('timer');
+    t.textContent=left; t.classList.toggle('low',left<=10);
+    if(left<=5&&left>0)sfxTick();
+    if(left<=0){stopTimer();finish()}
+  },1000);
+}
+
+function step(){
+  if(!G)return;
+  if(G.mode==='pairs')return renderPairs();
+  if(G.mode==='duel'){
+    if(G.i>=G.n)return finish();
+    G.duel.turn=G.i%2;
+    const list=G.duel.turn===0?G.qa:G.qb;
+    const w=list[Math.floor(G.i/2)];
+    const player=P[G.duel.turn];
+    turnEl.innerHTML=`<div class="turnbar t${G.duel.turn}">Au tour de ${esc(player.name)} — ${G.duel.score[0]} / ${G.duel.score[1]}</div>`;
+    progress(G.i/G.n);
+    return renderQuestion(w,player,'enfr');
+  }
+  turnEl.innerHTML='';
+  if(G.mode!=='chrono'&&G.i>=G.n)return finish();
+  if(G.mode==='chrono'&&G.i>=G.q.length)G.q=G.q.concat(queue(me(),20));
+  progress(G.mode==='chrono'?(G.ok%10)/10:G.i/G.n);
+  const w=G.q[G.i];
+  const dir=G.mode==='listen'?'audio':(G.i%3===2?'fren':'enfr');
+  renderQuestion(w,me(),dir);
+}
+
+function renderQuestion(w,player,dir){
+  if(!w)return finish();
+  playEl.dataset.done='';
+  const field=(dir==='fren')?'en':(dir==='audio'?'en':'fr');
+  const opts=shuffle([w].concat(distractors(player,w,3,field)));
+
+  let head;
+  if(dir==='audio'){
+    head=`<div class="ask">Écoute, puis choisis le mot</div>
+          <button class="speak big" id="sp">🔊</button>`;
+  }else if(dir==='fren'){
+    head=`<div class="ask">Comment dit-on en anglais&nbsp;?</div>
+          <div class="word fr">${esc(w.fr)}</div>`;
+  }else{
+    head=`<div class="ask">Que veut dire&nbsp;?</div>
+          <div class="word">${esc(w.en)}</div>
+          <button class="speak" id="sp">🔊</button>`;
+  }
+
+  playEl.innerHTML=`<div class="stage">${head}</div>
+    <div class="opts">${opts.map(o=>
+      `<button class="opt" data-k="${esc(o.en)}">${esc(o[field])}</button>`).join('')}</div>`;
+
+  const sp=document.getElementById('sp');
+  if(sp)sp.onclick=()=>say(w.en);
+  if(dir==='audio'||dir==='enfr')setTimeout(()=>say(w.en),260);
+
+  playEl.querySelector('.opts').onclick=e=>{
+    const b=e.target.closest('.opt'); if(!b||playEl.dataset.done)return;
+    playEl.dataset.done='1';
+    const ok=b.dataset.k===w.en;
+    playEl.querySelectorAll('.opt').forEach(x=>{
+      x.disabled=true;
+      if(x.dataset.k===w.en)x.classList.add('good');
+      else if(x===b)x.classList.add('bad');
+    });
+    if(ok){sfxGood();G.ok++;player.stars=(player.stars||0)+1;}
+    else{sfxBad();G.ko++;G.wrong.push(w);playEl.querySelector('.stage').classList.add('shake');}
+
+    const nb=grade(player,w,ok);
+    if(ok&&nb===3)G.ups.push(w);
+    if(G.duel&&ok)G.duel.score[G.duel.turn]++;
+    save();
+
+    if(!ok&&dir!=='fren')setTimeout(()=>say(w.en),320);
+    setTimeout(()=>{playEl.dataset.done='';G.i++;step()}, ok?620:1150);
+  };
+}
+
+/* --- paires --- */
+function renderPairs(){
+  if(!G.state){
+    const left=shuffle(G.pairs.map(w=>({k:w.en,t:w.en,en:1})));
+    const right=shuffle(G.pairs.map(w=>({k:w.en,t:w.fr,en:0})));
+    G.state={tiles:shuffle(left.concat(right)),sel:null,done:0};
+  }
+  turnEl.innerHTML='';
+  progress(G.state.done/G.pairs.length);
+  document.getElementById('timer').textContent='';
+  playEl.innerHTML=`<div class="stage" style="padding:16px">
+      <div class="ask" style="margin:0">Relie chaque mot anglais à sa traduction</div></div>
+    <div class="grid">${G.state.tiles.map((t,i)=>
+      `<button class="tile${t.en?' en':''}${t.off?' done':''}" data-i="${i}">${esc(t.t)}</button>`).join('')}</div>`;
+
+  playEl.querySelector('.grid').onclick=e=>{
+    const b=e.target.closest('.tile'); if(!b)return;
+    const i=+b.dataset.i, t=G.state.tiles[i];
+    if(t.off)return;
+    if(t.en)say(t.k);
+    if(G.state.sel===null){G.state.sel=i;b.classList.add('sel');return}
+    if(G.state.sel===i){G.state.sel=null;b.classList.remove('sel');return}
+    const a=G.state.tiles[G.state.sel];
+    const prev=playEl.querySelector('.tile.sel');
+    if(a.k===t.k&&a.en!==t.en){
+      sfxGood(); a.off=t.off=true; G.state.done++; G.ok++;
+      const w=G.pairs.find(x=>x.en===t.k);
+      const nb=grade(me(),w,true); if(nb===3)G.ups.push(w);
+      me().stars=(me().stars||0)+1; save();
+      G.state.sel=null;
+      if(G.state.done===G.pairs.length){setTimeout(finish,420);return}
+      renderPairs();
+    }else{
+      sfxBad(); G.ko++; b.classList.add('bad');
+      const s=G.state.sel; G.state.sel=null;
+      setTimeout(()=>{b.classList.remove('bad');if(prev)prev.classList.remove('sel');},420);
+    }
+  };
+}
+
+/* ========================================================= */
+/* Fin de partie                                             */
+/* ========================================================= */
+function finish(){
+  stopTimer();
+  const p=me();
+  touchStreak(p); save();
+  const total=G.ok+G.ko;
+  const pct=total?Math.round(G.ok/total*100):0;
+  let emo='🚀',title='Décollage réussi',line='';
+
+  if(G.mode==='duel'){
+    const [a,b]=G.duel.score;
+    emo = a===b?'🤝':'🏆';
+    title = a===b?'Égalité parfaite':`${esc(P[a>b?0:1].name)} gagne`;
+    line = `${esc(P[0].name)} ${a} — ${b} ${esc(P[1].name)}`;
+  }else if(G.mode==='chrono'){
+    emo = G.ok>=20?'🛸':G.ok>=12?'🚀':'🛰';
+    title = `${G.ok} mots en 60 secondes`;
+    line = pct>=80?'Et presque sans erreur.':`${pct}% de réussite.`;
+  }else{
+    emo = pct>=90?'🌟':pct>=70?'🚀':'🛰';
+    title = pct>=90?'Sans faute ou presque':pct>=70?'Bien joué':'Il reste du carburant à faire';
+    line = `${G.ok} bonnes réponses sur ${total}.`;
+  }
+
+  const tags=[];
+  if(G.ups.length)tags.push(`<span class="tag up">${G.ups.length} mot${G.ups.length>1?'s':''} maîtrisé${G.ups.length>1?'s':''}</span>`);
+  if(p.streak>1)tags.push(`<span class="tag">${p.streak} jours d'affilée 🔥</span>`);
+  tags.push(`<span class="tag">${p.stars||0}★ en tout</span>`);
+
+  let review='';
+  if(G.wrong.length){
+    const seen=[];
+    const rows=G.wrong.filter(w=>{if(seen.includes(w.en))return false;seen.push(w.en);return true})
+      .map(w=>`<div class="rrow"><button class="mini" data-say="${esc(w.en)}">🔊</button>
+        <b>${esc(w.en)}</b><span>${esc(w.fr)}</span></div>`).join('');
+    review=`<div class="review"><h3>À revoir — on les réécoute&nbsp;?</h3>${rows}</div>`;
+  }
+
+  document.getElementById('endBox').innerHTML=`
+    <div class="big">${emo}</div>
+    <h2>${title}</h2>
+    <p>${line}</p>
+    <div class="tags">${tags.join('')}</div>
+    ${review}
+    <button class="cta" id="again">Rejouer</button>
+    <button class="cta ghost" id="home2">Retour au menu</button>`;
+
+  document.getElementById('endBox').onclick=e=>{
+    const s=e.target.closest('[data-say]'); if(s)say(s.dataset.say);
+  };
+  document.getElementById('again').onclick=()=>start(G.mode);
+  document.getElementById('home2').onclick=()=>{renderHome();show('s-home')};
+  if(pct>=70||G.mode==='duel')sfxWin();
+  show('s-end');
+}
+
+/* ========================================================= */
+/* Réglages                                                  */
+/* ========================================================= */
+function renderSettings(){
+  document.getElementById('pForm').innerHTML=P.map((x,i)=>`
+    <div class="field">
+      <label>Joueur ${i+1}</label>
+      <input type="text" data-nm="${i}" value="${esc(x.name)}" maxlength="14" placeholder="Prénom">
+      <select data-lv="${i}" style="margin-top:8px">
+        <option value="1"${x.level==1?' selected':''}>Niveau 1 — primaire</option>
+        <option value="2"${x.level==2?' selected':''}>Niveau 2 — collège</option>
+      </select>
+    </div>`).join('');
+  document.querySelectorAll('[data-nm]').forEach(inp=>inp.onchange=()=>{
+    P[+inp.dataset.nm].name=inp.value.trim()||('Joueur '+(+inp.dataset.nm+1));save();});
+  document.querySelectorAll('[data-lv]').forEach(sel=>sel.onchange=()=>{
+    P[+sel.dataset.lv].level=+sel.value;save();});
+
+  const n=(WORDS['1']||[]).length+(WORDS['2']||[]).length;
+  document.getElementById('audioNote').innerHTML=
+    `<b>${n} mots</b> dans la liste. Les voix sont des fichiers livrés avec l'application : la prononciation est la même sur tous les appareils, et elle fonctionne sans réseau. Si un fichier manque, la voix du téléphone prend le relais pour ce mot.`;
+}
+document.getElementById('testAudio').onclick=()=>{unlockAudio();say('rocket')};
+document.getElementById('resetAll').onclick=()=>{
+  if(!confirm('Effacer les scores et la progression des deux joueurs ?'))return;
+  P=JSON.parse(JSON.stringify(defaultPlayers));who=0;save();renderSettings();renderHome();
+};
+
+/* ========================================================= */
+/* Démarrage                                                 */
+/* ========================================================= */
+document.addEventListener('touchstart',unlockAudio,{once:true,passive:true});
+document.addEventListener('click',unlockAudio,{once:true});
+
+fetch('words.json',{cache:'no-cache'})
+  .then(r=>r.json())
+  .then(d=>{WORDS=d;renderHome();})
+  .catch(()=>{renderHome();});
+renderHome();
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+name: Fabriquer les voix
+
+# Se déclenche dès que la liste de mots change, et peut aussi être lancé
+# à la main depuis l'onglet Actions du dépôt.
+on:
+  push:
+    paths:
+      - "words.json"
+      - "tools/generate_audio.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: voix
+  cancel-in-progress: false
+
+jobs:
+  voix:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installer la synthèse vocale
+        run: pip install --quiet gTTS
+
+      - name: Générer les mots manquants
+        run: python tools/generate_audio.py
+
+      - name: Déposer les nouveaux fichiers
+        run: |
+          git config user.name "Word Rocket"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add audio
+          if git diff --staged --quiet; then
+            echo "Rien de nouveau : aucune voix à ajouter."
+          else
+            git commit -m "Voix mises à jour"
+            git push
+          fi

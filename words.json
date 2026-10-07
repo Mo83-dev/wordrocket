@@ -1,223 +1,1320 @@
 {
-  "1": [
-    {"en": "cat", "fr": "le chat", "cat": "Animaux"},
-    {"en": "dog", "fr": "le chien", "cat": "Animaux"},
-    {"en": "horse", "fr": "le cheval", "cat": "Animaux"},
-    {"en": "rabbit", "fr": "le lapin", "cat": "Animaux"},
-    {"en": "bird", "fr": "l'oiseau", "cat": "Animaux"},
-    {"en": "fish", "fr": "le poisson", "cat": "Animaux"},
-    {"en": "mouse", "fr": "la souris", "cat": "Animaux"},
-    {"en": "bear", "fr": "l'ours", "cat": "Animaux"},
-    {"en": "sheep", "fr": "le mouton", "cat": "Animaux"},
-    {"en": "cow", "fr": "la vache", "cat": "Animaux"},
-    {"en": "duck", "fr": "le canard", "cat": "Animaux"},
-    {"en": "frog", "fr": "la grenouille", "cat": "Animaux"},
-
-    {"en": "red", "fr": "rouge", "cat": "Couleurs"},
-    {"en": "blue", "fr": "bleu", "cat": "Couleurs"},
-    {"en": "green", "fr": "vert", "cat": "Couleurs"},
-    {"en": "yellow", "fr": "jaune", "cat": "Couleurs"},
-    {"en": "black", "fr": "noir", "cat": "Couleurs"},
-    {"en": "white", "fr": "blanc", "cat": "Couleurs"},
-    {"en": "brown", "fr": "marron", "cat": "Couleurs"},
-    {"en": "purple", "fr": "violet", "cat": "Couleurs"},
-    {"en": "orange", "fr": "orange", "cat": "Couleurs"},
-    {"en": "pink", "fr": "rose", "cat": "Couleurs"},
-
-    {"en": "mother", "fr": "la mère", "cat": "Famille"},
-    {"en": "father", "fr": "le père", "cat": "Famille"},
-    {"en": "sister", "fr": "la sœur", "cat": "Famille"},
-    {"en": "brother", "fr": "le frère", "cat": "Famille"},
-    {"en": "grandmother", "fr": "la grand-mère", "cat": "Famille"},
-    {"en": "grandfather", "fr": "le grand-père", "cat": "Famille"},
-    {"en": "uncle", "fr": "l'oncle", "cat": "Famille"},
-    {"en": "aunt", "fr": "la tante", "cat": "Famille"},
-    {"en": "cousin", "fr": "le cousin", "cat": "Famille"},
-    {"en": "baby", "fr": "le bébé", "cat": "Famille"},
-
-    {"en": "bread", "fr": "le pain", "cat": "Nourriture"},
-    {"en": "cheese", "fr": "le fromage", "cat": "Nourriture"},
-    {"en": "milk", "fr": "le lait", "cat": "Nourriture"},
-    {"en": "apple", "fr": "la pomme", "cat": "Nourriture"},
-    {"en": "egg", "fr": "l'œuf", "cat": "Nourriture"},
-    {"en": "water", "fr": "l'eau", "cat": "Nourriture"},
-    {"en": "cake", "fr": "le gâteau", "cat": "Nourriture"},
-    {"en": "strawberry", "fr": "la fraise", "cat": "Nourriture"},
-    {"en": "butter", "fr": "le beurre", "cat": "Nourriture"},
-    {"en": "chicken", "fr": "le poulet", "cat": "Nourriture"},
-    {"en": "soup", "fr": "la soupe", "cat": "Nourriture"},
-    {"en": "honey", "fr": "le miel", "cat": "Nourriture"},
-
-    {"en": "head", "fr": "la tête", "cat": "Le corps"},
-    {"en": "hand", "fr": "la main", "cat": "Le corps"},
-    {"en": "foot", "fr": "le pied", "cat": "Le corps"},
-    {"en": "eye", "fr": "l'œil", "cat": "Le corps"},
-    {"en": "mouth", "fr": "la bouche", "cat": "Le corps"},
-    {"en": "nose", "fr": "le nez", "cat": "Le corps"},
-    {"en": "ear", "fr": "l'oreille", "cat": "Le corps"},
-    {"en": "hair", "fr": "les cheveux", "cat": "Le corps"},
-    {"en": "arm", "fr": "le bras", "cat": "Le corps"},
-    {"en": "leg", "fr": "la jambe", "cat": "Le corps"},
-
-    {"en": "book", "fr": "le livre", "cat": "L'école"},
-    {"en": "pen", "fr": "le stylo", "cat": "L'école"},
-    {"en": "pencil", "fr": "le crayon", "cat": "L'école"},
-    {"en": "teacher", "fr": "le maître", "cat": "L'école"},
-    {"en": "school", "fr": "l'école", "cat": "L'école"},
-    {"en": "chair", "fr": "la chaise", "cat": "L'école"},
-    {"en": "table", "fr": "la table", "cat": "L'école"},
-    {"en": "bag", "fr": "le sac", "cat": "L'école"},
-    {"en": "ruler", "fr": "la règle", "cat": "L'école"},
-    {"en": "paper", "fr": "le papier", "cat": "L'école"},
-
-    {"en": "house", "fr": "la maison", "cat": "La maison"},
-    {"en": "door", "fr": "la porte", "cat": "La maison"},
-    {"en": "window", "fr": "la fenêtre", "cat": "La maison"},
-    {"en": "bed", "fr": "le lit", "cat": "La maison"},
-    {"en": "kitchen", "fr": "la cuisine", "cat": "La maison"},
-    {"en": "garden", "fr": "le jardin", "cat": "La maison"},
-    {"en": "room", "fr": "la pièce", "cat": "La maison"},
-    {"en": "key", "fr": "la clé", "cat": "La maison"},
-
-    {"en": "to run", "fr": "courir", "cat": "Actions"},
-    {"en": "to eat", "fr": "manger", "cat": "Actions"},
-    {"en": "to sleep", "fr": "dormir", "cat": "Actions"},
-    {"en": "to play", "fr": "jouer", "cat": "Actions"},
-    {"en": "to sing", "fr": "chanter", "cat": "Actions"},
-    {"en": "to read", "fr": "lire", "cat": "Actions"},
-    {"en": "to write", "fr": "écrire", "cat": "Actions"},
-    {"en": "to swim", "fr": "nager", "cat": "Actions"},
-    {"en": "to jump", "fr": "sauter", "cat": "Actions"},
-    {"en": "to walk", "fr": "marcher", "cat": "Actions"},
-
-    {"en": "sun", "fr": "le soleil", "cat": "Le temps"},
-    {"en": "rain", "fr": "la pluie", "cat": "Le temps"},
-    {"en": "snow", "fr": "la neige", "cat": "Le temps"},
-    {"en": "wind", "fr": "le vent", "cat": "Le temps"},
-    {"en": "cloud", "fr": "le nuage", "cat": "Le temps"},
-    {"en": "cold", "fr": "froid", "cat": "Le temps"},
-    {"en": "hot", "fr": "chaud", "cat": "Le temps"},
-    {"en": "storm", "fr": "l'orage", "cat": "Le temps"},
-
-    {"en": "ball", "fr": "le ballon", "cat": "Jouets"},
-    {"en": "doll", "fr": "la poupée", "cat": "Jouets"},
-    {"en": "bike", "fr": "le vélo", "cat": "Jouets"},
-    {"en": "kite", "fr": "le cerf-volant", "cat": "Jouets"},
-    {"en": "game", "fr": "le jeu", "cat": "Jouets"},
-    {"en": "boat", "fr": "le bateau", "cat": "Jouets"},
-    {"en": "car", "fr": "la voiture", "cat": "Jouets"},
-    {"en": "plane", "fr": "l'avion", "cat": "Jouets"}
-  ],
-
-  "2": [
-    {"en": "to achieve", "fr": "réussir, atteindre", "cat": "Verbes utiles"},
-    {"en": "to borrow", "fr": "emprunter", "cat": "Verbes utiles"},
-    {"en": "to lend", "fr": "prêter", "cat": "Verbes utiles"},
-    {"en": "to afford", "fr": "avoir les moyens de", "cat": "Verbes utiles"},
-    {"en": "to improve", "fr": "améliorer", "cat": "Verbes utiles"},
-    {"en": "to complain", "fr": "se plaindre", "cat": "Verbes utiles"},
-    {"en": "to behave", "fr": "se comporter", "cat": "Verbes utiles"},
-    {"en": "to pretend", "fr": "faire semblant", "cat": "Verbes utiles"},
-    {"en": "to rely on", "fr": "compter sur", "cat": "Verbes utiles"},
-    {"en": "to give up", "fr": "abandonner", "cat": "Verbes utiles"},
-    {"en": "to look forward to", "fr": "attendre avec impatience", "cat": "Verbes utiles"},
-    {"en": "to point out", "fr": "faire remarquer", "cat": "Verbes utiles"},
-
-    {"en": "to take", "fr": "prendre — took, taken", "cat": "Verbes irréguliers"},
-    {"en": "to bring", "fr": "apporter — brought, brought", "cat": "Verbes irréguliers"},
-    {"en": "to catch", "fr": "attraper — caught, caught", "cat": "Verbes irréguliers"},
-    {"en": "to choose", "fr": "choisir — chose, chosen", "cat": "Verbes irréguliers"},
-    {"en": "to forget", "fr": "oublier — forgot, forgotten", "cat": "Verbes irréguliers"},
-    {"en": "to teach", "fr": "enseigner — taught, taught", "cat": "Verbes irréguliers"},
-    {"en": "to understand", "fr": "comprendre — understood", "cat": "Verbes irréguliers"},
-    {"en": "to grow", "fr": "grandir — grew, grown", "cat": "Verbes irréguliers"},
-    {"en": "to throw", "fr": "lancer — threw, thrown", "cat": "Verbes irréguliers"},
-    {"en": "to fight", "fr": "se battre — fought, fought", "cat": "Verbes irréguliers"},
-    {"en": "to hide", "fr": "cacher — hid, hidden", "cat": "Verbes irréguliers"},
-    {"en": "to break", "fr": "casser — broke, broken", "cat": "Verbes irréguliers"},
-
-    {"en": "angry", "fr": "en colère", "cat": "Sentiments"},
-    {"en": "afraid", "fr": "effrayé", "cat": "Sentiments"},
-    {"en": "proud", "fr": "fier", "cat": "Sentiments"},
-    {"en": "shy", "fr": "timide", "cat": "Sentiments"},
-    {"en": "lonely", "fr": "seul, esseulé", "cat": "Sentiments"},
-    {"en": "surprised", "fr": "surpris", "cat": "Sentiments"},
-    {"en": "worried", "fr": "inquiet", "cat": "Sentiments"},
-    {"en": "cheerful", "fr": "joyeux", "cat": "Sentiments"},
-    {"en": "upset", "fr": "contrarié", "cat": "Sentiments"},
-    {"en": "relieved", "fr": "soulagé", "cat": "Sentiments"},
-
-    {"en": "a lawyer", "fr": "un avocat", "cat": "Métiers"},
-    {"en": "a nurse", "fr": "un infirmier", "cat": "Métiers"},
-    {"en": "a baker", "fr": "un boulanger", "cat": "Métiers"},
-    {"en": "a firefighter", "fr": "un pompier", "cat": "Métiers"},
-    {"en": "an engineer", "fr": "un ingénieur", "cat": "Métiers"},
-    {"en": "a journalist", "fr": "un journaliste", "cat": "Métiers"},
-    {"en": "a scientist", "fr": "un scientifique", "cat": "Métiers"},
-    {"en": "a shopkeeper", "fr": "un commerçant", "cat": "Métiers"},
-    {"en": "a judge", "fr": "un juge", "cat": "Métiers"},
-    {"en": "a sailor", "fr": "un marin", "cat": "Métiers"},
-
-    {"en": "a street", "fr": "une rue", "cat": "En ville"},
-    {"en": "a bridge", "fr": "un pont", "cat": "En ville"},
-    {"en": "a library", "fr": "une bibliothèque", "cat": "En ville"},
-    {"en": "a church", "fr": "une église", "cat": "En ville"},
-    {"en": "a crowd", "fr": "une foule", "cat": "En ville"},
-    {"en": "a neighbourhood", "fr": "un quartier", "cat": "En ville"},
-    {"en": "a pavement", "fr": "un trottoir", "cat": "En ville"},
-    {"en": "a harbour", "fr": "un port", "cat": "En ville"},
-    {"en": "a castle", "fr": "un château", "cat": "En ville"},
-    {"en": "a market", "fr": "un marché", "cat": "En ville"},
-
-    {"en": "a cliff", "fr": "une falaise", "cat": "La nature"},
-    {"en": "a shore", "fr": "un rivage", "cat": "La nature"},
-    {"en": "a forest", "fr": "une forêt", "cat": "La nature"},
-    {"en": "a stream", "fr": "un ruisseau", "cat": "La nature"},
-    {"en": "a leaf", "fr": "une feuille", "cat": "La nature"},
-    {"en": "a branch", "fr": "une branche", "cat": "La nature"},
-    {"en": "the tide", "fr": "la marée", "cat": "La nature"},
-    {"en": "the sky", "fr": "le ciel", "cat": "La nature"},
-    {"en": "a hill", "fr": "une colline", "cat": "La nature"},
-    {"en": "a cave", "fr": "une grotte", "cat": "La nature"},
-
-    {"en": "clever", "fr": "intelligent, malin", "cat": "Adjectifs"},
-    {"en": "lazy", "fr": "paresseux", "cat": "Adjectifs"},
-    {"en": "quiet", "fr": "calme, silencieux", "cat": "Adjectifs"},
-    {"en": "tidy", "fr": "ordonné", "cat": "Adjectifs"},
-    {"en": "rude", "fr": "impoli", "cat": "Adjectifs"},
-    {"en": "generous", "fr": "généreux", "cat": "Adjectifs"},
-    {"en": "stubborn", "fr": "têtu", "cat": "Adjectifs"},
-    {"en": "honest", "fr": "honnête", "cat": "Adjectifs"},
-    {"en": "careful", "fr": "prudent, soigneux", "cat": "Adjectifs"},
-    {"en": "funny", "fr": "drôle", "cat": "Adjectifs"},
-    {"en": "tired", "fr": "fatigué", "cat": "Adjectifs"},
-    {"en": "crowded", "fr": "bondé", "cat": "Adjectifs"},
-
-    {"en": "a journey", "fr": "un voyage", "cat": "Voyage"},
-    {"en": "luggage", "fr": "les bagages", "cat": "Voyage"},
-    {"en": "abroad", "fr": "à l'étranger", "cat": "Voyage"},
-    {"en": "a flight", "fr": "un vol", "cat": "Voyage"},
-    {"en": "a ticket", "fr": "un billet", "cat": "Voyage"},
-    {"en": "a suitcase", "fr": "une valise", "cat": "Voyage"},
-    {"en": "a map", "fr": "une carte", "cat": "Voyage"},
-    {"en": "a railway station", "fr": "une gare", "cat": "Voyage"},
-
-    {"en": "a mistake", "fr": "une erreur", "cat": "Mots d'école"},
-    {"en": "homework", "fr": "les devoirs", "cat": "Mots d'école"},
-    {"en": "a test", "fr": "un contrôle", "cat": "Mots d'école"},
-    {"en": "a mark", "fr": "une note", "cat": "Mots d'école"},
-    {"en": "a subject", "fr": "une matière", "cat": "Mots d'école"},
-    {"en": "a timetable", "fr": "un emploi du temps", "cat": "Mots d'école"},
-    {"en": "a playground", "fr": "une cour de récréation", "cat": "Mots d'école"},
-    {"en": "a headmaster", "fr": "un directeur", "cat": "Mots d'école"},
-
-    {"en": "however", "fr": "cependant", "cat": "Petits mots"},
-    {"en": "although", "fr": "bien que", "cat": "Petits mots"},
-    {"en": "instead of", "fr": "au lieu de", "cat": "Petits mots"},
-    {"en": "as soon as", "fr": "dès que", "cat": "Petits mots"},
-    {"en": "in spite of", "fr": "malgré", "cat": "Petits mots"},
-    {"en": "enough", "fr": "assez", "cat": "Petits mots"},
-    {"en": "hardly", "fr": "à peine", "cat": "Petits mots"},
-    {"en": "whether", "fr": "si (ou non)", "cat": "Petits mots"}
-  ]
+ "1": [
+  {
+   "en": "cat",
+   "fr": "le chat",
+   "cat": "Animaux"
+  },
+  {
+   "en": "dog",
+   "fr": "le chien",
+   "cat": "Animaux"
+  },
+  {
+   "en": "horse",
+   "fr": "le cheval",
+   "cat": "Animaux"
+  },
+  {
+   "en": "rabbit",
+   "fr": "le lapin",
+   "cat": "Animaux"
+  },
+  {
+   "en": "bird",
+   "fr": "l'oiseau",
+   "cat": "Animaux"
+  },
+  {
+   "en": "fish",
+   "fr": "le poisson",
+   "cat": "Animaux"
+  },
+  {
+   "en": "mouse",
+   "fr": "la souris",
+   "cat": "Animaux"
+  },
+  {
+   "en": "bear",
+   "fr": "l'ours",
+   "cat": "Animaux"
+  },
+  {
+   "en": "sheep",
+   "fr": "le mouton",
+   "cat": "Animaux"
+  },
+  {
+   "en": "cow",
+   "fr": "la vache",
+   "cat": "Animaux"
+  },
+  {
+   "en": "duck",
+   "fr": "le canard",
+   "cat": "Animaux"
+  },
+  {
+   "en": "frog",
+   "fr": "la grenouille",
+   "cat": "Animaux"
+  },
+  {
+   "en": "red",
+   "fr": "rouge",
+   "cat": "Couleurs"
+  },
+  {
+   "en": "blue",
+   "fr": "bleu",
+   "cat": "Couleurs"
+  },
+  {
+   "en": "green",
+   "fr": "vert",
+   "cat": "Couleurs"
+  },
+  {
+   "en": "yellow",
+   "fr": "jaune",
+   "cat": "Couleurs"
+  },
+  {
+   "en": "black",
+   "fr": "noir",
+   "cat": "Couleurs"
+  },
+  {
+   "en": "white",
+   "fr": "blanc",
+   "cat": "Couleurs"
+  },
+  {
+   "en": "brown",
+   "fr": "marron",
+   "cat": "Couleurs"
+  },
+  {
+   "en": "purple",
+   "fr": "violet",
+   "cat": "Couleurs"
+  },
+  {
+   "en": "orange",
+   "fr": "orange",
+   "cat": "Couleurs"
+  },
+  {
+   "en": "pink",
+   "fr": "rose",
+   "cat": "Couleurs"
+  },
+  {
+   "en": "mother",
+   "fr": "la mère",
+   "cat": "Famille"
+  },
+  {
+   "en": "father",
+   "fr": "le père",
+   "cat": "Famille"
+  },
+  {
+   "en": "sister",
+   "fr": "la sœur",
+   "cat": "Famille"
+  },
+  {
+   "en": "brother",
+   "fr": "le frère",
+   "cat": "Famille"
+  },
+  {
+   "en": "grandmother",
+   "fr": "la grand-mère",
+   "cat": "Famille"
+  },
+  {
+   "en": "grandfather",
+   "fr": "le grand-père",
+   "cat": "Famille"
+  },
+  {
+   "en": "uncle",
+   "fr": "l'oncle",
+   "cat": "Famille"
+  },
+  {
+   "en": "aunt",
+   "fr": "la tante",
+   "cat": "Famille"
+  },
+  {
+   "en": "cousin",
+   "fr": "le cousin",
+   "cat": "Famille"
+  },
+  {
+   "en": "baby",
+   "fr": "le bébé",
+   "cat": "Famille"
+  },
+  {
+   "en": "bread",
+   "fr": "le pain",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "cheese",
+   "fr": "le fromage",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "milk",
+   "fr": "le lait",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "apple",
+   "fr": "la pomme",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "egg",
+   "fr": "l'œuf",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "water",
+   "fr": "l'eau",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "cake",
+   "fr": "le gâteau",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "strawberry",
+   "fr": "la fraise",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "butter",
+   "fr": "le beurre",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "chicken",
+   "fr": "le poulet",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "soup",
+   "fr": "la soupe",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "honey",
+   "fr": "le miel",
+   "cat": "Nourriture"
+  },
+  {
+   "en": "head",
+   "fr": "la tête",
+   "cat": "Le corps"
+  },
+  {
+   "en": "hand",
+   "fr": "la main",
+   "cat": "Le corps"
+  },
+  {
+   "en": "foot",
+   "fr": "le pied",
+   "cat": "Le corps"
+  },
+  {
+   "en": "eye",
+   "fr": "l'œil",
+   "cat": "Le corps"
+  },
+  {
+   "en": "mouth",
+   "fr": "la bouche",
+   "cat": "Le corps"
+  },
+  {
+   "en": "nose",
+   "fr": "le nez",
+   "cat": "Le corps"
+  },
+  {
+   "en": "ear",
+   "fr": "l'oreille",
+   "cat": "Le corps"
+  },
+  {
+   "en": "hair",
+   "fr": "les cheveux",
+   "cat": "Le corps"
+  },
+  {
+   "en": "arm",
+   "fr": "le bras",
+   "cat": "Le corps"
+  },
+  {
+   "en": "leg",
+   "fr": "la jambe",
+   "cat": "Le corps"
+  },
+  {
+   "en": "book",
+   "fr": "le livre",
+   "cat": "L'école"
+  },
+  {
+   "en": "pen",
+   "fr": "le stylo",
+   "cat": "L'école"
+  },
+  {
+   "en": "pencil",
+   "fr": "le crayon",
+   "cat": "L'école"
+  },
+  {
+   "en": "teacher",
+   "fr": "le maître",
+   "cat": "L'école"
+  },
+  {
+   "en": "school",
+   "fr": "l'école",
+   "cat": "L'école"
+  },
+  {
+   "en": "chair",
+   "fr": "la chaise",
+   "cat": "L'école"
+  },
+  {
+   "en": "table",
+   "fr": "la table",
+   "cat": "L'école"
+  },
+  {
+   "en": "bag",
+   "fr": "le sac",
+   "cat": "L'école"
+  },
+  {
+   "en": "ruler",
+   "fr": "la règle",
+   "cat": "L'école"
+  },
+  {
+   "en": "paper",
+   "fr": "le papier",
+   "cat": "L'école"
+  },
+  {
+   "en": "house",
+   "fr": "la maison",
+   "cat": "La maison"
+  },
+  {
+   "en": "door",
+   "fr": "la porte",
+   "cat": "La maison"
+  },
+  {
+   "en": "window",
+   "fr": "la fenêtre",
+   "cat": "La maison"
+  },
+  {
+   "en": "bed",
+   "fr": "le lit",
+   "cat": "La maison"
+  },
+  {
+   "en": "kitchen",
+   "fr": "la cuisine",
+   "cat": "La maison"
+  },
+  {
+   "en": "garden",
+   "fr": "le jardin",
+   "cat": "La maison"
+  },
+  {
+   "en": "room",
+   "fr": "la pièce",
+   "cat": "La maison"
+  },
+  {
+   "en": "key",
+   "fr": "la clé",
+   "cat": "La maison"
+  },
+  {
+   "en": "to run",
+   "fr": "courir",
+   "cat": "Actions"
+  },
+  {
+   "en": "to eat",
+   "fr": "manger",
+   "cat": "Actions"
+  },
+  {
+   "en": "to sleep",
+   "fr": "dormir",
+   "cat": "Actions"
+  },
+  {
+   "en": "to play",
+   "fr": "jouer",
+   "cat": "Actions"
+  },
+  {
+   "en": "to sing",
+   "fr": "chanter",
+   "cat": "Actions"
+  },
+  {
+   "en": "to read",
+   "fr": "lire",
+   "cat": "Actions"
+  },
+  {
+   "en": "to write",
+   "fr": "écrire",
+   "cat": "Actions"
+  },
+  {
+   "en": "to swim",
+   "fr": "nager",
+   "cat": "Actions"
+  },
+  {
+   "en": "to jump",
+   "fr": "sauter",
+   "cat": "Actions"
+  },
+  {
+   "en": "to walk",
+   "fr": "marcher",
+   "cat": "Actions"
+  },
+  {
+   "en": "sun",
+   "fr": "le soleil",
+   "cat": "Le temps"
+  },
+  {
+   "en": "rain",
+   "fr": "la pluie",
+   "cat": "Le temps"
+  },
+  {
+   "en": "snow",
+   "fr": "la neige",
+   "cat": "Le temps"
+  },
+  {
+   "en": "wind",
+   "fr": "le vent",
+   "cat": "Le temps"
+  },
+  {
+   "en": "cloud",
+   "fr": "le nuage",
+   "cat": "Le temps"
+  },
+  {
+   "en": "cold",
+   "fr": "froid",
+   "cat": "Le temps"
+  },
+  {
+   "en": "hot",
+   "fr": "chaud",
+   "cat": "Le temps"
+  },
+  {
+   "en": "storm",
+   "fr": "l'orage",
+   "cat": "Le temps"
+  },
+  {
+   "en": "ball",
+   "fr": "le ballon",
+   "cat": "Jouets"
+  },
+  {
+   "en": "doll",
+   "fr": "la poupée",
+   "cat": "Jouets"
+  },
+  {
+   "en": "bike",
+   "fr": "le vélo",
+   "cat": "Jouets"
+  },
+  {
+   "en": "kite",
+   "fr": "le cerf-volant",
+   "cat": "Jouets"
+  },
+  {
+   "en": "game",
+   "fr": "le jeu",
+   "cat": "Jouets"
+  },
+  {
+   "en": "boat",
+   "fr": "le bateau",
+   "cat": "Jouets"
+  },
+  {
+   "en": "car",
+   "fr": "la voiture",
+   "cat": "Jouets"
+  },
+  {
+   "en": "plane",
+   "fr": "l'avion",
+   "cat": "Jouets"
+  }
+ ],
+ "2": [
+  {
+   "en": "to achieve",
+   "fr": "réussir, atteindre",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to borrow",
+   "fr": "emprunter",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to lend",
+   "fr": "prêter",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to afford",
+   "fr": "avoir les moyens de",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to improve",
+   "fr": "améliorer",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to complain",
+   "fr": "se plaindre",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to behave",
+   "fr": "se comporter",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to pretend",
+   "fr": "faire semblant",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to rely on",
+   "fr": "compter sur",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to give up",
+   "fr": "abandonner",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to look forward to",
+   "fr": "attendre avec impatience",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to point out",
+   "fr": "faire remarquer",
+   "cat": "Verbes utiles"
+  },
+  {
+   "en": "to take",
+   "fr": "prendre — took, taken",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to bring",
+   "fr": "apporter — brought, brought",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to catch",
+   "fr": "attraper — caught, caught",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to choose",
+   "fr": "choisir — chose, chosen",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to forget",
+   "fr": "oublier — forgot, forgotten",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to teach",
+   "fr": "enseigner — taught, taught",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to understand",
+   "fr": "comprendre — understood",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to grow",
+   "fr": "grandir — grew, grown",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to throw",
+   "fr": "lancer — threw, thrown",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to fight",
+   "fr": "se battre — fought, fought",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to hide",
+   "fr": "cacher — hid, hidden",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "to break",
+   "fr": "casser — broke, broken",
+   "cat": "Verbes irréguliers"
+  },
+  {
+   "en": "angry",
+   "fr": "en colère",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "afraid",
+   "fr": "effrayé",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "proud",
+   "fr": "fier",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "shy",
+   "fr": "timide",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "lonely",
+   "fr": "seul, esseulé",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "surprised",
+   "fr": "surpris",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "worried",
+   "fr": "inquiet",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "cheerful",
+   "fr": "joyeux",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "upset",
+   "fr": "contrarié",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "relieved",
+   "fr": "soulagé",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "a lawyer",
+   "fr": "un avocat",
+   "cat": "Métiers"
+  },
+  {
+   "en": "a nurse",
+   "fr": "un infirmier",
+   "cat": "Métiers"
+  },
+  {
+   "en": "a baker",
+   "fr": "un boulanger",
+   "cat": "Métiers"
+  },
+  {
+   "en": "a firefighter",
+   "fr": "un pompier",
+   "cat": "Métiers"
+  },
+  {
+   "en": "an engineer",
+   "fr": "un ingénieur",
+   "cat": "Métiers"
+  },
+  {
+   "en": "a journalist",
+   "fr": "un journaliste",
+   "cat": "Métiers"
+  },
+  {
+   "en": "a scientist",
+   "fr": "un scientifique",
+   "cat": "Métiers"
+  },
+  {
+   "en": "a shopkeeper",
+   "fr": "un commerçant",
+   "cat": "Métiers"
+  },
+  {
+   "en": "a judge",
+   "fr": "un juge",
+   "cat": "Métiers"
+  },
+  {
+   "en": "a sailor",
+   "fr": "un marin",
+   "cat": "Métiers"
+  },
+  {
+   "en": "a street",
+   "fr": "une rue",
+   "cat": "En ville"
+  },
+  {
+   "en": "a bridge",
+   "fr": "un pont",
+   "cat": "En ville"
+  },
+  {
+   "en": "a library",
+   "fr": "une bibliothèque",
+   "cat": "En ville"
+  },
+  {
+   "en": "a church",
+   "fr": "une église",
+   "cat": "En ville"
+  },
+  {
+   "en": "a crowd",
+   "fr": "une foule",
+   "cat": "En ville"
+  },
+  {
+   "en": "a neighbourhood",
+   "fr": "un quartier",
+   "cat": "En ville"
+  },
+  {
+   "en": "a pavement",
+   "fr": "un trottoir",
+   "cat": "En ville"
+  },
+  {
+   "en": "a harbour",
+   "fr": "un port",
+   "cat": "En ville"
+  },
+  {
+   "en": "a castle",
+   "fr": "un château",
+   "cat": "En ville"
+  },
+  {
+   "en": "a market",
+   "fr": "un marché",
+   "cat": "En ville"
+  },
+  {
+   "en": "a cliff",
+   "fr": "une falaise",
+   "cat": "La nature"
+  },
+  {
+   "en": "a shore",
+   "fr": "un rivage",
+   "cat": "La nature"
+  },
+  {
+   "en": "a forest",
+   "fr": "une forêt",
+   "cat": "La nature"
+  },
+  {
+   "en": "a stream",
+   "fr": "un ruisseau",
+   "cat": "La nature"
+  },
+  {
+   "en": "a leaf",
+   "fr": "une feuille",
+   "cat": "La nature"
+  },
+  {
+   "en": "a branch",
+   "fr": "une branche",
+   "cat": "La nature"
+  },
+  {
+   "en": "the tide",
+   "fr": "la marée",
+   "cat": "La nature"
+  },
+  {
+   "en": "the sky",
+   "fr": "le ciel",
+   "cat": "La nature"
+  },
+  {
+   "en": "a hill",
+   "fr": "une colline",
+   "cat": "La nature"
+  },
+  {
+   "en": "a cave",
+   "fr": "une grotte",
+   "cat": "La nature"
+  },
+  {
+   "en": "clever",
+   "fr": "intelligent, malin",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "lazy",
+   "fr": "paresseux",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "quiet",
+   "fr": "calme, silencieux",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "tidy",
+   "fr": "ordonné",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "rude",
+   "fr": "impoli",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "generous",
+   "fr": "généreux",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "stubborn",
+   "fr": "têtu",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "honest",
+   "fr": "honnête",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "careful",
+   "fr": "prudent, soigneux",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "funny",
+   "fr": "drôle",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "tired",
+   "fr": "fatigué",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "crowded",
+   "fr": "bondé",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "a journey",
+   "fr": "un voyage",
+   "cat": "Voyage"
+  },
+  {
+   "en": "luggage",
+   "fr": "les bagages",
+   "cat": "Voyage"
+  },
+  {
+   "en": "abroad",
+   "fr": "à l'étranger",
+   "cat": "Voyage"
+  },
+  {
+   "en": "a flight",
+   "fr": "un vol",
+   "cat": "Voyage"
+  },
+  {
+   "en": "a ticket",
+   "fr": "un billet",
+   "cat": "Voyage"
+  },
+  {
+   "en": "a suitcase",
+   "fr": "une valise",
+   "cat": "Voyage"
+  },
+  {
+   "en": "a map",
+   "fr": "une carte",
+   "cat": "Voyage"
+  },
+  {
+   "en": "a railway station",
+   "fr": "une gare",
+   "cat": "Voyage"
+  },
+  {
+   "en": "a mistake",
+   "fr": "une erreur",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "homework",
+   "fr": "les devoirs",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "a test",
+   "fr": "un contrôle",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "a mark",
+   "fr": "une note",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "a subject",
+   "fr": "une matière",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "a timetable",
+   "fr": "un emploi du temps",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "a playground",
+   "fr": "une cour de récréation",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "a headmaster",
+   "fr": "un directeur",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "however",
+   "fr": "cependant",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "although",
+   "fr": "bien que",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "instead of",
+   "fr": "au lieu de",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "as soon as",
+   "fr": "dès que",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "in spite of",
+   "fr": "malgré",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "enough",
+   "fr": "assez",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "hardly",
+   "fr": "à peine",
+   "cat": "Petits mots"
+  },
+  {
+   "en": "whether",
+   "fr": "si (ou non)",
+   "cat": "Petits mots"
+  }
+ ],
+ "p1": [
+  {
+   "en": "The cat is under the table.",
+   "fr": "Le chat est sous la table."
+  },
+  {
+   "en": "I have two brothers.",
+   "fr": "J'ai deux frères."
+  },
+  {
+   "en": "My mother is in the kitchen.",
+   "fr": "Ma mère est dans la cuisine."
+  },
+  {
+   "en": "The dog is very big.",
+   "fr": "Le chien est très grand."
+  },
+  {
+   "en": "I like bread and cheese.",
+   "fr": "J'aime le pain et le fromage."
+  },
+  {
+   "en": "She is reading a book.",
+   "fr": "Elle lit un livre."
+  },
+  {
+   "en": "We play in the garden.",
+   "fr": "Nous jouons dans le jardin."
+  },
+  {
+   "en": "The sun is hot today.",
+   "fr": "Le soleil est chaud aujourd'hui."
+  },
+  {
+   "en": "My father has a red car.",
+   "fr": "Mon père a une voiture rouge."
+  },
+  {
+   "en": "I can swim very well.",
+   "fr": "Je sais très bien nager."
+  },
+  {
+   "en": "The baby is sleeping.",
+   "fr": "Le bébé dort."
+  },
+  {
+   "en": "Where is my school bag?",
+   "fr": "Où est mon sac d'école ?"
+  },
+  {
+   "en": "I do not like milk.",
+   "fr": "Je n'aime pas le lait."
+  },
+  {
+   "en": "The bird is in the tree.",
+   "fr": "L'oiseau est dans l'arbre."
+  },
+  {
+   "en": "He is eating an apple.",
+   "fr": "Il mange une pomme."
+  },
+  {
+   "en": "My sister is seven years old.",
+   "fr": "Ma sœur a sept ans."
+  },
+  {
+   "en": "It is raining today.",
+   "fr": "Il pleut aujourd'hui."
+  },
+  {
+   "en": "We have a big house.",
+   "fr": "Nous avons une grande maison."
+  },
+  {
+   "en": "The teacher is reading a story.",
+   "fr": "Le maître lit une histoire."
+  },
+  {
+   "en": "I would like some water please.",
+   "fr": "Je voudrais de l'eau s'il te plaît."
+  },
+  {
+   "en": "The horse is white.",
+   "fr": "Le cheval est blanc."
+  },
+  {
+   "en": "She has long hair.",
+   "fr": "Elle a les cheveux longs."
+  },
+  {
+   "en": "Open the door please.",
+   "fr": "Ouvre la porte s'il te plaît."
+  },
+  {
+   "en": "I am very tired.",
+   "fr": "Je suis très fatigué."
+  },
+  {
+   "en": "The cake is on the table.",
+   "fr": "Le gâteau est sur la table."
+  },
+  {
+   "en": "My brother can ride a bike.",
+   "fr": "Mon frère sait faire du vélo."
+  },
+  {
+   "en": "There are five chairs.",
+   "fr": "Il y a cinq chaises."
+  },
+  {
+   "en": "The fish is in the water.",
+   "fr": "Le poisson est dans l'eau."
+  },
+  {
+   "en": "I go to school every day.",
+   "fr": "Je vais à l'école tous les jours."
+  },
+  {
+   "en": "He has a blue bag.",
+   "fr": "Il a un sac bleu."
+  },
+  {
+   "en": "The rabbit is eating.",
+   "fr": "Le lapin mange."
+  },
+  {
+   "en": "We are playing a game.",
+   "fr": "Nous jouons à un jeu."
+  },
+  {
+   "en": "My grandmother makes good cakes.",
+   "fr": "Ma grand-mère fait de bons gâteaux."
+  },
+  {
+   "en": "The window is open.",
+   "fr": "La fenêtre est ouverte."
+  },
+  {
+   "en": "I have a little mouse.",
+   "fr": "J'ai une petite souris."
+  },
+  {
+   "en": "The snow is very cold.",
+   "fr": "La neige est très froide."
+  },
+  {
+   "en": "She can sing very well.",
+   "fr": "Elle sait très bien chanter."
+  },
+  {
+   "en": "Look at the big bear!",
+   "fr": "Regarde le gros ours !"
+  },
+  {
+   "en": "My feet are cold.",
+   "fr": "J'ai froid aux pieds."
+  },
+  {
+   "en": "Let us go to the garden.",
+   "fr": "Allons dans le jardin."
+  }
+ ],
+ "p2": [
+  {
+   "en": "I have been here since Monday.",
+   "fr": "Je suis ici depuis lundi."
+  },
+  {
+   "en": "She did not come because she was ill.",
+   "fr": "Elle n'est pas venue parce qu'elle était malade."
+  },
+  {
+   "en": "If it rains, we will stay at home.",
+   "fr": "S'il pleut, nous resterons à la maison."
+  },
+  {
+   "en": "I have never been to London.",
+   "fr": "Je ne suis jamais allé à Londres."
+  },
+  {
+   "en": "He was reading when I arrived.",
+   "fr": "Il lisait quand je suis arrivé."
+  },
+  {
+   "en": "You should have told me earlier.",
+   "fr": "Tu aurais dû me le dire plus tôt."
+  },
+  {
+   "en": "I used to live near the sea.",
+   "fr": "J'habitais autrefois près de la mer."
+  },
+  {
+   "en": "There is nothing we can do.",
+   "fr": "Il n'y a rien que nous puissions faire."
+  },
+  {
+   "en": "She asked me where I lived.",
+   "fr": "Elle m'a demandé où j'habitais."
+  },
+  {
+   "en": "The bridge was built in 1920.",
+   "fr": "Le pont a été construit en 1920."
+  },
+  {
+   "en": "I am looking forward to the holidays.",
+   "fr": "J'attends les vacances avec impatience."
+  },
+  {
+   "en": "He has already finished his homework.",
+   "fr": "Il a déjà fini ses devoirs."
+  },
+  {
+   "en": "We had better leave now.",
+   "fr": "Nous ferions mieux de partir maintenant."
+  },
+  {
+   "en": "I wish I had more time.",
+   "fr": "J'aimerais avoir plus de temps."
+  },
+  {
+   "en": "Although it was late, she kept working.",
+   "fr": "Bien qu'il soit tard, elle a continué à travailler."
+  },
+  {
+   "en": "Neither of them knew the answer.",
+   "fr": "Aucun des deux ne connaissait la réponse."
+  },
+  {
+   "en": "He must have forgotten the meeting.",
+   "fr": "Il a dû oublier la réunion."
+  },
+  {
+   "en": "The more I read, the better I understand.",
+   "fr": "Plus je lis, mieux je comprends."
+  },
+  {
+   "en": "She managed to open the door.",
+   "fr": "Elle a réussi à ouvrir la porte."
+  },
+  {
+   "en": "I would rather stay here.",
+   "fr": "Je préférerais rester ici."
+  },
+  {
+   "en": "They have been waiting for an hour.",
+   "fr": "Ils attendent depuis une heure."
+  },
+  {
+   "en": "It was raining when we left.",
+   "fr": "Il pleuvait quand nous sommes partis."
+  },
+  {
+   "en": "Do you mind if I open the window?",
+   "fr": "Cela vous dérange-t-il si j'ouvre la fenêtre ?"
+  },
+  {
+   "en": "He pretended not to hear me.",
+   "fr": "Il a fait semblant de ne pas m'entendre."
+  },
+  {
+   "en": "I had never seen such a crowd.",
+   "fr": "Je n'avais jamais vu une telle foule."
+  },
+  {
+   "en": "She is used to working late.",
+   "fr": "Elle a l'habitude de travailler tard."
+  },
+  {
+   "en": "We will have finished by Friday.",
+   "fr": "Nous aurons fini avant vendredi."
+  },
+  {
+   "en": "Nobody knows what happened.",
+   "fr": "Personne ne sait ce qui s'est passé."
+  },
+  {
+   "en": "The book which I borrowed was excellent.",
+   "fr": "Le livre que j'ai emprunté était excellent."
+  },
+  {
+   "en": "He gave up smoking last year.",
+   "fr": "Il a arrêté de fumer l'année dernière."
+  },
+  {
+   "en": "In spite of the rain, we went out.",
+   "fr": "Malgré la pluie, nous sommes sortis."
+  },
+  {
+   "en": "I cannot afford a new bike.",
+   "fr": "Je ne peux pas me payer un nouveau vélo."
+  },
+  {
+   "en": "She told me to wait outside.",
+   "fr": "Elle m'a dit d'attendre dehors."
+  },
+  {
+   "en": "How long have you known him?",
+   "fr": "Depuis combien de temps le connais-tu ?"
+  },
+  {
+   "en": "It is the first time I have seen this.",
+   "fr": "C'est la première fois que je vois cela."
+  },
+  {
+   "en": "He is taller than his brother.",
+   "fr": "Il est plus grand que son frère."
+  },
+  {
+   "en": "We were about to leave.",
+   "fr": "Nous étions sur le point de partir."
+  },
+  {
+   "en": "Let me know as soon as you arrive.",
+   "fr": "Préviens-moi dès que tu arrives."
+  },
+  {
+   "en": "There used to be a market here.",
+   "fr": "Il y avait autrefois un marché ici."
+  },
+  {
+   "en": "She apologised for being late.",
+   "fr": "Elle s'est excusée d'être en retard."
+  }
+ ]
 }

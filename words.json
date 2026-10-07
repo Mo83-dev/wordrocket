@@ -1040,7 +1040,7 @@
   },
   {
    "en": "Where is my school bag?",
-   "fr": "Où est mon sac d'école ?"
+   "fr": "Où est mon sac d'école ?"
   },
   {
    "en": "I do not like milk.",
@@ -1144,7 +1144,7 @@
   },
   {
    "en": "Look at the big bear!",
-   "fr": "Regarde le gros ours !"
+   "fr": "Regarde le gros ours !"
   },
   {
    "en": "My feet are cold.",
@@ -1246,7 +1246,7 @@
   },
   {
    "en": "Do you mind if I open the window?",
-   "fr": "Cela vous dérange-t-il si j'ouvre la fenêtre ?"
+   "fr": "Cela vous dérange-t-il si j'ouvre la fenêtre ?"
   },
   {
    "en": "He pretended not to hear me.",
@@ -1290,7 +1290,7 @@
   },
   {
    "en": "How long have you known him?",
-   "fr": "Depuis combien de temps le connais-tu ?"
+   "fr": "Depuis combien de temps le connais-tu ?"
   },
   {
    "en": "It is the first time I have seen this.",
@@ -1315,6 +1315,1246 @@
   {
    "en": "She apologised for being late.",
    "fr": "Elle s'est excusée d'être en retard."
+  }
+ ],
+ "d1": [
+  {
+   "id": "sch1",
+   "place": "school",
+   "title": "A new pupil",
+   "cast": [
+    "hall",
+    "tom"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "Good morning. What is your name?",
+     "fr": "Bonjour. Comment t'appelles-tu ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "My name is Tom. I am ten years old.",
+     "fr": "Je m'appelle Tom. J'ai dix ans.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Welcome, Tom. Here is your book.",
+     "fr": "Bienvenue, Tom. Voici ton livre.",
+     "v": "gb",
+     "p": "book"
+    },
+    {
+     "s": 1,
+     "en": "Thank you. Where do I sit?",
+     "fr": "Merci. Où est-ce que je m'assieds ?",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Next to the window, please.",
+     "fr": "À côté de la fenêtre, s'il te plaît.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Thank you very much!",
+     "fr": "Merci beaucoup !",
+     "v": "us"
+    }
+   ],
+   "q": {
+    "q": "How old is Tom?",
+    "o": [
+     "Ten",
+     "Eight",
+     "Twelve"
+    ],
+    "a": 0,
+    "why": "Il le dit dès sa première réplique : « I am ten years old. »"
+   }
+  },
+  {
+   "id": "pla1",
+   "place": "playground",
+   "title": "Let us play",
+   "cast": [
+    "mia",
+    "sam"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "Hello! Do you want to play with me?",
+     "fr": "Bonjour ! Tu veux jouer avec moi ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Yes! What do you want to play?",
+     "fr": "Oui ! À quoi veux-tu jouer ?",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Let us play football. I have a ball.",
+     "fr": "Jouons au football. J'ai un ballon.",
+     "v": "gb",
+     "p": "ball"
+    },
+    {
+     "s": 1,
+     "en": "Good idea! I can run very fast.",
+     "fr": "Bonne idée ! Je cours très vite.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Me too! Let us go.",
+     "fr": "Moi aussi ! Allons-y.",
+     "v": "gb"
+    }
+   ],
+   "q": {
+    "q": "What are they going to play?",
+    "o": [
+     "Football",
+     "Hide and seek",
+     "Cards"
+    ],
+    "a": 0,
+    "why": "« Let us play football » — et Mia a le ballon."
+   }
+  },
+  {
+   "id": "par1",
+   "place": "park",
+   "title": "The ducks",
+   "cast": [
+    "mia",
+    "tom"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "Look! There are ducks in the water.",
+     "fr": "Regarde ! Il y a des canards dans l'eau.",
+     "v": "gb",
+     "p": "duck"
+    },
+    {
+     "s": 1,
+     "en": "They are very small. Can we give them bread?",
+     "fr": "Ils sont tout petits. On peut leur donner du pain ?",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "No, bread is not good for ducks.",
+     "fr": "Non, le pain n'est pas bon pour les canards.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Oh! What can we do?",
+     "fr": "Oh ! Qu'est-ce qu'on peut faire ?",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "We can just watch them. Look, one is swimming!",
+     "fr": "On peut simplement les regarder. Regarde, il y en a un qui nage !",
+     "v": "gb"
+    }
+   ],
+   "q": {
+    "q": "Why can they not give bread to the ducks?",
+    "o": [
+     "It is not good for them",
+     "They have no bread",
+     "The ducks are not hungry"
+    ],
+    "a": 0,
+    "why": "« Bread is not good for ducks. »"
+   }
+  },
+  {
+   "id": "poo1",
+   "place": "pool",
+   "title": "At the pool",
+   "cast": [
+    "hall",
+    "sam"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "Can you swim, Sam?",
+     "fr": "Sais-tu nager, Sam ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "A little. I am not very good.",
+     "fr": "Un peu. Je ne suis pas très bon.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Do not worry. Put on your goggles.",
+     "fr": "Ne t'inquiète pas. Mets tes lunettes.",
+     "v": "gb",
+     "p": "goggles"
+    },
+    {
+     "s": 1,
+     "en": "The water is cold!",
+     "fr": "L'eau est froide !",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Yes, but you will be warm when you swim.",
+     "fr": "Oui, mais tu auras chaud quand tu nageras.",
+     "v": "gb"
+    }
+   ],
+   "q": {
+    "q": "How well can Sam swim?",
+    "o": [
+     "A little",
+     "Very well",
+     "Not at all"
+    ],
+    "a": 0,
+    "why": "« A little. I am not very good. »"
+   }
+  },
+  {
+   "id": "hom1",
+   "place": "home",
+   "title": "Before dinner",
+   "cast": [
+    "rose",
+    "tom"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "Tom, can you help me please?",
+     "fr": "Tom, tu peux m'aider s'il te plaît ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Yes. What can I do?",
+     "fr": "Oui. Qu'est-ce que je peux faire ?",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Put the cake on the table.",
+     "fr": "Pose le gâteau sur la table.",
+     "v": "gb",
+     "p": "cake"
+    },
+    {
+     "s": 1,
+     "en": "It smells very good! Can I eat some now?",
+     "fr": "Ça sent très bon ! Je peux en manger maintenant ?",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "After dinner, Tom. Not before!",
+     "fr": "Après le dîner, Tom. Pas avant !",
+     "v": "gb"
+    }
+   ],
+   "q": {
+    "q": "When can Tom eat the cake?",
+    "o": [
+     "After dinner",
+     "Now",
+     "Tomorrow"
+    ],
+    "a": 0,
+    "why": "« After dinner, Tom. Not before! »"
+   }
+  },
+  {
+   "id": "mou1",
+   "place": "mountain",
+   "title": "The walk",
+   "cast": [
+    "mia",
+    "lily"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "I am tired. How far is it?",
+     "fr": "Je suis fatiguée. C'est encore loin ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Only twenty minutes. Look at the mountains!",
+     "fr": "Seulement vingt minutes. Regarde les montagnes !",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "They are beautiful. It is cold up here.",
+     "fr": "Elles sont magnifiques. Il fait froid ici.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Here, drink some water.",
+     "fr": "Tiens, bois un peu d'eau.",
+     "v": "us",
+     "p": "flask"
+    },
+    {
+     "s": 0,
+     "en": "Thank you. Let us go!",
+     "fr": "Merci. Allons-y !",
+     "v": "gb"
+    }
+   ],
+   "q": {
+    "q": "How much longer is the walk?",
+    "o": [
+     "Twenty minutes",
+     "Two hours",
+     "Five minutes"
+    ],
+    "a": 0,
+    "why": "« Only twenty minutes. »"
+   }
+  },
+  {
+   "id": "bea1",
+   "place": "beach",
+   "title": "A day at the sea",
+   "cast": [
+    "mia",
+    "sam"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "The sun is hot today!",
+     "fr": "Le soleil tape aujourd'hui !",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Yes. Do you want to swim?",
+     "fr": "Oui. Tu veux aller nager ?",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Not now. Let us play with the ball.",
+     "fr": "Pas maintenant. Jouons au ballon.",
+     "v": "gb",
+     "p": "ball"
+    },
+    {
+     "s": 1,
+     "en": "Good! Look, I found a shell.",
+     "fr": "D'accord ! Regarde, j'ai trouvé un coquillage.",
+     "v": "us",
+     "p": "shell"
+    },
+    {
+     "s": 0,
+     "en": "It is very pretty. Can I see it?",
+     "fr": "Il est très joli. Je peux le voir ?",
+     "v": "gb"
+    }
+   ],
+   "q": {
+    "q": "What does Sam find?",
+    "o": [
+     "A shell",
+     "A fish",
+     "A stone"
+    ],
+    "a": 0,
+    "why": "« Look, I found a shell. »"
+   }
+  },
+  {
+   "id": "clo1",
+   "place": "clothes",
+   "title": "The green jumper",
+   "cast": [
+    "rose",
+    "lily"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "Good afternoon. Can I help you?",
+     "fr": "Bonjour. Je peux vous aider ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Yes please. I would like a jumper.",
+     "fr": "Oui, s'il vous plaît. Je voudrais un pull.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "What colour would you like?",
+     "fr": "De quelle couleur le voulez-vous ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Green, please. Do you have one?",
+     "fr": "Vert, s'il vous plaît. Vous en avez un ?",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Here you are. Twenty euros.",
+     "fr": "Voilà. Vingt euros.",
+     "v": "gb",
+     "p": "jumper"
+    }
+   ],
+   "q": {
+    "q": "What does Lily buy?",
+    "o": [
+     "A green jumper",
+     "A red hat",
+     "Blue shoes"
+    ],
+    "a": 0,
+    "why": "Elle demande un pull, puis précise « Green, please. »"
+   }
+  },
+  {
+   "id": "jud1",
+   "place": "judo",
+   "title": "The first lesson",
+   "cast": [
+    "hall",
+    "tom"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "Welcome. Are you ready for your first lesson?",
+     "fr": "Bienvenue. Es-tu prêt pour ton premier cours ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Yes! But I am a little afraid.",
+     "fr": "Oui ! Mais j'ai un peu peur.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Do not worry. First, we learn how to fall.",
+     "fr": "Ne t'inquiète pas. D'abord, on apprend à tomber.",
+     "v": "gb",
+     "p": "belt"
+    },
+    {
+     "s": 1,
+     "en": "How to fall? Really?",
+     "fr": "À tomber ? Vraiment ?",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Yes. Falling well is the most important thing.",
+     "fr": "Oui. Bien tomber est le plus important.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "I understand. I am ready!",
+     "fr": "Je comprends. Je suis prêt !",
+     "v": "us"
+    }
+   ],
+   "q": {
+    "q": "What do they learn first?",
+    "o": [
+     "How to fall",
+     "How to throw",
+     "How to win"
+    ],
+    "a": 0,
+    "why": "« First, we learn how to fall. »"
+   }
+  },
+  {
+   "id": "bas1",
+   "place": "basket",
+   "title": "A quick game",
+   "cast": [
+    "mia",
+    "sam"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "Do you want to play basketball?",
+     "fr": "Tu veux jouer au basket ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Yes, but I am not very tall.",
+     "fr": "Oui, mais je ne suis pas très grand.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "That does not matter. You run fast.",
+     "fr": "Ça n'a pas d'importance. Tu cours vite.",
+     "v": "gb",
+     "p": "ball"
+    },
+    {
+     "s": 1,
+     "en": "All right. How many points to win?",
+     "fr": "D'accord. Combien de points pour gagner ?",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "The first to ten. Are you ready?",
+     "fr": "Le premier à dix. Tu es prêt ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Ready! You start.",
+     "fr": "Prêt ! Commence.",
+     "v": "us"
+    }
+   ],
+   "q": {
+    "q": "How many points do they need to win?",
+    "o": [
+     "Ten",
+     "Five",
+     "Twenty"
+    ],
+    "a": 0,
+    "why": "« The first to ten. »"
+   }
+  },
+  {
+   "id": "foo1",
+   "place": "food",
+   "title": "At the shop",
+   "cast": [
+    "rose",
+    "tom"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "Good morning! What would you like?",
+     "fr": "Bonjour ! Que désirez-vous ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Good morning. Some bread, please.",
+     "fr": "Bonjour. Du pain, s'il vous plaît.",
+     "v": "us",
+     "p": "bread"
+    },
+    {
+     "s": 0,
+     "en": "Anything else?",
+     "fr": "Autre chose ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Yes, two apples. How much is it?",
+     "fr": "Oui, deux pommes. Combien ça fait ?",
+     "v": "us",
+     "p": "apples"
+    },
+    {
+     "s": 0,
+     "en": "Three euros, please.",
+     "fr": "Trois euros, s'il vous plaît.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Here you are. Thank you!",
+     "fr": "Voilà. Merci !",
+     "v": "us"
+    }
+   ],
+   "q": {
+    "q": "How much does Tom pay?",
+    "o": [
+     "Three euros",
+     "Two euros",
+     "Five euros"
+    ],
+    "a": 0,
+    "why": "« Three euros, please. »"
+   }
+  }
+ ],
+ "d2": [
+  {
+   "id": "sch2",
+   "place": "school",
+   "title": "The homework",
+   "cast": [
+    "hall",
+    "lily"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "Lily, you did not hand in your homework.",
+     "fr": "Lily, vous n'avez pas rendu vos devoirs.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "I know. I am sorry, I forgot it at home.",
+     "fr": "Je sais. Je suis désolée, je les ai oubliés chez moi.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "You should have told me this morning.",
+     "fr": "Vous auriez dû me le dire ce matin.",
+     "v": "gb",
+     "p": "book"
+    },
+    {
+     "s": 1,
+     "en": "I was going to, but you were busy.",
+     "fr": "J'allais le faire, mais vous étiez occupé.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Bring it tomorrow, and it will be fine.",
+     "fr": "Apportez-les demain, et ce sera réglé.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Thank you. It will not happen again.",
+     "fr": "Merci. Cela ne se reproduira pas.",
+     "v": "us"
+    }
+   ],
+   "q": {
+    "q": "Why did Lily not hand in her homework?",
+    "o": [
+     "She left it at home",
+     "She did not do it",
+     "She lost it"
+    ],
+    "a": 0,
+    "why": "« I forgot it at home. » Notez aussi le reproche au passé : should have told."
+   }
+  },
+  {
+   "id": "pla2",
+   "place": "playground",
+   "title": "Whose turn?",
+   "cast": [
+    "mia",
+    "tom"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "You have been playing for an hour. It is my turn.",
+     "fr": "Tu joues depuis une heure. C'est mon tour.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "I have only just started!",
+     "fr": "Je viens à peine de commencer !",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "That is not true. I have been waiting since lunch.",
+     "fr": "Ce n'est pas vrai. J'attends depuis le déjeuner.",
+     "v": "gb",
+     "p": "ball"
+    },
+    {
+     "s": 1,
+     "en": "All right, I am sorry. You can have it now.",
+     "fr": "D'accord, je suis désolé. Prends-le maintenant.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Thank you. Do you want to play together instead?",
+     "fr": "Merci. Tu veux qu'on joue ensemble plutôt ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "That would be much better.",
+     "fr": "Ce serait bien mieux.",
+     "v": "us"
+    }
+   ],
+   "q": {
+    "q": "How do they solve the problem?",
+    "o": [
+     "They play together",
+     "Tom keeps playing",
+     "They ask a teacher"
+    ],
+    "a": 0,
+    "why": "Mia propose « play together », Tom accepte. Repérez for an hour et since lunch."
+   }
+  },
+  {
+   "id": "par2",
+   "place": "park",
+   "title": "The lost dog",
+   "cast": [
+    "hall",
+    "sam"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "Excuse me, have you seen a small brown dog?",
+     "fr": "Excusez-moi, avez-vous vu un petit chien marron ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "I think I saw one near the trees ten minutes ago.",
+     "fr": "Je crois en avoir vu un près des arbres il y a dix minutes.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Was it wearing a red collar?",
+     "fr": "Portait-il un collier rouge ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Yes, it was. It was running towards the bridge.",
+     "fr": "Oui. Il courait vers le pont.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Thank you very much. I have been looking for an hour.",
+     "fr": "Merci beaucoup. Je le cherche depuis une heure.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "I hope you find him.",
+     "fr": "J'espère que vous le retrouverez.",
+     "v": "us"
+    }
+   ],
+   "q": {
+    "q": "Where did Sam last see the dog?",
+    "o": [
+     "Running towards the bridge",
+     "Near the pond",
+     "At the gate"
+    ],
+    "a": 0,
+    "why": "« It was running towards the bridge. »"
+   }
+  },
+  {
+   "id": "poo2",
+   "place": "pool",
+   "title": "Lessons",
+   "cast": [
+    "rose",
+    "lily"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "How long have you been swimming here?",
+     "fr": "Depuis combien de temps nagez-vous ici ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Since I was six. My brother taught me.",
+     "fr": "Depuis mes six ans. C'est mon frère qui m'a appris.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "You are much faster than the others.",
+     "fr": "Vous êtes bien plus rapide que les autres.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Thank you. I train three times a week.",
+     "fr": "Merci. Je m'entraîne trois fois par semaine.",
+     "v": "us",
+     "p": "goggles"
+    },
+    {
+     "s": 0,
+     "en": "If you keep working, you could join the team.",
+     "fr": "Si vous continuez, vous pourriez entrer dans l'équipe.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "That is exactly what I am hoping for.",
+     "fr": "C'est exactement ce que j'espère.",
+     "v": "us"
+    }
+   ],
+   "q": {
+    "q": "Who taught Lily to swim?",
+    "o": [
+     "Her brother",
+     "A teacher",
+     "Her mother"
+    ],
+    "a": 0,
+    "why": "« My brother taught me. » Notez le present perfect : have you been swimming."
+   }
+  },
+  {
+   "id": "hom2",
+   "place": "home",
+   "title": "Coming home late",
+   "cast": [
+    "rose",
+    "sam"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "You are late. I was beginning to worry.",
+     "fr": "Tu es en retard. Je commençais à m'inquiéter.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "I am sorry. The bus did not come.",
+     "fr": "Je suis désolé. Le bus n'est pas venu.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "You should have called me.",
+     "fr": "Tu aurais dû m'appeler.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "My phone had no battery.",
+     "fr": "Mon téléphone n'avait plus de batterie.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Next time, borrow one. I need to know you are safe.",
+     "fr": "La prochaine fois, emprunte-en un. J'ai besoin de te savoir en sécurité.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "You are right. I will.",
+     "fr": "Tu as raison. Je le ferai.",
+     "v": "us"
+    }
+   ],
+   "q": {
+    "q": "Why was Sam late?",
+    "o": [
+     "The bus did not come",
+     "He missed the train",
+     "He was at a friend's house"
+    ],
+    "a": 0,
+    "why": "« The bus did not come. » Et le reproche : should have called."
+   }
+  },
+  {
+   "id": "mou2",
+   "place": "mountain",
+   "title": "The storm",
+   "cast": [
+    "hall",
+    "tom"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "We had better turn back. The weather is changing.",
+     "fr": "Nous ferions mieux de faire demi-tour. Le temps change.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "But we are almost at the top!",
+     "fr": "Mais on est presque au sommet !",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "If it starts raining, the path will be dangerous.",
+     "fr": "S'il se met à pleuvoir, le sentier sera dangereux.",
+     "v": "gb",
+     "p": "flask"
+    },
+    {
+     "s": 1,
+     "en": "I had not thought of that.",
+     "fr": "Je n'y avais pas pensé.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "We can come back next week, when it is dry.",
+     "fr": "Nous pourrons revenir la semaine prochaine, au sec.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "All right. Let us go down.",
+     "fr": "D'accord. Redescendons.",
+     "v": "us"
+    }
+   ],
+   "q": {
+    "q": "Why do they turn back?",
+    "o": [
+     "The weather is changing",
+     "Tom is tired",
+     "It is getting dark"
+    ],
+    "a": 0,
+    "why": "« The weather is changing. » Retenez had better et la subordonnée en if."
+   }
+  },
+  {
+   "id": "bea2",
+   "place": "beach",
+   "title": "Jellyfish",
+   "cast": [
+    "mia",
+    "lily"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "Be careful. There were jellyfish here yesterday.",
+     "fr": "Fais attention. Il y avait des méduses ici hier.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Really? I have never seen one.",
+     "fr": "Vraiment ? Je n'en ai jamais vu.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "They are difficult to see in the water.",
+     "fr": "Elles sont difficiles à voir dans l'eau.",
+     "v": "gb",
+     "p": "shell"
+    },
+    {
+     "s": 1,
+     "en": "What should I do if one touches me?",
+     "fr": "Que dois-je faire si l'une d'elles me touche ?",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Come out of the water and tell an adult straight away.",
+     "fr": "Sors de l'eau et préviens un adulte tout de suite.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Thank you. I will stay near the beach.",
+     "fr": "Merci. Je resterai près du bord.",
+     "v": "us"
+    }
+   ],
+   "q": {
+    "q": "What should Lily do if a jellyfish touches her?",
+    "o": [
+     "Leave the water and tell an adult",
+     "Keep swimming",
+     "Wash it with sea water"
+    ],
+    "a": 0,
+    "why": "« Come out of the water and tell an adult straight away. »"
+   }
+  },
+  {
+   "id": "clo2",
+   "place": "clothes",
+   "title": "Too small",
+   "cast": [
+    "rose",
+    "sam"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "Good afternoon. Is everything all right?",
+     "fr": "Bonjour. Tout va bien ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "I bought this jumper last week, but it is too small.",
+     "fr": "J'ai acheté ce pull la semaine dernière, mais il est trop petit.",
+     "v": "us",
+     "p": "jumper"
+    },
+    {
+     "s": 0,
+     "en": "Do you have the receipt with you?",
+     "fr": "Avez-vous le ticket de caisse ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Yes, here it is.",
+     "fr": "Oui, le voici.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Would you rather have a bigger one or your money back?",
+     "fr": "Préférez-vous un plus grand ou un remboursement ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "A bigger one, please, if you have it.",
+     "fr": "Un plus grand, s'il vous plaît, si vous en avez.",
+     "v": "us"
+    }
+   ],
+   "q": {
+    "q": "What does Sam want?",
+    "o": [
+     "A bigger jumper",
+     "His money back",
+     "A different colour"
+    ],
+    "a": 0,
+    "why": "« A bigger one, please. » Retenez would rather."
+   }
+  },
+  {
+   "id": "jud2",
+   "place": "judo",
+   "title": "Before the contest",
+   "cast": [
+    "rose",
+    "lily"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "Have you fought her before?",
+     "fr": "Tu l'as déjà affrontée ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Twice. She beat me both times.",
+     "fr": "Deux fois. Elle m'a battue les deux fois.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "She is strong, but she always attacks on the right.",
+     "fr": "Elle est forte, mais elle attaque toujours à droite.",
+     "v": "gb",
+     "p": "medal"
+    },
+    {
+     "s": 1,
+     "en": "So I should move to my left?",
+     "fr": "Donc je devrais me déplacer vers ma gauche ?",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Exactly. And do not rush. Wait for her mistake.",
+     "fr": "Exactement. Et ne te précipite pas. Attends sa faute.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "I will. Thank you for watching her.",
+     "fr": "Je le ferai. Merci de l'avoir observée.",
+     "v": "us"
+    }
+   ],
+   "q": {
+    "q": "What does Mrs Rose advise?",
+    "o": [
+     "Move left and wait",
+     "Attack immediately",
+     "Fight on the right"
+    ],
+    "a": 0,
+    "why": "Se décaler à gauche et attendre la faute. Repérez le present perfect : Have you fought her before?"
+   }
+  },
+  {
+   "id": "bas2",
+   "place": "basket",
+   "title": "After the match",
+   "cast": [
+    "hall",
+    "sam"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "You played well, but you did not pass enough.",
+     "fr": "Tu as bien joué, mais tu n'as pas assez fait la passe.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "I know. I wanted to score myself.",
+     "fr": "Je sais. Je voulais marquer moi-même.",
+     "v": "us",
+     "p": "ball"
+    },
+    {
+     "s": 0,
+     "en": "If you had passed to Tom, you would have won.",
+     "fr": "Si tu avais fait la passe à Tom, vous auriez gagné.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "You are right. I was being selfish.",
+     "fr": "Tu as raison. J'ai été égoïste.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Think about the team next time.",
+     "fr": "Pense à l'équipe la prochaine fois.",
+     "v": "gb",
+     "p": "bottle"
+    },
+    {
+     "s": 1,
+     "en": "I promise I will do better.",
+     "fr": "Je promets de faire mieux.",
+     "v": "us"
+    }
+   ],
+   "q": {
+    "q": "What mistake did Sam make?",
+    "o": [
+     "He did not pass the ball",
+     "He arrived late",
+     "He played badly"
+    ],
+    "a": 0,
+    "why": "« You did not pass enough. » Et la phrase clé, l'irréel du passé : If you had passed, you would have won."
+   }
+  },
+  {
+   "id": "foo2",
+   "place": "food",
+   "title": "Out of stock",
+   "cast": [
+    "hall",
+    "sam"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "Excuse me, do you still have any fresh bread?",
+     "fr": "Excusez-moi, vous avez encore du pain frais ?",
+     "v": "gb",
+     "p": "bread"
+    },
+    {
+     "s": 1,
+     "en": "I am afraid we sold the last loaf an hour ago.",
+     "fr": "Je crains que nous ayons vendu la dernière miche il y a une heure.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "That is a pity. When do you bake again?",
+     "fr": "C'est dommage. Quand enfournez-vous à nouveau ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Tomorrow at six, if you can come early.",
+     "fr": "Demain à six heures, si vous pouvez venir tôt.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "I will. Could I take some apples instead?",
+     "fr": "Je viendrai. Pourrais-je prendre des pommes à la place ?",
+     "v": "gb",
+     "p": "apples"
+    },
+    {
+     "s": 1,
+     "en": "Of course. They arrived this morning.",
+     "fr": "Bien sûr. Elles sont arrivées ce matin.",
+     "v": "us"
+    }
+   ],
+   "q": {
+    "q": "When will there be fresh bread?",
+    "o": [
+     "Tomorrow at six",
+     "This evening",
+     "In an hour"
+    ],
+    "a": 0,
+    "why": "« Tomorrow at six. » Notez I am afraid, atténuation typique."
+   }
   }
  ]
 }

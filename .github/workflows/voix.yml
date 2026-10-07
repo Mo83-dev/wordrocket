@@ -31,42 +31,54 @@ jobs:
           import json, os, re, time
           from gtts import gTTS
 
-          TLD = "co.uk"   # "com" pour l'accent americain
+          TLD = {"gb": "co.uk", "us": "com"}
 
           def slug(w):
               return re.sub(r"(^-|-$)", "", re.sub(r"[^a-z0-9]+", "-", w.lower()))
 
           data = json.load(open("words.json", encoding="utf-8"))
-          mots, vus = [], set()
-          for niveau in data.values():
-              for e in niveau:
-                  if e["en"] not in vus:
-                      vus.add(e["en"])
-                      mots.append(e["en"])
+
+          # (nom de fichier, texte, voix) sans doublon, dans l'ordre
+          travail, vus = [], set()
+          def ajouter(nom, texte, voix):
+              if nom in vus:
+                  return
+              vus.add(nom)
+              travail.append((nom, texte, voix))
+
+          for cle, entrees in data.items():
+              if cle.startswith("d"):          # dialogues
+                  for d in entrees:
+                      for ligne in d["lines"]:
+                          v = ligne.get("v", "gb")
+                          ajouter(slug(ligne["en"]) + "-" + v, ligne["en"], v)
+              else:                            # mots et phrases
+                  for e in entrees:
+                      ajouter(slug(e["en"]), e["en"], "gb")
 
           faits = sautes = 0
           echecs = []
-          for mot in mots:
-              chemin = os.path.join("audio", slug(mot) + ".mp3")
+          for nom, texte, voix in travail:
+              chemin = os.path.join("audio", nom + ".mp3")
               if os.path.exists(chemin) and os.path.getsize(chemin) > 0:
                   sautes += 1
                   continue
               for essai in range(3):
                   try:
-                      gTTS(mot, lang="en", tld=TLD).save(chemin)
+                      gTTS(texte, lang="en", tld=TLD.get(voix, "co.uk")).save(chemin)
                       faits += 1
-                      print("ok : " + mot, flush=True)
+                      print("ok [%s] %s" % (voix, texte[:60]), flush=True)
                       time.sleep(0.4)
                       break
                   except Exception as exc:
                       if os.path.exists(chemin) and os.path.getsize(chemin) == 0:
                           os.remove(chemin)
                       if essai == 2:
-                          echecs.append((mot, str(exc)[:100]))
+                          echecs.append((texte, str(exc)[:100]))
                       else:
                           time.sleep(3)
 
-          voulus = {slug(m) + ".mp3" for m in mots}
+          voulus = {n + ".mp3" for n, _, _ in travail}
           retires = 0
           for nom in os.listdir("audio"):
               if nom.endswith(".mp3") and nom not in voulus:
@@ -75,8 +87,8 @@ jobs:
 
           print("\n%d creees, %d deja la, %d retirees, %d en echec"
                 % (faits, sautes, retires, len(echecs)))
-          for mot, err in echecs:
-              print("  echec : %s -> %s" % (mot, err))
+          for texte, err in echecs:
+              print("  echec : %s -> %s" % (texte[:50], err))
           FIN
 
       - name: Deposer les fichiers

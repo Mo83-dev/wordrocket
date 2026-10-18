@@ -88,6 +88,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;font-f
 .m5 b{margin-top:0}
 .m6{background:#2C3A52;border-color:#4A6287}
 .m7{background:#3F3156;border-color:#63518A}
+.m9{background:#14453E;border-color:#22766A}
 .m8{background:#1E4A4E;border-color:#2F7A80;grid-column:1 / -1;min-height:auto;flex-direction:row;align-items:center;gap:14px}
 .m8 b{margin-top:0}
 .seclabel{grid-column:1 / -1;font-size:12.5px;font-weight:800;color:var(--dim);
@@ -264,9 +265,28 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;font-f
 .tcard b{display:block;font-size:22px;font-weight:800;margin:8px 0 4px}
 .tcard p{font-size:14.5px;color:var(--dim);font-weight:600;margin-bottom:16px}
 
+#fireBtn{display:block;width:100%;max-width:360px;margin:11px auto 0;border-radius:16px;
+  padding:17px;font-size:19px;font-weight:800;letter-spacing:.06em;background:var(--coral);
+  color:#2A0A10;box-shadow:0 5px 0 #B5404E;touch-action:none;user-select:none;
+  transition:transform .06s,box-shadow .06s}
+#fireBtn.down{transform:translateY(4px);box-shadow:0 1px 0 #B5404E}
 #cv{width:100%;max-width:360px;aspect-ratio:360/560;border-radius:16px;border:3px solid var(--edge);
   touch-action:none;background:#0B0820;display:block;margin:0 auto}
 .arcHint{text-align:center;font-size:12.5px;color:var(--dim);font-weight:600;margin-top:11px;line-height:1.45}
+
+
+/* --- répéter --- */
+#micBtn{display:block;width:100%;border-radius:18px;padding:20px;margin-top:14px;font-size:18px;
+  font-weight:800;background:var(--cyan);color:#06201D;box-shadow:0 5px 0 #1FA396;
+  touch-action:none;user-select:none;transition:transform .06s,box-shadow .06s,background .15s}
+#micBtn.rec{background:var(--coral);color:#2A0A10;box-shadow:0 5px 0 #B5404E;
+  animation:pulse 1s infinite alternate}
+@keyframes pulse{from{opacity:1}to{opacity:.78}}
+#micBtn:active{transform:translateY(4px);box-shadow:0 1px 0 #1FA396}
+.word.petite{font-size:26px;line-height:1.25}
+#s-rep .stage .fr{font-size:15px;color:var(--dim);font-weight:600;margin-top:9px}
+.row2{display:flex;gap:9px}
+.row2 .cta{margin-top:0;padding:13px 8px;font-size:14.5px}
 
 @keyframes pop{0%{transform:scale(.9);opacity:0}100%{transform:scale(1);opacity:1}}
 @media (prefers-reduced-motion:no-preference){.stage,.result{animation:pop .22s ease-out}}
@@ -304,6 +324,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;font-f
       <span class="em">⏱</span><span><b>Chrono</b><small>Un maximum en 60 s</small></span></button>
     <button class="mode m4" data-mode="pairs">
       <span class="em">🧩</span><span><b>Paires</b><small>Relie les deux langues</small></span></button>
+
+    <button class="mode m9" data-mode="repeat">
+      <span class="em">🎤</span><span><b>Répéter</b><small>Écoute, enregistre-toi, compare</small></span></button>
 
     <p class="seclabel">Les phrases</p>
     <button class="mode m6" data-mode="build">
@@ -371,6 +394,24 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;font-f
   <div id="dQuiz"></div>
 </section>
 
+<!-- ================= RÉPÉTER ================= -->
+<section class="screen" id="s-rep">
+  <div class="bar">
+    <button class="icon-btn" id="repQuit" aria-label="Quitter">✕</button>
+    <div class="brand" style="font-size:16px">Répéter</div>
+    <div id="repStep" style="font-size:13px;color:var(--dim);font-weight:700;min-width:40px;text-align:right"></div>
+  </div>
+  <div class="stage">
+    <div class="ask">Écoute, puis répète</div>
+    <div class="word" id="repEn"></div>
+    <div class="fr" id="repFr"></div>
+    <button class="speak" id="repListen">🔊</button>
+  </div>
+  <button id="micBtn">🎤&nbsp;&nbsp;Appuie et parle</button>
+  <div id="repAfter"></div>
+  <audio id="mine" playsinline preload="auto"></audio>
+</section>
+
 <!-- ================= SALLE D'ARCADE ================= -->
 <section class="screen" id="s-arcade">
   <div class="bar">
@@ -379,8 +420,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;font-f
     <div style="width:40px"></div>
   </div>
   <canvas id="cv"></canvas>
-  <p class="arcHint">Glisse le doigt pour déplacer le vaisseau — il tire tout seul.<br>
-  Entre deux vagues, vise la bonne traduction : tu gagnes une vie, un bouclier ou le tir double.</p>
+  <button id="fireBtn">◉&nbsp;&nbsp;TIR</button>
+  <p class="arcHint">Glisse le doigt sur l'écran pour déplacer le vaisseau.</p>
 </section>
 
 <!-- ================= RÉGLAGES ================= -->
@@ -868,11 +909,11 @@ function distractors(p,w,k,field){
 /* ========================================================= */
 /* Navigation                                                */
 /* ========================================================= */
-const screens=['s-home','s-game','s-end','s-set','s-pick','s-dial','s-arcade'];
+const screens=['s-home','s-game','s-end','s-set','s-pick','s-dial','s-arcade','s-rep'];
 function show(id){
   screens.forEach(s=>document.getElementById(s).classList.toggle('on',s===id));
   window.scrollTo(0,0);
-  if(id==='s-game'||id==='s-dial') startTick(); else stopTick();
+  if(id==='s-game'||id==='s-dial'||id==='s-rep') startTick(); else stopTick();
 }
 document.getElementById('toSettings').onclick=()=>{renderSettings();show('s-set')};
 document.getElementById('backHome').onclick=()=>{renderHome();show('s-home')};
@@ -915,6 +956,7 @@ document.getElementById('modes').onclick=e=>{
   const b=e.target.closest('[data-mode]');if(!b)return;
   unlockAudio();
   if(b.dataset.mode==='talk')return openPick();
+  if(b.dataset.mode==='repeat')return openRepeat();
   start(b.dataset.mode);
 };
 
@@ -1327,6 +1369,148 @@ function celebrate(){
 }
 
 /* ========================================================= */
+/* Répéter — écoute le modèle, enregistre-toi, compare        */
+/* Rien ne sort du téléphone : aucun envoi, aucun jugement.   */
+/* ========================================================= */
+
+const SILENCE='data:audio/mpeg;base64,SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4LjEyLjEwMAAAAAAAAAAAAAAA//tAwAAAAAAAAAAAAAAAAAAAAAAASW5mbwAAAA8AAAACAAABhgC7u7u7u7u7u7u7u7u7u7u7u7u7u7u7u7vd3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d//////////////////////////8AAAAATGF2YzU4LjIyAAAAAAAAAAAAAAAAJAQKAAAAAAAAAYZgjqkSAAAAAAD/+xDEAAPAAAGkAAAAIAAANIAAAARMQU1FMy4xMDBVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV';
+
+let RP=null, micStream=null, mediaRec=null, chunks=[], recTimer=null;
+
+function micDispo(){
+  return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia && window.MediaRecorder);
+}
+
+function openRepeat(){
+  const p=me();
+  const mots=queue(p,6), phr=queue(p,2,sents(p));
+  const items=shuffle(mots.concat(phr));
+  if(!items.length){ renderHome(); show('s-home'); return; }
+  RP={q:items, i:0, url:null, rec:false, n:0};
+
+  /* on débloque la lecture de l'enregistrement pendant que le geste de l'enfant est encore valide */
+  try{ const a=document.getElementById('mine'); a.src=SILENCE; a.play().then(()=>a.pause()).catch(()=>{}); }catch(e){}
+
+  show('s-rep');
+  repStep(0);
+}
+
+function closeRepeat(){
+  stopRec();
+  if(micStream){ micStream.getTracks().forEach(t=>t.stop()); micStream=null; }
+  if(RP && RP.url) URL.revokeObjectURL(RP.url);
+  RP=null;
+  try{ document.getElementById('mine').pause(); }catch(e){}
+  renderHome(); show('s-home');
+}
+
+function repStep(n){
+  if(!RP) return;
+  RP.i=n;
+  if(n>=RP.q.length) return repEnd();
+  const w=RP.q[n];
+  if(RP.url){ URL.revokeObjectURL(RP.url); RP.url=null; }
+  document.getElementById('repStep').textContent=(n+1)+' / '+RP.q.length;
+  document.getElementById('repEn').textContent=w.en;
+  document.getElementById('repEn').className = w.cat ? 'word' : 'word petite';
+  document.getElementById('repFr').textContent=w.fr;
+  document.getElementById('repAfter').innerHTML='';
+  document.getElementById('micBtn').textContent='🎤  Appuie et parle';
+  document.getElementById('micBtn').classList.remove('rec');
+  setTimeout(()=>say(w.en), 260);
+}
+
+async function startRec(){
+  if(!RP || RP.rec) return;
+  if(!micDispo()) return repErr("Ce navigateur ne sait pas enregistrer le micro. Essaie depuis l'icône de l'écran d'accueil.");
+  try{
+    if(!micStream) micStream = await navigator.mediaDevices.getUserMedia({audio:true});
+  }catch(e){
+    return repErr("Le micro n'est pas autorisé. Dans Réglages → Safari → Microphone, autorise ce site, puis recharge.");
+  }
+  try{
+    chunks=[];
+    const mime = MediaRecorder.isTypeSupported('audio/mp4') ? 'audio/mp4'
+               : MediaRecorder.isTypeSupported('audio/webm') ? 'audio/webm' : '';
+    mediaRec = new MediaRecorder(micStream, mime ? {mimeType:mime} : undefined);
+    mediaRec.ondataavailable = e=>{ if(e.data && e.data.size) chunks.push(e.data); };
+    mediaRec.onstop = ()=>{
+      RP.rec=false;
+      const btn=document.getElementById('micBtn');
+      btn.classList.remove('rec'); btn.textContent='🎤  Appuie et parle';
+      if(!chunks.length) return repErr("Rien n'a été enregistré. Garde le doigt appuyé pendant que tu parles.");
+      const blob=new Blob(chunks,{type:mediaRec.mimeType||'audio/mp4'});
+      if(RP.url) URL.revokeObjectURL(RP.url);
+      RP.url=URL.createObjectURL(blob);
+      RP.n++;
+      repApres();
+      playBoth();
+    };
+    mediaRec.start();
+    RP.rec=true;
+    const btn=document.getElementById('micBtn');
+    btn.classList.add('rec'); btn.textContent='●  Parle…  relâche quand tu as fini';
+    tone(520,.06,'sine',0,.05);
+    clearTimeout(recTimer);
+    recTimer=setTimeout(stopRec, 7000);        /* garde-fou si le doigt reste collé */
+  }catch(e){ repErr("L'enregistrement n'a pas pu démarrer."); }
+}
+
+function stopRec(){
+  clearTimeout(recTimer);
+  try{ if(mediaRec && mediaRec.state==='recording') mediaRec.stop(); }catch(e){}
+}
+
+function playBoth(){
+  if(!RP) return;
+  const w=RP.q[RP.i];
+  say(w.en, null, ()=>setTimeout(playMine, 260));
+}
+function playMine(){
+  if(!RP || !RP.url) return;
+  try{
+    const a=document.getElementById('mine');
+    a.src=RP.url;
+    const pr=a.play(); if(pr && pr.catch) pr.catch(()=>{});
+  }catch(e){}
+}
+
+function repApres(){
+  const el=document.getElementById('repAfter');
+  el.innerHTML=`<div class="row2">
+      <button class="cta ghost" id="rpBoth">🔊 Les deux</button>
+      <button class="cta ghost" id="rpMine">👂 Moi</button>
+      <button class="cta" id="rpNext">Suivant</button>
+    </div>
+    <p class="arcHint" style="margin-top:10px">Écoute le modèle, puis toi. La différence s'entend mieux qu'elle ne s'explique.</p>`;
+  document.getElementById('rpBoth').onclick=playBoth;
+  document.getElementById('rpMine').onclick=playMine;
+  document.getElementById('rpNext').onclick=()=>repStep(RP.i+1);
+}
+
+function repErr(t){
+  const el=document.getElementById('repAfter');
+  el.innerHTML=`<div class="truth" style="border-left:3px solid var(--coral)"><small>Micro</small>
+     <span style="font-size:14.5px;font-weight:600;color:var(--dim)">${esc(t)}</span></div>
+     <button class="cta ghost" id="rpSkip">Passer au suivant</button>`;
+  const b=document.getElementById('rpSkip'); if(b)b.onclick=()=>repStep(RP.i+1);
+}
+
+function repEnd(){
+  document.getElementById('repStep').textContent='';
+  document.getElementById('repEn').textContent='';
+  document.getElementById('repFr').textContent='';
+  document.getElementById('micBtn').style.display='none';
+  document.getElementById('repAfter').innerHTML=`<div class="result" style="padding-top:4px">
+      <div class="big">🎤</div><h2>Série terminée</h2>
+      <p>${RP.n} enregistrement${RP.n>1?'s':''} écouté${RP.n>1?'s':''}.</p>
+      <button class="cta" id="rpAgain">Une autre série</button>
+      <button class="cta ghost" id="rpHome">Retour au menu</button></div>`;
+  document.getElementById('rpAgain').onclick=()=>{ document.getElementById('micBtn').style.display=''; openRepeat(); };
+  document.getElementById('rpHome').onclick=closeRepeat;
+}
+
+/* ========================================================= */
 /* Salle d'arcade — Word Invaders                            */
 /* ========================================================= */
 
@@ -1350,6 +1534,7 @@ function openArcade(){
 }
 
 function closeArcade(){
+  if(AR && AR.stopFire) AR.stopFire();
   if(raf) cancelAnimationFrame(raf);
   raf = null; AR = null;
   window.removeEventListener('keydown', arcKeyDn);
@@ -1363,7 +1548,7 @@ function arcNew(){
     lvl:1, score:0, lives:3, shield:0, dbl:0,
     ship:{x:AW/2, w:30, h:14},
     bul:[], bomb:[], inv:[], bunk:[],
-    dir:1, drop:0, fire:0, t:0,
+    dir:1, drop:0, cool:0, t:0,
     phase:'play',          // play | bonus | dead | over
     bonus:null, msg:null, msgT:0,
     best: me().best || 0
@@ -1406,9 +1591,22 @@ function arcBuild(){
 
 function arcFlash(t){ AR.msg = t; AR.msgT = 90; }
 
+/* ---------- le tir ---------- */
+function arcFire(){
+  if(!AR || AR.phase==='over') return;
+  if(AR.cool>0) return;
+  const max = AR.dbl>0 ? 4 : 2;      /* pas plus de deux tirs à l'écran : on vise, on ne mitraille pas */
+  if(AR.bul.length >= max) return;
+  AR.cool = 9;
+  if(AR.dbl>0){ AR.bul.push({x:AR.ship.x-7,y:AH-56}); AR.bul.push({x:AR.ship.x+7,y:AH-56}); }
+  else AR.bul.push({x:AR.ship.x, y:AH-56});
+  tone(900,.04,'square',0,.035);
+  markAct();
+}
+
 /* ---------- commandes ---------- */
 let arcKeys = {};
-function arcKeyDn(e){ arcKeys[e.key]=1; if(e.key===' ')e.preventDefault(); }
+function arcKeyDn(e){ arcKeys[e.key]=1; if(e.key===' '){ e.preventDefault(); arcFire(); } }
 function arcKeyUp(e){ arcKeys[e.key]=0; }
 
 function arcBind(){
@@ -1431,6 +1629,15 @@ function arcBind(){
   cv.ontouchmove  = e=>{ e.preventDefault(); move(e); };
   window.addEventListener('keydown', arcKeyDn);
   window.addEventListener('keyup', arcKeyUp);
+
+  /* bouton de tir : un appui tire, un appui maintenu enchaîne au rythme du refroidissement */
+  const f = document.getElementById('fireBtn');
+  let rep = null;
+  const stop = ()=>{ if(rep){clearInterval(rep); rep=null;} f.classList.remove('down'); };
+  f.onpointerdown = e=>{ e.preventDefault(); f.classList.add('down'); arcFire();
+                         if(!rep) rep = setInterval(arcFire, 60); };
+  f.onpointerup = stop; f.onpointercancel = stop; f.onpointerleave = stop;
+  AR.stopFire = stop;
 }
 
 /* ---------- boucle ---------- */
@@ -1450,14 +1657,8 @@ function arcStep(){
 
   if(AR.phase==='over') return;
 
-  /* tir automatique */
-  AR.fire--;
-  if(AR.fire<=0){
-    AR.fire = AR.dbl>0 ? 16 : 24;
-    if(AR.dbl>0){ AR.bul.push({x:AR.ship.x-7,y:AH-56}); AR.bul.push({x:AR.ship.x+7,y:AH-56}); }
-    else AR.bul.push({x:AR.ship.x, y:AH-56});
-    tone(900,.04,'square',0,.035);
-  }
+  /* le tir est déclenché par l'enfant, jamais tout seul */
+  if(AR.cool>0) AR.cool--;
   AR.bul = AR.bul.filter(b=>{ b.y -= 7; return b.y > -10; });
 
   if(AR.phase==='bonus'){ arcStepBonus(); return; }
@@ -1564,7 +1765,6 @@ function arcWin(){
   AR.phase = 'bonus';
   AR.bomb = [];
   AR.bul  = [];        /* les tirs en vol ne doivent pas répondre à la place de l'enfant */
-  AR.fire = 36;        /* court répit pour lire la question */
   AR.bonus = {
     w, t: 0, lim: 760,
     pods: choix.map((o,k)=>({
@@ -1755,6 +1955,14 @@ $('cards').onclick=e=>{
   unlockAudio(); playDial(dials(me())[+b.dataset.d]);
 };
 document.getElementById('arcQuit').onclick=closeArcade;
+document.getElementById('repQuit').onclick=closeRepeat;
+document.getElementById('repListen').onclick=()=>{ if(RP)say(RP.q[RP.i].en); };
+(function(){
+  const m=document.getElementById('micBtn');
+  const bas=e=>{ e.preventDefault(); markAct(); startRec(); };
+  const haut=e=>{ e.preventDefault(); stopRec(); };
+  m.onpointerdown=bas; m.onpointerup=haut; m.onpointercancel=haut; m.onpointerleave=haut;
+})();
 $('pickBack').onclick=()=>{ renderHome(); show('s-home'); };
 $('dQuit').onclick=()=>{ if(DL&&DL.t)clearTimeout(DL.t); DL=null; try{el.pause()}catch(x){} openPick(); };
 

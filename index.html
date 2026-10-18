@@ -231,6 +231,43 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;font-f
 .card b{display:block;font-size:15.5px;font-weight:800;margin-top:7px;line-height:1.2}
 .card small{display:block;font-size:12.5px;color:var(--dim);font-weight:600;margin-top:2px}
 .card .tick{float:right;color:var(--cyan);font-size:15px;font-weight:800}
+
+/* --- objectif du jour --- */
+.goal{border-radius:18px;background:var(--panel);border:3px solid var(--edge);padding:14px 15px;margin-bottom:16px}
+.goal.done{border-color:var(--cyan)}
+.gtop{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:9px}
+.glbl{font-size:13px;font-weight:800;color:var(--dim)}
+.gval{font-size:14px;font-weight:800;color:var(--amber)}
+.goal.done .gval{color:var(--cyan);font-size:19px}
+.gbar{height:10px;border-radius:99px;background:#2A1A5E;overflow:hidden}
+.gbar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#2F7A80,var(--cyan));transition:width .4s}
+.gsub{font-size:12.5px;color:var(--dim);font-weight:600;margin-top:8px}
+.gsub b{color:var(--cream)}
+
+/* --- salle d'arcade --- */
+.arc{width:100%;border-radius:20px;padding:15px;text-align:left;border:3px solid var(--edge);
+  background:#1A1038;display:flex;align-items:center;gap:14px;margin-top:12px;box-shadow:0 4px 0 #0D0722;
+  transition:transform .09s,box-shadow .09s}
+.arc:active{transform:translateY(3px);box-shadow:0 1px 0 #0D0722}
+.arc.open{border-color:var(--amber);background:#3A2410}
+.arc.locked{opacity:.7}
+.arc .em{font-size:28px;flex:0 0 auto}
+.arc b{display:block;font-size:16.5px;font-weight:800}
+.arc small{display:block;font-size:12.5px;color:var(--dim);font-weight:600;margin-top:2px;line-height:1.3}
+
+.overlay{position:fixed;inset:0;z-index:40;display:none;align-items:center;justify-content:center;
+  background:rgba(10,7,26,.86);padding:24px}
+.overlay.on{display:flex}
+.tcard{background:var(--panel);border:3px solid var(--edge);border-radius:22px;padding:24px 20px;
+  text-align:center;max-width:320px;width:100%}
+.tcard .tem{font-size:52px;line-height:1.1}
+.tcard b{display:block;font-size:22px;font-weight:800;margin:8px 0 4px}
+.tcard p{font-size:14.5px;color:var(--dim);font-weight:600;margin-bottom:16px}
+
+#cv{width:100%;max-width:360px;aspect-ratio:360/560;border-radius:16px;border:3px solid var(--edge);
+  touch-action:none;background:#0B0820;display:block;margin:0 auto}
+.arcHint{text-align:center;font-size:12.5px;color:var(--dim);font-weight:600;margin-top:11px;line-height:1.45}
+
 @keyframes pop{0%{transform:scale(.9);opacity:0}100%{transform:scale(1);opacity:1}}
 @media (prefers-reduced-motion:no-preference){.stage,.result{animation:pop .22s ease-out}}
 @keyframes shake{10%,90%{transform:translateX(-3px)}30%,70%{transform:translateX(5px)}50%{transform:translateX(-5px)}}
@@ -255,6 +292,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;font-f
     <div class="num" id="gNum"></div>
   </div>
 
+  <div id="goalBox" class="goal"></div>
   <div class="players" id="players"></div>
   <div class="modes" id="modes">
     <p class="seclabel">Les mots</p>
@@ -281,6 +319,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;font-f
     <button class="mode m5" data-mode="duel">
       <span class="em">⚔️</span><span><b>Duel</b><small>Un contre un sur le même téléphone</small></span></button>
   </div>
+  <div id="arcBox"></div>
   <p id="homeMsg" class="note" style="margin-top:18px;display:none"></p>
 </section>
 
@@ -332,6 +371,18 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;font-f
   <div id="dQuiz"></div>
 </section>
 
+<!-- ================= SALLE D'ARCADE ================= -->
+<section class="screen" id="s-arcade">
+  <div class="bar">
+    <button class="icon-btn" id="arcQuit" aria-label="Quitter">✕</button>
+    <div class="brand" id="arcTitle" style="font-size:16px"></div>
+    <div style="width:40px"></div>
+  </div>
+  <canvas id="cv"></canvas>
+  <p class="arcHint">Glisse le doigt pour déplacer le vaisseau — il tire tout seul.<br>
+  Entre deux vagues, vise la bonne traduction : tu gagnes une vie, un bouclier ou le tir double.</p>
+</section>
+
 <!-- ================= RÉGLAGES ================= -->
 <section class="screen" id="s-set">
   <div class="bar">
@@ -341,6 +392,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;font-f
   </div>
 
   <div id="pForm"></div>
+  <div id="goalForm"></div>
 
   <div class="note" id="audioNote"></div>
   <button class="cta ghost" id="testAudio">Tester le son</button>
@@ -348,6 +400,9 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;font-f
 </section>
 
 </div>
+
+<div class="overlay" id="toast"></div>
+<div class="overlay" id="arcEnd"></div>
 
 <script>
 /* ========================================================= */
@@ -813,8 +868,12 @@ function distractors(p,w,k,field){
 /* ========================================================= */
 /* Navigation                                                */
 /* ========================================================= */
-const screens=['s-home','s-game','s-end','s-set','s-pick','s-dial'];
-function show(id){screens.forEach(s=>document.getElementById(s).classList.toggle('on',s===id));window.scrollTo(0,0)}
+const screens=['s-home','s-game','s-end','s-set','s-pick','s-dial','s-arcade'];
+function show(id){
+  screens.forEach(s=>document.getElementById(s).classList.toggle('on',s===id));
+  window.scrollTo(0,0);
+  if(id==='s-game'||id==='s-dial') startTick(); else stopTick();
+}
 document.getElementById('toSettings').onclick=()=>{renderSettings();show('s-set')};
 document.getElementById('backHome').onclick=()=>{renderHome();show('s-home')};
 document.getElementById('quit').onclick=()=>{stopTimer();renderHome();show('s-home')};
@@ -840,6 +899,8 @@ function renderHome(){
        <div class="nm">${esc(x.name)}</div>
        <div class="lv">Niveau ${x.level} · ${mastered(x)+masteredS(x)} acquis</div>
        <div class="st">${x.stars||0}★</div></button>`).join('');
+
+  renderGoal(); renderArc();
 
   const msg=document.getElementById('homeMsg');
   if(!n){msg.style.display='block';
@@ -962,7 +1023,7 @@ function renderQuestion(w,player,dir){
       if(x.dataset.k===w.en)x.classList.add('good');
       else if(x===b)x.classList.add('bad');
     });
-    if(ok){sfxGood();G.ok++;player.stars=(player.stars||0)+1;}
+    if(ok){sfxGood();G.ok++;player.stars=(player.stars||0)+1;scoreOk(player);}
     else{sfxBad();G.ko++;G.wrong.push(w);playEl.querySelector('.stage').classList.add('shake');}
 
     const nb=grade(player,w,ok);
@@ -1042,7 +1103,7 @@ function renderBuild(s){
     checkEl.style.display='none';
     bankEl.innerHTML='';
 
-    if(ok){sfxGood(); G.ok++; me().stars=(me().stars||0)+1;}
+    if(ok){sfxGood(); G.ok++; me().stars=(me().stars||0)+1; scoreOk();}
     else{sfxBad(); G.ko++; G.wrong.push(s); slotsEl.classList.add('shake');}
     const nb=grade(me(),s,ok);
     if(ok&&nb===3)G.ups.push(s);
@@ -1087,7 +1148,7 @@ function renderPairs(){
     const a=G.state.tiles[G.state.sel];
     const prev=playEl.querySelector('.tile.sel');
     if(a.k===t.k&&a.en!==t.en){
-      sfxGood(); a.off=t.off=true; G.state.done++; G.ok++;
+      sfxGood(); a.off=t.off=true; G.state.done++; G.ok++; scoreOk();
       const w=G.pairs.find(x=>x.en===t.k);
       const nb=grade(me(),w,true); if(nb===3)G.ups.push(w);
       me().stars=(me().stars||0)+1; save();
@@ -1171,6 +1232,504 @@ function finish(){
 /* ========================================================= */
 
 /* ========================================================= */
+/* Objectif du jour                                          */
+/* ========================================================= */
+/* Le chronomètre ne tourne que pendant une activité, et se
+   met en pause dès que l'écran n'est plus touché.            */
+
+const IDLE_MS = 22000;     // au-delà, on considère l'enfant parti
+let lastAct = Date.now();
+let ticking = false, tickId = null;
+
+function markAct(){ lastAct = Date.now(); }
+document.addEventListener('pointerdown', markAct, {passive:true});
+document.addEventListener('keydown', markAct);
+
+function day(p){
+  const t = today();
+  if(!p.day || p.day.d !== t) p.day = {d:t, sec:0, ok:0, free:false};
+  return p.day;
+}
+function goalSec(){ return (S.get('goalMin', 10)|0) * 60; }
+function goalDone(p){ const j = day(p); return j.sec >= goalSec(); }
+function arcadeOpen(p){ return S.get('noLock', false) || goalDone(p) || day(p).free; }
+
+function startTick(){
+  if(ticking) return;
+  ticking = true;
+  markAct();
+  tickId = setInterval(()=>{
+    if(Date.now() - lastAct > IDLE_MS) return;        // en pause
+    const p = me(), j = day(p);
+    const avant = goalDone(p);
+    j.sec++;
+    if(j.sec % 5 === 0) save();
+    if(!avant && goalDone(p)){ save(); celebrate(); }
+  }, 1000);
+}
+function stopTick(){ ticking=false; if(tickId)clearInterval(tickId); tickId=null; save(); }
+
+function scoreOk(p){ const j=day(p||me()); j.ok++; }
+
+function mmss(s){
+  const m = Math.floor(s/60), r = s%60;
+  return m + ' min ' + (r<10?'0':'') + r + ' s';
+}
+
+function renderGoal(){
+  const p = me(), j = day(p), but = goalSec();
+  const pct = Math.min(100, Math.round(j.sec / but * 100));
+  const fait = goalDone(p);
+  const reste = Math.max(0, but - j.sec);
+  const el = document.getElementById('goalBox');
+  if(!el) return;
+  el.className = 'goal' + (fait ? ' done' : '');
+  el.innerHTML = `
+    <div class="gtop">
+      <span class="glbl">${fait ? 'Objectif du jour atteint' : 'Objectif du jour'}</span>
+      <span class="gval">${fait ? '✓' : mmss(reste) + ' restantes'}</span>
+    </div>
+    <div class="gbar"><i style="width:${pct}%"></i></div>
+    <div class="gsub">${mmss(j.sec)} de travail · <b>${j.ok}</b> bonne${j.ok>1?'s':''} réponse${j.ok>1?'s':''}</div>`;
+}
+
+function renderArc(){
+  const p=me(), el=document.getElementById('arcBox');
+  if(!el) return;
+  const ouvert = arcadeOpen(p);
+  const reste = Math.max(0, goalSec() - day(p).sec);
+  el.innerHTML = `<button class="arc ${ouvert?'open':'locked'}" id="arcGo">
+      <span class="em">${ouvert?'🕹️':'🔒'}</span>
+      <span><b>Word Invaders</b><small>${ouvert
+        ? 'Ouvert pour aujourd\'hui' + (p.best?' · meilleur score '+p.best:'')
+        : 'S\'ouvre après ' + mmss(reste) + ' de travail'}</small></span></button>`;
+  document.getElementById('arcGo').onclick = ()=>{
+    unlockAudio();
+    if(arcadeOpen(me())) openArcade();
+    else { const b=document.getElementById('arcGo'); b.classList.add('shake');
+           setTimeout(()=>b.classList.remove('shake'),400); sfxBad(); }
+  };
+}
+
+function celebrate(){
+  sfxWin();
+  const v = document.getElementById('toast');
+  v.innerHTML = `<div class="tcard">
+      <div class="tem">🏅</div>
+      <b>Objectif atteint&nbsp;!</b>
+      <p>La salle d'arcade est ouverte pour aujourd'hui.</p>
+      <button class="cta" id="tGo">Jouer</button>
+      <button class="cta ghost" id="tNo">Plus tard</button>
+    </div>`;
+  v.classList.add('on');
+  document.getElementById('tGo').onclick = ()=>{ v.classList.remove('on'); openArcade(); };
+  document.getElementById('tNo').onclick = ()=>{ v.classList.remove('on'); renderHome(); };
+}
+
+/* ========================================================= */
+/* Salle d'arcade — Word Invaders                            */
+/* ========================================================= */
+
+const SPR = {
+a:["00011000","00111100","01111110","11011011","00100100"],
+b:["01000010","00111100","01111110","11011011","10100101"],
+c:["00111100","01111110","11111111","00100100","01011010"]
+};
+const SPRC = {a:'#7FE8D8', b:'#FFC14D', c:'#FF8FA0'};
+const AW = 360, AH = 560;
+
+let AR = null;          // état de la partie
+let raf = null;
+
+function openArcade(){
+  const p = me();
+  if(!arcadeOpen(p)){ renderHome(); show('s-home'); return; }
+  show('s-arcade');
+  document.getElementById('arcTitle').textContent = 'Word Invaders';
+  arcNew();
+}
+
+function closeArcade(){
+  if(raf) cancelAnimationFrame(raf);
+  raf = null; AR = null;
+  window.removeEventListener('keydown', arcKeyDn);
+  window.removeEventListener('keyup', arcKeyUp);
+  renderHome(); show('s-home');
+}
+
+/* ---------- mise en place ---------- */
+function arcNew(){
+  AR = {
+    lvl:1, score:0, lives:3, shield:0, dbl:0,
+    ship:{x:AW/2, w:30, h:14},
+    bul:[], bomb:[], inv:[], bunk:[],
+    dir:1, drop:0, fire:0, t:0,
+    phase:'play',          // play | bonus | dead | over
+    bonus:null, msg:null, msgT:0,
+    best: me().best || 0
+  };
+  arcBuild();
+  arcBind();
+  arcLoop();
+}
+
+function arcBuild(){
+  const L = AR.lvl;
+  const rows = Math.min(5, 2 + Math.floor((L+1)/2));
+  const cols = Math.min(9, 5 + Math.floor(L/2));
+  AR.inv = [];
+  for(let r=0;r<rows;r++){
+    for(let c=0;c<cols;c++){
+      const type = r===0 ? 'a' : (r<3 ? 'b' : 'c');
+      AR.inv.push({
+        x: 34 + c*34, y: 70 + r*30, w:24, h:15,
+        t:type, pts: type==='a'?30:type==='b'?20:10, alive:true
+      });
+    }
+  }
+  AR.dir = 1; AR.drop = 0; AR.bomb = []; AR.bul = [];
+  AR.bunk = [];
+  const nb = 4;
+  for(let i=0;i<nb;i++){
+    const bx = 30 + i*(AW-60)/(nb-1) - 24;
+    const cells = [];
+    for(let r=0;r<3;r++){
+      cells.push([]);
+      for(let c=0;c<6;c++) cells[r].push(r===2 && (c===2||c===3) ? 0 : 1);
+    }
+    AR.bunk.push({x:bx, y:AH-116, cells});
+  }
+  AR.speed = 0.30 + L*0.07;
+  AR.bombRate = 0.006 + L*0.0022;
+  arcFlash('NIVEAU ' + L);
+}
+
+function arcFlash(t){ AR.msg = t; AR.msgT = 90; }
+
+/* ---------- commandes ---------- */
+let arcKeys = {};
+function arcKeyDn(e){ arcKeys[e.key]=1; if(e.key===' ')e.preventDefault(); }
+function arcKeyUp(e){ arcKeys[e.key]=0; }
+
+function arcBind(){
+  const cv = document.getElementById('cv');
+  const dpr = Math.min(2, window.devicePixelRatio||1);
+  cv.width = AW*dpr; cv.height = AH*dpr;
+  AR.ctx = cv.getContext('2d');
+  AR.ctx.setTransform(dpr,0,0,dpr,0,0);
+
+  const move = e=>{
+    if(!AR) return;
+    const r = cv.getBoundingClientRect();
+    const px = (e.touches ? e.touches[0].clientX : e.clientX) - r.left;
+    AR.ship.x = Math.max(18, Math.min(AW-18, px / r.width * AW));
+    markAct();
+  };
+  cv.onpointerdown = e=>{ cv.setPointerCapture&&cv.setPointerCapture(e.pointerId); move(e); };
+  cv.onpointermove = e=>{ if(e.buttons||e.pointerType==='touch') move(e); };
+  cv.ontouchstart = e=>{ e.preventDefault(); move(e); };
+  cv.ontouchmove  = e=>{ e.preventDefault(); move(e); };
+  window.addEventListener('keydown', arcKeyDn);
+  window.addEventListener('keyup', arcKeyUp);
+}
+
+/* ---------- boucle ---------- */
+function arcLoop(){
+  if(!AR) return;
+  arcStep();
+  arcDraw();
+  raf = requestAnimationFrame(arcLoop);
+}
+
+function arcStep(){
+  AR.t++;
+  if(AR.msgT>0) AR.msgT--;
+
+  if(arcKeys['ArrowLeft'])  AR.ship.x = Math.max(18, AR.ship.x-4.5);
+  if(arcKeys['ArrowRight']) AR.ship.x = Math.min(AW-18, AR.ship.x+4.5);
+
+  if(AR.phase==='over') return;
+
+  /* tir automatique */
+  AR.fire--;
+  if(AR.fire<=0){
+    AR.fire = AR.dbl>0 ? 16 : 24;
+    if(AR.dbl>0){ AR.bul.push({x:AR.ship.x-7,y:AH-56}); AR.bul.push({x:AR.ship.x+7,y:AH-56}); }
+    else AR.bul.push({x:AR.ship.x, y:AH-56});
+    tone(900,.04,'square',0,.035);
+  }
+  AR.bul = AR.bul.filter(b=>{ b.y -= 7; return b.y > -10; });
+
+  if(AR.phase==='bonus'){ arcStepBonus(); return; }
+
+  /* envahisseurs */
+  const vivants = AR.inv.filter(i=>i.alive);
+  if(!vivants.length){ arcWin(); return; }
+  const vit = AR.speed * (1 + (1 - vivants.length/AR.inv.length)*2.2);
+  let bord = false;
+  for(const i of vivants){
+    i.x += AR.dir * vit;
+    if(i.x < 16 || i.x > AW-16) bord = true;
+  }
+  if(bord){
+    AR.dir *= -1;
+    for(const i of vivants) i.y += 14;
+    for(const i of vivants) i.x += AR.dir*vit*2;
+  }
+
+  /* bombes */
+  for(const i of vivants){
+    if(Math.random() < AR.bombRate/vivants.length)
+      AR.bomb.push({x:i.x, y:i.y+10});
+  }
+  AR.bomb = AR.bomb.filter(b=>{ b.y += 2.6 + AR.lvl*0.12; return b.y < AH; });
+
+  /* tirs du joueur sur les envahisseurs */
+  for(const b of AR.bul){
+    for(const i of vivants){
+      if(Math.abs(b.x-i.x)<i.w/2 && Math.abs(b.y-i.y)<i.h/2){
+        i.alive = false; b.y = -99;
+        AR.score += i.pts;
+        tone(220,.08,'square',0,.06);
+        break;
+      }
+    }
+  }
+
+  /* bunkers */
+  arcHitBunkers(AR.bul, -1);
+  arcHitBunkers(AR.bomb, 1);
+
+  /* bombes sur le vaisseau */
+  for(const b of AR.bomb){
+    if(Math.abs(b.x-AR.ship.x)<17 && b.y > AH-62 && b.y < AH-38){
+      b.y = AH+99;
+      if(AR.shield>0){ AR.shield--; arcFlash('BOUCLIER'); tone(400,.1,'sine',0,.07); }
+      else arcHurt();
+    }
+  }
+  /* envahisseurs arrivés en bas */
+  if(vivants.some(i=>i.y > AH-120)) arcHurt(true);
+}
+
+function arcHitBunkers(list, side){
+  for(const b of list){
+    for(const k of AR.bunk){
+      if(b.x < k.x-2 || b.x > k.x+50 || b.y < k.y-4 || b.y > k.y+26) continue;
+      const c = Math.floor((b.x-k.x)/8), r = Math.floor((b.y-k.y)/8);
+      if(r<0||r>2||c<0||c>5) continue;
+      if(k.cells[r][c]){
+        k.cells[r][c] = 0;
+        b.y = side<0 ? -99 : AH+99;
+        tone(140,.05,'square',0,.04);
+      }
+    }
+  }
+}
+
+function arcHurt(bas){
+  AR.lives--;
+  AR.bomb = [];
+  tone(90,.3,'sawtooth',0,.09);
+  if(AR.lives<=0 || bas) arcGameOver();
+  else arcFlash('ATTENTION');
+}
+
+function arcGameOver(){
+  AR.phase = 'over';
+  const p = me();
+  if(AR.score > (p.best||0)){ p.best = AR.score; save(); }
+  const v = document.getElementById('arcEnd');
+  v.innerHTML = `<div class="tcard">
+      <div class="tem">${AR.score >= (AR.best||0) && AR.score>0 ? '🏆' : '💥'}</div>
+      <b>${AR.score} points</b>
+      <p>Niveau ${AR.lvl} · meilleur score&nbsp;: ${Math.max(AR.score, AR.best||0)}</p>
+      <button class="cta" id="aAgain">Rejouer</button>
+      <button class="cta ghost" id="aBack">Retour</button>
+    </div>`;
+  v.classList.add('on');
+  document.getElementById('aAgain').onclick = ()=>{ v.classList.remove('on'); arcNew(); };
+  document.getElementById('aBack').onclick  = ()=>{ v.classList.remove('on'); closeArcade(); };
+}
+
+/* ---------- manche bonus : l'anglais donne de la puissance ---------- */
+function arcWin(){
+  AR.score += 50 * AR.lvl;
+  const mots = pool(me());
+  if(!mots.length){ AR.lvl++; arcBuild(); return; }
+  const vus = mots.filter(w=>me().srs[w.en]);
+  const w = (vus.length>3 ? vus : mots)[Math.floor(Math.random()*(vus.length>3?vus.length:mots.length))];
+  const faux = distractors(me(), w, 2, 'fr');
+  const choix = shuffle([w].concat(faux));
+  AR.phase = 'bonus';
+  AR.bomb = [];
+  AR.bul  = [];        /* les tirs en vol ne doivent pas répondre à la place de l'enfant */
+  AR.fire = 36;        /* court répit pour lire la question */
+  AR.bonus = {
+    w, t: 0, lim: 760,
+    pods: choix.map((o,k)=>({
+      o, x: 60 + k*(AW-120)/2, y: 132, w: 92, h: 34, hit:false
+    }))
+  };
+  say(w.en);
+  arcFlash('MOT BONUS');
+}
+
+function arcStepBonus(){
+  const B = AR.bonus;
+  if(B.over) return;          /* la manche est déjà jouée : on n'enchaîne qu'une fois */
+  B.t++;
+  for(const p of B.pods) p.y = 132 + Math.sin((B.t + p.x)/40)*7;
+
+  for(const b of AR.bul){
+    for(const p of B.pods){
+      if(b.y > p.y-p.h/2 && b.y < p.y+p.h/2 && Math.abs(b.x-p.x) < p.w/2 && !p.hit){
+        p.hit = true; b.y = -99;
+        B.over = true;
+        if(p.o.en === B.w.en) arcReward(); else { tone(110,.25,'sawtooth',0,.07); arcFlash('RATÉ'); arcEndBonus(900); }
+        return;
+      }
+    }
+  }
+  if(B.t > B.lim){ B.over = true; arcFlash('TROP TARD'); arcEndBonus(700); }
+}
+
+function arcReward(){
+  const r = Math.random();
+  if(AR.lives<5 && r<0.34){ AR.lives++; arcFlash('+ 1 VIE'); }
+  else if(r<0.67){ AR.shield += 3; arcFlash('+ BOUCLIER'); }
+  else { AR.dbl = 1; arcFlash('TIR DOUBLE'); }
+  AR.score += 100;
+  scoreOk();
+  sfxGood();
+  arcEndBonus(900);
+}
+
+function arcEndBonus(ms){
+  const jeton = AR.bonus;                  /* la manche en cours */
+  setTimeout(()=>{
+    if(!AR || AR.bonus !== jeton) return;  /* partie relancée ou quittée : on ne touche à rien */
+    AR.phase = 'play';
+    AR.bonus = null;
+    AR.lvl++;
+    arcBuild();
+  }, ms);
+}
+
+/* ---------- dessin ---------- */
+function arcDraw(){
+  const g = AR.ctx;
+  g.fillStyle = '#0B0820'; g.fillRect(0,0,AW,AH);
+
+  /* étoiles */
+  g.fillStyle = 'rgba(255,255,255,.35)';
+  for(let i=0;i<26;i++){
+    const x = (i*97 + 13) % AW, y = ((i*53 + AR.t*0.25) % AH);
+    g.fillRect(x, y, 1.6, 1.6);
+  }
+
+  /* bandeau */
+  g.fillStyle = '#9D8FD4'; g.font = '700 13px ui-rounded, system-ui, sans-serif';
+  g.textAlign = 'left';  g.fillText('SCORE ' + AR.score, 12, 22);
+  g.textAlign = 'right'; g.fillText('NIVEAU ' + AR.lvl, AW-12, 22);
+  g.textAlign = 'left';
+  for(let i=0;i<AR.lives;i++) arcShip(g, 16 + i*20, 38, .55, '#3EE8D8');
+  if(AR.shield>0){ g.fillStyle='#FFC14D'; g.fillText('◇'.repeat(AR.shield), 16+AR.lives*20+8, 42); }
+
+  /* bunkers */
+  for(const k of AR.bunk){
+    for(let r=0;r<3;r++) for(let c=0;c<6;c++){
+      if(!k.cells[r][c]) continue;
+      g.fillStyle = '#2F7A68';
+      g.fillRect(k.x + c*8, k.y + r*8, 7, 7);
+    }
+  }
+
+  /* envahisseurs */
+  const anim = Math.floor(AR.t/22) % 2;
+  for(const i of AR.inv){
+    if(!i.alive) continue;
+    const s = SPR[i.t];
+    g.fillStyle = SPRC[i.t];
+    for(let r=0;r<s.length;r++) for(let c=0;c<8;c++){
+      if(s[r][c]==='1') g.fillRect(i.x-12 + c*3, i.y-7 + r*3 + (anim?0:0.5), 2.6, 2.6);
+    }
+  }
+
+  /* manche bonus */
+  if(AR.phase==='bonus' && AR.bonus){
+    const B = AR.bonus;
+    g.textAlign='center';
+    g.fillStyle='#F2EEFF'; g.font='800 24px ui-rounded, system-ui, sans-serif';
+    g.fillText(B.w.en, AW/2, 74);
+    g.fillStyle='#9D8FD4'; g.font='700 11px ui-rounded, system-ui, sans-serif';
+    g.fillText('VISE LA BONNE TRADUCTION', AW/2, 94);
+    for(const p of B.pods){
+      g.fillStyle = p.hit ? '#5B1C2B' : '#251656';
+      g.strokeStyle = '#B48CFF'; g.lineWidth = 2;
+      arcRrect(g, p.x-p.w/2, p.y-p.h/2, p.w, p.h, 8); g.fill(); g.stroke();
+      g.fillStyle='#F2EEFF'; g.font='700 12px ui-rounded, system-ui, sans-serif';
+      arcWrap(g, p.o.fr, p.x, p.y, p.w-10);
+    }
+    g.fillStyle='#3B2780'; g.fillRect(40, 110, AW-80, 3);
+    g.fillStyle='#FFC14D'; g.fillRect(40, 110, (AW-80)*(1-B.t/B.lim), 3);
+    g.textAlign='left';
+  }
+
+  /* tirs */
+  g.fillStyle = '#3EE8D8';
+  for(const b of AR.bul) g.fillRect(b.x-1.5, b.y, 3, 10);
+  g.fillStyle = '#FF6B7A';
+  for(const b of AR.bomb) g.fillRect(b.x-1.5, b.y, 3, 9);
+
+  /* vaisseau */
+  arcShip(g, AR.ship.x, AH-46, 1, AR.shield>0 ? '#FFC14D' : '#3EE8D8');
+  if(AR.shield>0){
+    g.strokeStyle='rgba(255,193,77,.55)'; g.lineWidth=2;
+    g.beginPath(); g.arc(AR.ship.x, AH-46, 26, Math.PI, 0); g.stroke();
+  }
+
+  /* message */
+  if(AR.msgT>0){
+    g.textAlign='center';
+    g.globalAlpha = Math.min(1, AR.msgT/26);
+    g.fillStyle='#FFC14D'; g.font='800 21px ui-rounded, system-ui, sans-serif';
+    g.fillText(AR.msg, AW/2, AH/2 - 40);
+    g.globalAlpha = 1; g.textAlign='left';
+  }
+}
+
+function arcShip(g,x,y,s,col){
+  g.fillStyle = col;
+  g.beginPath();
+  g.moveTo(x, y-13*s);
+  g.lineTo(x+15*s, y+7*s);
+  g.lineTo(x+7*s,  y+7*s);
+  g.lineTo(x+5*s,  y+12*s);
+  g.lineTo(x-5*s,  y+12*s);
+  g.lineTo(x-7*s,  y+7*s);
+  g.lineTo(x-15*s, y+7*s);
+  g.closePath(); g.fill();
+}
+function arcRrect(g,x,y,w,h,r){
+  g.beginPath();
+  g.moveTo(x+r,y); g.arcTo(x+w,y,x+w,y+h,r); g.arcTo(x+w,y+h,x,y+h,r);
+  g.arcTo(x,y+h,x,y,r); g.arcTo(x,y,x+w,y,r); g.closePath();
+}
+function arcWrap(g,txt,cx,cy,max){
+  const mots = String(txt).split(' ');
+  let l='', lignes=[];
+  for(const m of mots){
+    const t = l ? l+' '+m : m;
+    if(g.measureText(t).width > max && l){ lignes.push(l); l = m; } else l = t;
+  }
+  if(l) lignes.push(l);
+  lignes = lignes.slice(0,2);
+  const y0 = cy - (lignes.length-1)*6;
+  lignes.forEach((t,i)=>g.fillText(t, cx, y0 + i*13 + 4));
+}
+
+/* ========================================================= */
 /* Dialogues animés                                          */
 /* ========================================================= */
 let DL=null;
@@ -1195,6 +1754,7 @@ $('cards').onclick=e=>{
   const b=e.target.closest('[data-d]'); if(!b)return;
   unlockAudio(); playDial(dials(me())[+b.dataset.d]);
 };
+document.getElementById('arcQuit').onclick=closeArcade;
 $('pickBack').onclick=()=>{ renderHome(); show('s-home'); };
 $('dQuit').onclick=()=>{ if(DL&&DL.t)clearTimeout(DL.t); DL=null; try{el.pause()}catch(x){} openPick(); };
 
@@ -1287,6 +1847,7 @@ function dialQuiz(){
     });
     ok?sfxGood():sfxBad();
     const p=me();
+    if(ok)scoreOk(p);
     grade(p,{en:'#'+d.id},ok);
     if(ok)p.stars=(p.stars||0)+2;
     touchStreak(p); save();
@@ -1319,6 +1880,23 @@ function renderSettings(){
     P[+inp.dataset.nm].name=inp.value.trim()||('Joueur '+(+inp.dataset.nm+1));save();});
   document.querySelectorAll('[data-lv]').forEach(sel=>sel.onchange=()=>{
     P[+sel.dataset.lv].level=+sel.value;save();});
+
+  const g=S.get('goalMin',10), libre=S.get('noLock',false);
+  document.getElementById('goalForm').innerHTML=`
+    <div class="field">
+      <label>Objectif de travail quotidien</label>
+      <select id="goalSel">${[5,10,15,20,30].map(m=>
+        `<option value="${m}"${m==g?' selected':''}>${m} minutes de travail actif</option>`).join('')}</select>
+    </div>
+    <div class="field">
+      <label>Accès au jeu</label>
+      <select id="lockSel">
+        <option value="0"${!libre?' selected':''}>Verrouillé jusqu'à l'objectif</option>
+        <option value="1"${libre?' selected':''}>Toujours accessible</option>
+      </select>
+    </div>`;
+  document.getElementById('goalSel').onchange=e=>{S.set('goalMin',+e.target.value);renderHome()};
+  document.getElementById('lockSel').onchange=e=>{S.set('noLock',e.target.value==='1');renderHome()};
 
   const nw=(WORDS['1']||[]).length+(WORDS['2']||[]).length;
   const ns=(WORDS['p1']||[]).length+(WORDS['p2']||[]).length;

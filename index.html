@@ -89,6 +89,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;font-f
 .m6{background:#2C3A52;border-color:#4A6287}
 .m7{background:#3F3156;border-color:#63518A}
 .m9{background:#14453E;border-color:#22766A}
+.m10{background:#4A3A14;border-color:#8A6C22}
 .m8{background:#1E4A4E;border-color:#2F7A80;grid-column:1 / -1;min-height:auto;flex-direction:row;align-items:center;gap:14px}
 .m8 b{margin-top:0}
 .seclabel{grid-column:1 / -1;font-size:12.5px;font-weight:800;color:var(--dim);
@@ -245,6 +246,16 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;font-f
 .gsub{font-size:12.5px;color:var(--dim);font-weight:600;margin-top:8px}
 .gsub b{color:var(--cream)}
 
+/* --- parcours quotidien --- */
+.sess{width:100%;border-radius:20px;padding:16px;text-align:left;border:3px solid var(--cyan);
+  background:#14403C;display:flex;align-items:center;gap:14px;margin-bottom:16px;
+  box-shadow:0 5px 0 #0C2926;transition:transform .09s,box-shadow .09s}
+.sess:active{transform:translateY(4px);box-shadow:0 1px 0 #0C2926}
+.sess.done{border-color:var(--edge);background:#1C1442;box-shadow:0 5px 0 #0D0722}
+.sess .em{font-size:28px;flex:0 0 auto}
+.sess b{display:block;font-size:17.5px;font-weight:800}
+.sess small{display:block;font-size:12.5px;color:var(--dim);font-weight:600;margin-top:3px;line-height:1.35}
+
 /* --- salle d'arcade --- */
 .arc{width:100%;border-radius:20px;padding:15px;text-align:left;border:3px solid var(--edge);
   background:#1A1038;display:flex;align-items:center;gap:14px;margin-top:12px;box-shadow:0 4px 0 #0D0722;
@@ -274,6 +285,15 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;font-f
   touch-action:none;background:#0B0820;display:block;margin:0 auto}
 .arcHint{text-align:center;font-size:12.5px;color:var(--dim);font-weight:600;margin-top:11px;line-height:1.45}
 
+
+/* --- écrire --- */
+#wIn{width:100%;border-radius:15px;border:3px solid var(--edge);background:var(--panel);
+  color:var(--cream);font-family:var(--round);font-size:21px;font-weight:700;padding:15px;
+  margin-top:13px;text-align:center}
+#wIn::placeholder{color:#6B5CA8;font-weight:600;font-size:16px}
+#wIn.bon{border-color:var(--cyan);background:#13402F}
+#wIn.faux{border-color:var(--coral);background:#3F1620}
+.truth mark{background:var(--amber);color:#2A1A00;border-radius:4px;padding:0 3px}
 
 /* --- répéter --- */
 #micBtn{display:block;width:100%;border-radius:18px;padding:20px;margin-top:14px;font-size:18px;
@@ -313,6 +333,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;font-f
   </div>
 
   <div id="goalBox" class="goal"></div>
+  <div id="sessBox"></div>
   <div class="players" id="players"></div>
   <div class="modes" id="modes">
     <p class="seclabel">Les mots</p>
@@ -327,6 +348,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;font-f
 
     <button class="mode m9" data-mode="repeat">
       <span class="em">🎤</span><span><b>Répéter</b><small>Écoute, enregistre-toi, compare</small></span></button>
+    <button class="mode m10" data-mode="write">
+      <span class="em">✍️</span><span><b>Écrire</b><small>Tape le mot toi-même, sans proposition</small></span></button>
 
     <p class="seclabel">Les phrases</p>
     <button class="mode m6" data-mode="build">
@@ -917,7 +940,7 @@ function show(id){
 }
 document.getElementById('toSettings').onclick=()=>{renderSettings();show('s-set')};
 document.getElementById('backHome').onclick=()=>{renderHome();show('s-home')};
-document.getElementById('quit').onclick=()=>{stopTimer();renderHome();show('s-home')};
+document.getElementById('quit').onclick=()=>{sessStop();stopTimer();renderHome();show('s-home')};
 
 /* ========================================================= */
 /* Accueil                                                   */
@@ -941,7 +964,7 @@ function renderHome(){
        <div class="lv">Niveau ${x.level} · ${mastered(x)+masteredS(x)} acquis</div>
        <div class="st">${x.stars||0}★</div></button>`).join('');
 
-  renderGoal(); renderArc();
+  renderGoal(); renderSess(); renderArc();
 
   const msg=document.getElementById('homeMsg');
   if(!n){msg.style.display='block';
@@ -969,18 +992,20 @@ const turnEl=document.getElementById('turnbar');
 
 function stopTimer(){if(tId){clearInterval(tId);tId=null}document.getElementById('timer').textContent=''}
 
-function start(mode){
+function start(mode, nn){
   const phrases=(mode==='build'||mode==='dictee');
   if(!(phrases?sents(me()):pool(me())).length){renderHome();return}
   if(mode==='duel'&&P.length<2){return}
   G={mode,i:0,ok:0,ko:0,wrong:[],ups:[],t0:Date.now(),
+     sess:!!SESS,
      duel:mode==='duel'?{turn:0,score:[0,0]}:null};
 
-  if(phrases){G.q=queue(me(),5,sents(me()));G.n=G.q.length;}
-  else if(mode==='pairs'){G.pairs=queue(me(),5);}
+  if(phrases){G.q=queue(me(),nn||5,sents(me()));G.n=G.q.length;}
+  else if(mode==='pairs'){G.pairs=queue(me(),nn||5);}
   else if(mode==='chrono'){G.q=queue(me(),60);G.n=60;}
   else if(mode==='duel'){G.qa=queue(P[0],5);G.qb=queue(P[1],5);G.n=10;}
-  else {G.q=queue(me(),10);G.n=10;}
+  else if(mode==='write'){G.n=nn||8;G.q=queue(me(),G.n);}
+  else {G.n=nn||10;G.q=queue(me(),G.n);}
 
   show('s-game');
   if(mode==='chrono')runChrono(); else stopTimer();
@@ -1008,6 +1033,11 @@ function step(){
     if(G.i>=G.n)return finish();
     turnEl.innerHTML=''; stopTimer(); progress(G.i/G.n);
     return renderBuild(G.q[G.i]);
+  }
+  if(G.mode==='write'){
+    if(G.i>=G.n)return finish();
+    turnEl.innerHTML=''; stopTimer(); progress(G.i/G.n);
+    return renderWrite(G.q[G.i]);
   }
   if(G.mode==='pairs')return renderPairs();
   if(G.mode==='duel'){
@@ -1076,6 +1106,92 @@ function renderQuestion(w,player,dir){
     if(!ok&&dir!=='fren')setTimeout(()=>say(w.en),320);
     setTimeout(()=>{playEl.dataset.done='';G.i++;step()}, ok?620:1150);
   };
+}
+
+
+/* ========================================================= */
+/* Écrire — l'enfant tape le mot, il ne le choisit pas       */
+/* ========================================================= */
+
+function normW(s){
+  return String(s||'').toLowerCase().trim()
+    .replace(/[.,!?;:"']/g,'').replace(/\s+/g,' ');
+}
+function sansArticle(s){ return s.replace(/^(to|a|an|the)\s+/,''); }
+function bonneGraphie(tape, cible){
+  const t=normW(tape), c=normW(cible);
+  return t===c || sansArticle(t)===sansArticle(c);
+}
+/* met en évidence la portion fautive de la bonne réponse */
+function diffHtml(tape, cible){
+  const a=normW(tape), b=cible;
+  const bn=normW(cible);
+  let p=0; while(p<a.length && p<bn.length && a[p]===bn[p]) p++;
+  let q=0; while(q < a.length-p && q < bn.length-p &&
+                 a[a.length-1-q]===bn[bn.length-1-q]) q++;
+  const d=b.length-bn.length;            /* décalage dû à la ponctuation retirée */
+  const fin=Math.max(p, b.length-q+ (d>0?d:0));
+  const milieu=b.slice(p,fin);
+  /* si l'enfant a écrit plus long, il n'y a rien à surligner dans la bonne réponse */
+  return esc(b.slice(0,p)) + (milieu ? '<mark>'+esc(milieu)+'</mark>' : '') + esc(b.slice(fin));
+}
+
+function renderWrite(w){
+  if(!w)return finish();
+  playEl.dataset.done='';
+  const parOreille = (G.i % 2 === 0);     /* on alterne : dictée, puis thème */
+
+  playEl.innerHTML=`<div class="stage">
+      <div class="ask">${parOreille ? 'Écoute, puis écris le mot' : 'Écris ce mot en anglais'}</div>
+      ${parOreille ? '<button class="speak big" id="wSp">🔊</button>'
+                   : `<div class="sentence">${esc(w.fr)}</div>`}
+    </div>
+    <input id="wIn" type="text" inputmode="text" autocapitalize="off" autocorrect="off"
+           autocomplete="off" spellcheck="false" placeholder="ton réponse en anglais…">
+    <button class="cta" id="wGo">Vérifier</button>
+    <div id="wOut"></div>`;
+
+  const sp=document.getElementById('wSp');
+  if(sp)sp.onclick=()=>say(w.en);
+  if(parOreille)setTimeout(()=>say(w.en),280);
+
+  const inp=document.getElementById('wIn');
+  setTimeout(()=>{ try{inp.focus()}catch(e){} },120);
+  inp.onkeydown=e=>{ if(e.key==='Enter'){ e.preventDefault(); verif(); } };
+  document.getElementById('wGo').onclick=verif;
+
+  function verif(){
+    if(playEl.dataset.done)return;
+    const tape=inp.value;
+    if(!normW(tape)){ inp.focus(); return; }
+    playEl.dataset.done='1';
+    const ok=bonneGraphie(tape,w.en);
+    inp.disabled=true;
+    inp.classList.add(ok?'bon':'faux');
+    document.getElementById('wGo').style.display='none';
+
+    if(ok){ sfxGood(); G.ok++; me().stars=(me().stars||0)+1; scoreOk(); }
+    else { sfxBad(); G.ko++; G.wrong.push(w); }
+    const nb=grade(me(),w,ok);
+    if(ok&&nb===3)G.ups.push(w);
+    save();
+
+    const out=document.getElementById('wOut');
+    out.innerHTML = ok
+      ? `<div class="truth"><small>Exact</small>${esc(w.en)} — ${esc(w.fr)}
+           <button class="spk" style="display:block;margin-top:9px">🔊 réécouter</button></div>`
+      : `<div class="truth"><small>Tu as écrit</small>
+           <span style="color:var(--coral)">${esc(tape)}</span></div>
+         <div class="truth" style="margin-top:8px"><small>C'était</small>${diffHtml(tape,w.en)}
+           <button class="spk" style="display:block;margin-top:9px">🔊 réécouter</button></div>`;
+    const b=out.querySelector('.spk'); if(b)b.onclick=()=>say(w.en);
+    setTimeout(()=>say(w.en),260);
+
+    const nx=document.createElement('button');
+    nx.className='cta'; nx.textContent='Suivant';
+    nx.onclick=()=>{ G.i++; step(); };
+    out.appendChild(nx);
+  }
 }
 
 /* --- construction de phrases --- */
@@ -1153,7 +1269,7 @@ function renderBuild(s){
 
     const v=document.getElementById('verdict');
     v.innerHTML=`<div class="truth"><small>${ok?'Exact':'La phrase était'}</small>${esc(s.en)}
-        <button class="spk" style="margin-top:7px">🔊 réécouter</button></div>`
+        <button class="spk" style="display:block;margin-top:9px">🔊 réécouter</button></div>`
       + (G.mode==='dictee'?`<div class="truth" style="background:#231552"><small>En français</small>${esc(s.fr)}</div>`:'');
     v.querySelector('.spk').onclick=()=>say(s.en);
     setTimeout(()=>say(s.en),260);
@@ -1212,6 +1328,7 @@ function finish(){
   stopTimer();
   const p=me();
   touchStreak(p); save();
+  if(G && G.sess && SESS){ return sessNext(); }
   const total=G.ok+G.ko;
   const pct=total?Math.round(G.ok/total*100):0;
   let emo='🚀',title='Décollage réussi',line='';
@@ -1225,6 +1342,10 @@ function finish(){
     emo = G.ok>=20?'🛸':G.ok>=12?'🚀':'🛰';
     title = `${G.ok} mots en 60 secondes`;
     line = pct>=80?'Et presque sans erreur.':`${pct}% de réussite.`;
+  }else if(G.mode==='write'){
+    emo = pct>=90?'✍️':pct>=60?'📝':'🔤';
+    title = pct>=90?'Orthographe sûre':pct>=60?'Bien écrit':'L orthographe demande du travail';
+    line = `${G.ok} mot${G.ok>1?'s':''} écrit${G.ok>1?'s':''} juste sur ${total}.`;
   }else if(G.mode==='build'||G.mode==='dictee'){
     emo = pct>=90?'📜':pct>=60?'🧱':'🪨';
     title = pct>=90?'Phrases impeccables':pct>=60?'Bien construit':'Les phrases résistent encore';
@@ -1272,6 +1393,101 @@ function finish(){
 /* ========================================================= */
 /* Réglages                                                  */
 /* ========================================================= */
+
+/* ========================================================= */
+/* Mes N minutes — un parcours qui enchaîne les exercices    */
+/* ========================================================= */
+
+let SESS = null;
+
+const BLOCS = [
+  {m:'quiz',   n:5, t:'Traduire',   e:'🎯'},
+  {m:'listen', n:4, t:'Écouter',    e:'👂'},
+  {m:'write',  n:4, t:'Écrire',     e:'✍️'},
+  {m:'build',  n:3, t:'Construire', e:'🧱'},
+  {m:'repeat', n:3, t:'Répéter',    e:'🎤'},
+  {m:'pairs',  n:5, t:'Paires',     e:'🧩'},
+  {m:'dictee', n:3, t:'Dictée',     e:'🎧'},
+  {m:'dial',   n:1, t:'Dialogue',   e:'🎬'}
+];
+
+function startSession(){
+  /* l'ordre tourne d'un jour à l'autre : jamais deux journées identiques */
+  const d = today() % BLOCS.length;
+  SESS = { plan: BLOCS.slice(d).concat(BLOCS.slice(0,d)), i:0, faits:[] };
+  sessNext(true);
+}
+
+function sessStop(){
+  SESS = null;
+}
+
+function sessNext(premier){
+  if(!SESS) return;
+  if(goalDone(me())) return sessEnd();
+  const b = SESS.plan[SESS.i % SESS.plan.length];
+  SESS.i++;
+  SESS.faits.push(b.t);
+  sessCarton(b, premier);
+}
+
+/* court carton d'annonce, qui donne le rythme */
+function sessCarton(b, premier){
+  const v = document.getElementById('toast');
+  const reste = Math.max(0, goalSec() - day(me()).sec);
+  v.innerHTML = `<div class="tcard">
+      <div class="tem">${b.e}</div>
+      <b>${esc(b.t)}</b>
+      <p>${premier ? 'On commence.' : 'Étape ' + SESS.i} · ${mmss(reste)} avant l'objectif</p>
+    </div>`;
+  v.classList.add('on');
+  setTimeout(()=>{ v.classList.remove('on'); sessLance(b); }, premier ? 1100 : 850);
+}
+
+function sessLance(b){
+  if(!SESS) return;
+  if(b.m === 'repeat') return openRepeat(b.n);
+  if(b.m === 'dial'){
+    const l = dials(me());
+    if(!l.length) return sessNext();
+    const p = me();
+    const neufs = l.filter(d => box(p,{en:'#'+d.id}) < 1);
+    const d = (neufs.length ? neufs : l)[Math.floor(Math.random() * (neufs.length ? neufs.length : l.length))];
+    return playDial(d);
+  }
+  start(b.m, b.n);
+}
+
+function sessEnd(){
+  const p = me(), j = day(p);
+  const liste = [...new Set(SESS ? SESS.faits : [])];
+  SESS = null;
+  const v = document.getElementById('toast');
+  v.innerHTML = `<div class="tcard">
+      <div class="tem">🏅</div>
+      <b>Objectif atteint&nbsp;!</b>
+      <p>${mmss(j.sec)} de travail · ${j.ok} bonne${j.ok>1?'s':''} réponse${j.ok>1?'s':''}<br>
+         ${esc(liste.join(' · '))}</p>
+      <button class="cta" id="seGo">Jouer</button>
+      <button class="cta ghost" id="seNo">Retour au menu</button>
+    </div>`;
+  v.classList.add('on');
+  document.getElementById('seGo').onclick = ()=>{ v.classList.remove('on'); openArcade(); };
+  document.getElementById('seNo').onclick = ()=>{ v.classList.remove('on'); renderHome(); show('s-home'); };
+}
+
+function renderSess(){
+  const el = document.getElementById('sessBox');
+  if(!el) return;
+  const p = me(), j = day(p), min = S.get('goalMin',10)|0;
+  const fait = goalDone(p);
+  el.innerHTML = `<button class="sess${fait?' done':''}" id="sessGo">
+      <span class="em">${fait ? '✅' : '▶️'}</span>
+      <span><b>Mes ${min} minutes</b><small>${fait
+        ? "C'est fait pour aujourd'hui — on peut en refaire un tour"
+        : 'Un parcours qui enchaîne les exercices, sans jamais le même ordre'}</small></span></button>`;
+  document.getElementById('sessGo').onclick = ()=>{ unlockAudio(); startSession(); };
+}
 
 /* ========================================================= */
 /* Objectif du jour                                          */
@@ -1381,12 +1597,13 @@ function micDispo(){
   return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia && window.MediaRecorder);
 }
 
-function openRepeat(){
+function openRepeat(nn){
   const p=me();
-  const mots=queue(p,6), phr=queue(p,2,sents(p));
+  const nm = nn ? Math.max(1, nn-1) : 6, np = nn ? 1 : 2;
+  const mots=queue(p,nm), phr=queue(p,np,sents(p));
   const items=shuffle(mots.concat(phr));
   if(!items.length){ renderHome(); show('s-home'); return; }
-  RP={q:items, i:0, url:null, rec:false, n:0};
+  RP={q:items, i:0, url:null, rec:false, n:0, sess:!!SESS};
 
   /* on débloque la lecture de l'enregistrement pendant que le geste de l'enfant est encore valide */
   try{ const a=document.getElementById('mine'); a.src=SILENCE; a.play().then(()=>a.pause()).catch(()=>{}); }catch(e){}
@@ -1396,6 +1613,7 @@ function openRepeat(){
 }
 
 function closeRepeat(){
+  sessStop();
   stopRec();
   if(micStream){ micStream.getTracks().forEach(t=>t.stop()); micStream=null; }
   if(RP && RP.url) URL.revokeObjectURL(RP.url);
@@ -1410,6 +1628,8 @@ function repStep(n){
   if(n>=RP.q.length) return repEnd();
   const w=RP.q[n];
   if(RP.url){ URL.revokeObjectURL(RP.url); RP.url=null; }
+  const mb=document.getElementById('micBtn');
+  mb.style.display='';          /* il avait pu être masqué par la fin d'une série précédente */
   document.getElementById('repStep').textContent=(n+1)+' / '+RP.q.length;
   document.getElementById('repEn').textContent=w.en;
   document.getElementById('repEn').className = w.cat ? 'word' : 'word petite';
@@ -1497,6 +1717,7 @@ function repErr(t){
 }
 
 function repEnd(){
+  if(RP && RP.sess && SESS){ stopRec(); return sessNext(); }
   document.getElementById('repStep').textContent='';
   document.getElementById('repEn').textContent='';
   document.getElementById('repFr').textContent='';
@@ -1964,12 +2185,12 @@ document.getElementById('repListen').onclick=()=>{ if(RP)say(RP.q[RP.i].en); };
   m.onpointerdown=bas; m.onpointerup=haut; m.onpointercancel=haut; m.onpointerleave=haut;
 })();
 $('pickBack').onclick=()=>{ renderHome(); show('s-home'); };
-$('dQuit').onclick=()=>{ if(DL&&DL.t)clearTimeout(DL.t); DL=null; try{el.pause()}catch(x){} openPick(); };
+$('dQuit').onclick=()=>{ sessStop(); if(DL&&DL.t)clearTimeout(DL.t); DL=null; try{el.pause()}catch(x){} openPick(); };
 
 function playDial(d){
   const pl=PLACES[d.place];
   if(!pl){openPick();return}
-  DL={d,i:0,t:null};
+  DL={d,i:0,t:null,sess:!!SESS};
   const cos = pl.costume ? COSTUMES[pl.costume] : null;
   const fig=(id,at,slot)=>`<g id="pp${slot}" class="person" transform="translate(${at[0]},${at[1]}) scale(${at[2]})">`
     + (CAST[id]||'') + (cos?cos[ADULTS.includes(id)?'adult':'kid']:'') + '</g>';
@@ -2063,6 +2284,13 @@ function dialQuiz(){
     w.className='truth'; w.style.marginTop='13px';
     w.innerHTML=`<small>${ok?'Exact':'Non'}</small><span style="font-size:15px;font-weight:600;color:var(--dim)">${esc(q.why||'')}</span>`;
     box_.appendChild(w);
+    if(DL && DL.sess && SESS){
+      const go=document.createElement('button');
+      go.className='cta'; go.style.marginTop='13px'; go.textContent='Continuer';
+      go.onclick=()=>sessNext();
+      box_.appendChild(go);
+      return;
+    }
     const again=document.createElement('button');
     again.className='cta'; again.style.marginTop='13px'; again.textContent='Revoir la scène';
     again.onclick=()=>playDial(d);

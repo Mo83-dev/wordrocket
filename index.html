@@ -1053,12 +1053,29 @@ function touchStreak(p){
 function queue(p,n,all){
   all=all||pool(p);
   if(!all.length)return [];
-  const seen=all.filter(w=>p.srs[w.en]);
-  const fresh=all.filter(w=>!p.srs[w.en]);
-  const ready=shuffle(seen.filter(w=>due(p,w)));
-  const q=ready.slice(0,n);
-  for(const w of shuffle(fresh)){ if(q.length>=n)break; q.push(w); }
-  if(q.length<n)for(const w of shuffle(seen)){ if(q.length>=n)break; if(!q.includes(w))q.push(w); }
+  /* mémoire courte, séparée pour les mots et pour les phrases : ce qui vient
+     d'être travaillé attend que le reste ait défilé avant de revenir */
+  const cle = all[0] && all[0].cat===undefined ? 'vusP' : 'vus';
+  if(!Array.isArray(p[cle])) p[cle]=[];
+  const fen=Math.min(p[cle].length, Math.max(6, Math.round(all.length*0.4)));
+  const recents=new Set(p[cle].slice(-fen));
+  let base=all.filter(w=>!recents.has(w.en));
+  if(base.length<n) base=all;
+
+  const connus=base.filter(w=>p.srs[w.en]);
+  const neufs =shuffle(base.filter(w=>!p.srs[w.en]));
+  const dus   =shuffle(connus.filter(w=>due(p,w)));
+
+  /* la moitié de la série au plus pour les révisions : ce qui n'a jamais été
+     vu garde toujours sa place, sinon les anciens items tournent sans fin */
+  const q=dus.slice(0, Math.max(1, Math.ceil(n/2)));
+  for(const w of neufs)          { if(q.length>=n)break; q.push(w); }
+  for(const w of dus)            { if(q.length>=n)break; if(!q.includes(w))q.push(w); }
+  for(const w of shuffle(connus)){ if(q.length>=n)break; if(!q.includes(w))q.push(w); }
+  for(const w of shuffle(all))   { if(q.length>=n)break; if(!q.includes(w))q.push(w); }
+
+  p[cle]=p[cle].concat(q.map(w=>w.en)).slice(-400);
+  save();
   return shuffle(q);
 }
 function distractors(p,w,k,field){

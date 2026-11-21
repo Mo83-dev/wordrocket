@@ -7738,11 +7738,6 @@
    "cat": "Vie civique"
   },
   {
-   "en": "an oath",
-   "fr": "un serment",
-   "cat": "Vie civique"
-  },
-  {
    "en": "a jury",
    "fr": "un jury",
    "cat": "Vie civique"
@@ -7755,16 +7750,6 @@
   {
    "en": "innocent",
    "fr": "innocent",
-   "cat": "Vie civique"
-  },
-  {
-   "en": "a hearing",
-   "fr": "une audience",
-   "cat": "Vie civique"
-  },
-  {
-   "en": "to appeal",
-   "fr": "faire appel",
    "cat": "Vie civique"
   },
   {
@@ -9903,119 +9888,734 @@
    "cat": "Faux amis"
   },
   {
-   "en": "a ballot",
-   "fr": "un bulletin de vote",
-   "cat": "Vie civique"
+   "en": "to get up",
+   "fr": "se lever",
+   "cat": "Au quotidien"
   },
   {
-   "en": "a constituency",
-   "fr": "une circonscription",
-   "cat": "Vie civique"
+   "en": "to get dressed",
+   "fr": "s'habiller",
+   "cat": "Au quotidien"
   },
   {
-   "en": "a bill",
-   "fr": "un projet de loi",
-   "cat": "Vie civique"
+   "en": "to have a shower",
+   "fr": "prendre une douche",
+   "cat": "Au quotidien"
   },
   {
-   "en": "a verdict",
-   "fr": "un verdict",
-   "cat": "Vie civique"
+   "en": "to have breakfast",
+   "fr": "prendre le petit-déjeuner",
+   "cat": "Au quotidien"
   },
   {
-   "en": "a sentence",
-   "fr": "une peine",
-   "cat": "Vie civique"
+   "en": "to be late",
+   "fr": "être en retard",
+   "cat": "Au quotidien"
   },
   {
-   "en": "an appeal",
-   "fr": "un appel",
-   "cat": "Vie civique"
+   "en": "to catch the bus",
+   "fr": "attraper le bus",
+   "cat": "Au quotidien"
   },
   {
-   "en": "a petition",
-   "fr": "une pétition",
-   "cat": "Vie civique"
+   "en": "to walk home",
+   "fr": "rentrer à pied",
+   "cat": "Au quotidien"
   },
   {
-   "en": "a treaty",
-   "fr": "un traité",
-   "cat": "Vie civique"
+   "en": "to do the washing-up",
+   "fr": "faire la vaisselle",
+   "cat": "Au quotidien"
   },
   {
-   "en": "a regulation",
-   "fr": "un règlement",
-   "cat": "Vie civique"
+   "en": "to tidy up",
+   "fr": "ranger",
+   "cat": "Au quotidien"
   },
   {
-   "en": "taxation",
-   "fr": "la fiscalité",
-   "cat": "Vie civique"
+   "en": "to take out the bin",
+   "fr": "sortir la poubelle",
+   "cat": "Au quotidien"
   },
   {
-   "en": "an amendment",
-   "fr": "un amendement",
-   "cat": "Vie civique"
+   "en": "to set the table",
+   "fr": "mettre la table",
+   "cat": "Au quotidien"
   },
   {
-   "en": "a constitution",
-   "fr": "une constitution",
-   "cat": "Vie civique"
+   "en": "to go to bed",
+   "fr": "aller se coucher",
+   "cat": "Au quotidien"
   },
   {
-   "en": "a magistrate",
-   "fr": "un juge non professionnel (R.-U.)",
-   "cat": "Vie civique"
+   "en": "to fall asleep",
+   "fr": "s'endormir",
+   "cat": "Au quotidien"
   },
   {
-   "en": "a mandate",
-   "fr": "un mandat",
-   "cat": "Vie civique"
+   "en": "to oversleep",
+   "fr": "se réveiller trop tard",
+   "cat": "Au quotidien"
   },
   {
-   "en": "a plaintiff",
-   "fr": "un demandeur",
-   "cat": "Vie civique"
+   "en": "a chore",
+   "fr": "une corvée",
+   "cat": "Au quotidien"
   },
   {
-   "en": "a prosecutor",
-   "fr": "un procureur",
-   "cat": "Vie civique"
+   "en": "pocket money",
+   "fr": "l'argent de poche",
+   "cat": "Au quotidien"
   },
   {
-   "en": "a ruling",
-   "fr": "une décision de justice",
-   "cat": "Vie civique"
+   "en": "spare time",
+   "fr": "le temps libre",
+   "cat": "Au quotidien"
   },
   {
-   "en": "a statute",
-   "fr": "une loi écrite",
-   "cat": "Vie civique"
+   "en": "a nap",
+   "fr": "une sieste",
+   "cat": "Au quotidien"
   },
   {
-   "en": "a summons",
-   "fr": "une convocation en justice",
-   "cat": "Vie civique"
+   "en": "a habit",
+   "fr": "une habitude",
+   "cat": "Au quotidien"
   },
   {
-   "en": "an inquiry",
-   "fr": "une enquête",
-   "cat": "Vie civique"
+   "en": "to be in a rush",
+   "fr": "être pressé",
+   "cat": "Au quotidien"
   },
   {
-   "en": "the judiciary",
-   "fr": "la magistrature",
-   "cat": "Vie civique"
+   "en": "a mate",
+   "fr": "un copain",
+   "cat": "Les amis et les sorties"
   },
   {
-   "en": "a defendant",
-   "fr": "un prévenu, un défendeur",
-   "cat": "Vie civique"
+   "en": "a best friend",
+   "fr": "un meilleur ami",
+   "cat": "Les amis et les sorties"
   },
   {
-   "en": "evidence in court",
-   "fr": "les éléments de preuve",
-   "cat": "Vie civique"
+   "en": "to hang out",
+   "fr": "traîner ensemble",
+   "cat": "Les amis et les sorties"
+  },
+  {
+   "en": "to get along",
+   "fr": "bien s'entendre",
+   "cat": "Les amis et les sorties"
+  },
+  {
+   "en": "to fall out",
+   "fr": "se fâcher",
+   "cat": "Les amis et les sorties"
+  },
+  {
+   "en": "to tease",
+   "fr": "taquiner",
+   "cat": "Les amis et les sorties"
+  },
+  {
+   "en": "to gossip",
+   "fr": "faire des commérages",
+   "cat": "Les amis et les sorties"
+  },
+  {
+   "en": "to invite",
+   "fr": "inviter",
+   "cat": "Les amis et les sorties"
+  },
+  {
+   "en": "a sleepover",
+   "fr": "une soirée pyjama",
+   "cat": "Les amis et les sorties"
+  },
+  {
+   "en": "a birthday party",
+   "fr": "une fête d'anniversaire",
+   "cat": "Les amis et les sorties"
+  },
+  {
+   "en": "a nickname",
+   "fr": "un surnom",
+   "cat": "Les amis et les sorties"
+  },
+  {
+   "en": "to hug",
+   "fr": "serrer dans ses bras",
+   "cat": "Les amis et les sorties"
+  },
+  {
+   "en": "to wave",
+   "fr": "faire signe de la main",
+   "cat": "Les amis et les sorties"
+  },
+  {
+   "en": "trustworthy",
+   "fr": "digne de confiance",
+   "cat": "Les amis et les sorties"
+  },
+  {
+   "en": "to lend a hand",
+   "fr": "donner un coup de main",
+   "cat": "Les amis et les sorties"
+  },
+  {
+   "en": "to stand up for",
+   "fr": "prendre la défense de",
+   "cat": "Les amis et les sorties"
+  },
+  {
+   "en": "to leave someone out",
+   "fr": "mettre quelqu'un à l'écart",
+   "cat": "Les amis et les sorties"
+  },
+  {
+   "en": "to make friends",
+   "fr": "se faire des amis",
+   "cat": "Les amis et les sorties"
+  },
+  {
+   "en": "to show up",
+   "fr": "se pointer",
+   "cat": "Les amis et les sorties"
+  },
+  {
+   "en": "a screen",
+   "fr": "un écran",
+   "cat": "Le téléphone et internet"
+  },
+  {
+   "en": "a charger",
+   "fr": "un chargeur",
+   "cat": "Le téléphone et internet"
+  },
+  {
+   "en": "a password",
+   "fr": "un mot de passe",
+   "cat": "Le téléphone et internet"
+  },
+  {
+   "en": "an account",
+   "fr": "un compte",
+   "cat": "Le téléphone et internet"
+  },
+  {
+   "en": "to log in",
+   "fr": "se connecter",
+   "cat": "Le téléphone et internet"
+  },
+  {
+   "en": "to download",
+   "fr": "télécharger",
+   "cat": "Le téléphone et internet"
+  },
+  {
+   "en": "to upload",
+   "fr": "mettre en ligne",
+   "cat": "Le téléphone et internet"
+  },
+  {
+   "en": "to scroll",
+   "fr": "faire défiler",
+   "cat": "Le téléphone et internet"
+  },
+  {
+   "en": "a notification",
+   "fr": "une notification",
+   "cat": "Le téléphone et internet"
+  },
+  {
+   "en": "to text",
+   "fr": "envoyer un SMS",
+   "cat": "Le téléphone et internet"
+  },
+  {
+   "en": "to share a post",
+   "fr": "partager une publication",
+   "cat": "Le téléphone et internet"
+  },
+  {
+   "en": "a video game",
+   "fr": "un jeu vidéo",
+   "cat": "Le téléphone et internet"
+  },
+  {
+   "en": "a headset",
+   "fr": "un casque audio",
+   "cat": "Le téléphone et internet"
+  },
+  {
+   "en": "battery life",
+   "fr": "l'autonomie",
+   "cat": "Le téléphone et internet"
+  },
+  {
+   "en": "a search engine",
+   "fr": "un moteur de recherche",
+   "cat": "Le téléphone et internet"
+  },
+  {
+   "en": "a website",
+   "fr": "un site internet",
+   "cat": "Le téléphone et internet"
+  },
+  {
+   "en": "screen time",
+   "fr": "le temps d'écran",
+   "cat": "Le téléphone et internet"
+  },
+  {
+   "en": "to switch off",
+   "fr": "éteindre",
+   "cat": "Le téléphone et internet"
+  },
+  {
+   "en": "online",
+   "fr": "en ligne",
+   "cat": "Le téléphone et internet"
+  },
+  {
+   "en": "a link",
+   "fr": "un lien",
+   "cat": "Le téléphone et internet"
+  },
+  {
+   "en": "a hobby",
+   "fr": "un passe-temps",
+   "cat": "Les loisirs"
+  },
+  {
+   "en": "to collect",
+   "fr": "collectionner",
+   "cat": "Les loisirs"
+  },
+  {
+   "en": "a board game",
+   "fr": "un jeu de société",
+   "cat": "Les loisirs"
+  },
+  {
+   "en": "to go for a ride",
+   "fr": "aller faire un tour",
+   "cat": "Les loisirs"
+  },
+  {
+   "en": "a tournament",
+   "fr": "un tournoi",
+   "cat": "Les loisirs"
+  },
+  {
+   "en": "a rehearsal",
+   "fr": "une répétition",
+   "cat": "Les loisirs"
+  },
+  {
+   "en": "a band",
+   "fr": "un groupe de musique",
+   "cat": "Les loisirs"
+  },
+  {
+   "en": "a drum kit",
+   "fr": "une batterie",
+   "cat": "Les loisirs"
+  },
+  {
+   "en": "to practise",
+   "fr": "travailler son instrument",
+   "cat": "Les loisirs"
+  },
+  {
+   "en": "to train",
+   "fr": "s'entraîner",
+   "cat": "Les loisirs"
+  },
+  {
+   "en": "a club",
+   "fr": "un club",
+   "cat": "Les loisirs"
+  },
+  {
+   "en": "to join",
+   "fr": "rejoindre",
+   "cat": "Les loisirs"
+  },
+  {
+   "en": "a trick",
+   "fr": "une figure",
+   "cat": "Les loisirs"
+  },
+  {
+   "en": "a draw",
+   "fr": "un match nul",
+   "cat": "Les loisirs"
+  },
+  {
+   "en": "a changing room",
+   "fr": "un vestiaire",
+   "cat": "Les loisirs"
+  },
+  {
+   "en": "a pitch",
+   "fr": "un terrain",
+   "cat": "Les loisirs"
+  },
+  {
+   "en": "to take up",
+   "fr": "se mettre à",
+   "cat": "Les loisirs"
+  },
+  {
+   "en": "a summer camp",
+   "fr": "une colonie de vacances",
+   "cat": "Les loisirs"
+  },
+  {
+   "en": "a swimming pool",
+   "fr": "une piscine",
+   "cat": "Les loisirs"
+  },
+  {
+   "en": "a shopping list",
+   "fr": "une liste de courses",
+   "cat": "Faire les courses"
+  },
+  {
+   "en": "a trolley",
+   "fr": "un chariot",
+   "cat": "Faire les courses"
+  },
+  {
+   "en": "a till",
+   "fr": "une caisse",
+   "cat": "Faire les courses"
+  },
+  {
+   "en": "a receipt",
+   "fr": "un ticket de caisse",
+   "cat": "Faire les courses"
+  },
+  {
+   "en": "change",
+   "fr": "la monnaie",
+   "cat": "Faire les courses"
+  },
+  {
+   "en": "a bargain",
+   "fr": "une bonne affaire",
+   "cat": "Faire les courses"
+  },
+  {
+   "en": "a sale",
+   "fr": "les soldes",
+   "cat": "Faire les courses"
+  },
+  {
+   "en": "to try on",
+   "fr": "essayer un vêtement",
+   "cat": "Faire les courses"
+  },
+  {
+   "en": "a fitting room",
+   "fr": "une cabine d'essayage",
+   "cat": "Faire les courses"
+  },
+  {
+   "en": "a size",
+   "fr": "une taille",
+   "cat": "Faire les courses"
+  },
+  {
+   "en": "a refund",
+   "fr": "un remboursement",
+   "cat": "Faire les courses"
+  },
+  {
+   "en": "half price",
+   "fr": "à moitié prix",
+   "cat": "Faire les courses"
+  },
+  {
+   "en": "to queue",
+   "fr": "faire la queue",
+   "cat": "Faire les courses"
+  },
+  {
+   "en": "a corner shop",
+   "fr": "une supérette",
+   "cat": "Faire les courses"
+  },
+  {
+   "en": "to run an errand",
+   "fr": "faire une course",
+   "cat": "Faire les courses"
+  },
+  {
+   "en": "a vet",
+   "fr": "un vétérinaire",
+   "cat": "Métiers"
+  },
+  {
+   "en": "a hairdresser",
+   "fr": "un coiffeur",
+   "cat": "Métiers"
+  },
+  {
+   "en": "a photographer",
+   "fr": "un photographe",
+   "cat": "Métiers"
+  },
+  {
+   "en": "a farmer",
+   "fr": "un agriculteur",
+   "cat": "Métiers"
+  },
+  {
+   "en": "a waiter",
+   "fr": "un serveur",
+   "cat": "Métiers"
+  },
+  {
+   "en": "a shop assistant",
+   "fr": "un vendeur",
+   "cat": "Métiers"
+  },
+  {
+   "en": "a dentist",
+   "fr": "un dentiste",
+   "cat": "Métiers"
+  },
+  {
+   "en": "a pilot",
+   "fr": "un pilote",
+   "cat": "Métiers"
+  },
+  {
+   "en": "a coach",
+   "fr": "un entraîneur",
+   "cat": "Métiers"
+  },
+  {
+   "en": "a librarian",
+   "fr": "un bibliothécaire",
+   "cat": "Métiers"
+  },
+  {
+   "en": "a postman",
+   "fr": "un facteur",
+   "cat": "Métiers"
+  },
+  {
+   "en": "a bus driver",
+   "fr": "un chauffeur de bus",
+   "cat": "Métiers"
+  },
+  {
+   "en": "a break",
+   "fr": "une récréation",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "a canteen",
+   "fr": "une cantine",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "a locker",
+   "fr": "un casier",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "a schoolbag",
+   "fr": "un cartable",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "a form teacher",
+   "fr": "un professeur principal",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "a detention",
+   "fr": "une heure de colle",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "a school trip",
+   "fr": "une sortie scolaire",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "to put one's hand up",
+   "fr": "lever la main",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "to take notes",
+   "fr": "prendre des notes",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "a group project",
+   "fr": "un travail de groupe",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "a supply teacher",
+   "fr": "un remplaçant",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "a school year",
+   "fr": "une année scolaire",
+   "cat": "Mots d'école"
+  },
+  {
+   "en": "annoyed",
+   "fr": "agacé",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "amused",
+   "fr": "amusé",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "moved",
+   "fr": "ému",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "homesick",
+   "fr": "qui a le mal du pays",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "in a good mood",
+   "fr": "de bonne humeur",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "in a bad mood",
+   "fr": "de mauvaise humeur",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "keen on",
+   "fr": "passionné par",
+   "cat": "Sentiments"
+  },
+  {
+   "en": "annoying",
+   "fr": "agaçant",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "awesome",
+   "fr": "génial",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "boring",
+   "fr": "ennuyeux",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "cosy",
+   "fr": "douillet",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "disgusting",
+   "fr": "dégoûtant",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "handy",
+   "fr": "bien pratique",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "messy",
+   "fr": "en désordre",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "noisy",
+   "fr": "bruyant",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "scruffy",
+   "fr": "négligé",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "spotless",
+   "fr": "impeccable",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "stunning",
+   "fr": "époustouflant",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "weird",
+   "fr": "bizarre",
+   "cat": "Adjectifs"
+  },
+  {
+   "en": "to be into something",
+   "fr": "être passionné de quelque chose",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "to feel like",
+   "fr": "avoir envie de",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "to hang on",
+   "fr": "patienter une seconde",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "no big deal",
+   "fr": "ce n'est pas grave",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "what is up?",
+   "fr": "quoi de neuf ?",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "to get the hang of",
+   "fr": "prendre le coup de main",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "to be on time",
+   "fr": "être à l'heure",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "to have a go",
+   "fr": "tenter sa chance",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "to call it a day",
+   "fr": "en rester là",
+   "cat": "Expressions courantes"
+  },
+  {
+   "en": "to be worn out",
+   "fr": "être à bout",
+   "cat": "Expressions courantes"
   }
  ],
  "p1": [
@@ -11338,14 +11938,6 @@
    "fr": "Les citoyens ont le droit de voter."
   },
   {
-   "en": "The court delivered its ruling yesterday.",
-   "fr": "La cour a rendu sa décision hier."
-  },
-  {
-   "en": "The new law comes into force in January.",
-   "fr": "La nouvelle loi entre en vigueur en janvier."
-  },
-  {
    "en": "They accused him of stealing the money.",
    "fr": "Ils l'ont accusé d'avoir volé l'argent."
   },
@@ -11400,6 +11992,54 @@
   {
    "en": "By the time we got there, it was over.",
    "fr": "Quand nous sommes arrivés, c'était fini."
+  },
+  {
+   "en": "I am going to meet my friends later.",
+   "fr": "Je vais retrouver mes amis tout à l'heure."
+  },
+  {
+   "en": "My phone battery is almost dead.",
+   "fr": "La batterie de mon téléphone est presque vide."
+  },
+  {
+   "en": "Can I borrow your charger?",
+   "fr": "Je peux t'emprunter ton chargeur ?"
+  },
+  {
+   "en": "We lost the match by one goal.",
+   "fr": "Nous avons perdu le match d'un but."
+  },
+  {
+   "en": "I have too much homework this week.",
+   "fr": "J'ai trop de devoirs cette semaine."
+  },
+  {
+   "en": "She is really into photography.",
+   "fr": "Elle est passionnée de photographie."
+  },
+  {
+   "en": "Let us meet in front of the cinema.",
+   "fr": "Retrouvons-nous devant le cinéma."
+  },
+  {
+   "en": "I am saving up for a new bike.",
+   "fr": "J'économise pour un nouveau vélo."
+  },
+  {
+   "en": "He never answers his messages.",
+   "fr": "Il ne répond jamais à ses messages."
+  },
+  {
+   "en": "The train was packed this morning.",
+   "fr": "Le train était bondé ce matin."
+  },
+  {
+   "en": "We are going to the swimming pool on Saturday.",
+   "fr": "Nous allons à la piscine samedi."
+  },
+  {
+   "en": "Do not forget to charge your phone.",
+   "fr": "N'oublie pas de recharger ton téléphone."
   }
  ],
  "d1": [
@@ -11999,6 +12639,360 @@
     ],
     "a": 0,
     "why": "« Three euros, please. »"
+   }
+  },
+  {
+   "id": "kit1",
+   "place": "kitchen",
+   "title": "Breakfast",
+   "cast": [
+    "rose",
+    "sam"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "Good morning, Sam. Did you sleep well?",
+     "fr": "Bonjour, Sam. Tu as bien dormi ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Yes, thank you. I am very hungry.",
+     "fr": "Oui, merci. J'ai très faim.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Here is your toast. Be careful, it is hot.",
+     "fr": "Voici ton pain grillé. Attention, c'est chaud.",
+     "v": "gb",
+     "p": "toast"
+    },
+    {
+     "s": 1,
+     "en": "Can I have some juice, please?",
+     "fr": "Est-ce que je peux avoir du jus, s'il te plaît ?",
+     "v": "us",
+     "p": "juice"
+    },
+    {
+     "s": 0,
+     "en": "Of course. Then brush your teeth.",
+     "fr": "Bien sûr. Ensuite, brosse-toi les dents.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "All right. I do not want to be late.",
+     "fr": "D'accord. Je ne veux pas être en retard.",
+     "v": "us"
+    }
+   ],
+   "q": {
+    "q": "What does Sam ask for?",
+    "o": [
+     "Some juice",
+     "Some milk",
+     "Some tea"
+    ],
+    "a": 0,
+    "why": "« Can I have some juice, please? » — « some » devant un nom indénombrable."
+   }
+  },
+  {
+   "id": "doc1",
+   "place": "doctor",
+   "title": "My head hurts",
+   "cast": [
+    "hall",
+    "lily"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "Hello, Lily. What is the matter?",
+     "fr": "Bonjour, Lily. Qu'est-ce qui ne va pas ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "My head hurts and I feel very tired.",
+     "fr": "J'ai mal à la tête et je me sens très fatiguée.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Let me take your temperature.",
+     "fr": "Laisse-moi prendre ta température.",
+     "v": "gb",
+     "p": "thermometer"
+    },
+    {
+     "s": 1,
+     "en": "Is it serious, doctor?",
+     "fr": "Est-ce que c'est grave, docteur ?",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "No, do not worry. Drink water and rest.",
+     "fr": "Non, ne t'inquiète pas. Bois de l'eau et repose-toi.",
+     "v": "gb",
+     "p": "bottle"
+    },
+    {
+     "s": 1,
+     "en": "Thank you very much.",
+     "fr": "Merci beaucoup.",
+     "v": "us"
+    }
+   ],
+   "q": {
+    "q": "What does the doctor tell Lily to do?",
+    "o": [
+     "Drink water and rest",
+     "Stay in bed for a week",
+     "Come back tomorrow"
+    ],
+    "a": 0,
+    "why": "« Drink water and rest. » Deux impératifs, sans sujet exprimé."
+   }
+  },
+  {
+   "id": "sta1",
+   "place": "station",
+   "title": "The ticket",
+   "cast": [
+    "rose",
+    "tom"
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "en": "Excuse me, where is the train to London?",
+     "fr": "Excusez-moi, où est le train pour Londres ?",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Platform four. It leaves at ten o'clock.",
+     "fr": "Quai numéro quatre. Il part à dix heures.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Do I need a ticket?",
+     "fr": "Est-ce que j'ai besoin d'un billet ?",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Yes. Here it is. Keep it, please.",
+     "fr": "Oui. Le voici. Garde-le, s'il te plaît.",
+     "v": "gb",
+     "p": "ticket"
+    },
+    {
+     "s": 1,
+     "en": "Is my bag too big?",
+     "fr": "Est-ce que mon sac est trop grand ?",
+     "v": "us",
+     "p": "suitcase"
+    },
+    {
+     "s": 0,
+     "en": "No, it is fine. Have a good journey!",
+     "fr": "Non, il est très bien. Bon voyage !",
+     "v": "gb"
+    }
+   ],
+   "q": {
+    "q": "Which platform is the train on?",
+    "o": [
+     "Four",
+     "Ten",
+     "Fourteen"
+    ],
+    "a": 0,
+    "why": "« Platform four. » Attention à ne pas confondre four, ten et fourteen à l'oreille."
+   }
+  },
+  {
+   "id": "lib1",
+   "place": "library",
+   "title": "A quiet place",
+   "cast": [
+    "rose",
+    "mia"
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "en": "Hello. I am looking for a book about horses.",
+     "fr": "Bonjour. Je cherche un livre sur les chevaux.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "They are on the second shelf, over there.",
+     "fr": "Ils sont sur la deuxième étagère, là-bas.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Thank you. Can I take it home?",
+     "fr": "Merci. Est-ce que je peux l'emporter chez moi ?",
+     "v": "us",
+     "p": "book"
+    },
+    {
+     "s": 0,
+     "en": "Yes, for three weeks. Show me your card.",
+     "fr": "Oui, pendant trois semaines. Montre-moi ta carte.",
+     "v": "gb",
+     "p": "card"
+    },
+    {
+     "s": 1,
+     "en": "Here you are. Must I be quiet?",
+     "fr": "La voici. Est-ce que je dois rester silencieuse ?",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Yes, please. People are reading.",
+     "fr": "Oui, s'il te plaît. Des gens lisent.",
+     "v": "gb"
+    }
+   ],
+   "q": {
+    "q": "How long can Mia keep the book?",
+    "o": [
+     "Three weeks",
+     "Three days",
+     "One month"
+    ],
+    "a": 0,
+    "why": "« Yes, for three weeks. » — « for » marque une durée."
+   }
+  },
+  {
+   "id": "par1b",
+   "place": "party",
+   "title": "Happy birthday",
+   "cast": [
+    "mia",
+    "tom"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "Happy birthday, Tom! How old are you today?",
+     "fr": "Joyeux anniversaire, Tom ! Quel âge as-tu aujourd'hui ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "I am eleven. Look at my cake!",
+     "fr": "J'ai onze ans. Regarde mon gâteau !",
+     "v": "us",
+     "p": "cake"
+    },
+    {
+     "s": 0,
+     "en": "This present is for you.",
+     "fr": "Ce cadeau est pour toi.",
+     "v": "gb",
+     "p": "gift"
+    },
+    {
+     "s": 1,
+     "en": "Thank you! Can I open it now?",
+     "fr": "Merci ! Est-ce que je peux l'ouvrir maintenant ?",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Yes, but blow out the candle first.",
+     "fr": "Oui, mais souffle d'abord la bougie.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "All right. Make a wish with me!",
+     "fr": "D'accord. Fais un vœu avec moi !",
+     "v": "us"
+    }
+   ],
+   "q": {
+    "q": "What must Tom do before opening his present?",
+    "o": [
+     "Blow out the candle",
+     "Cut the cake",
+     "Say thank you"
+    ],
+    "a": 0,
+    "why": "« Blow out the candle first. » — « first » place l'action avant l'autre."
+   }
+  },
+  {
+   "id": "far1",
+   "place": "farm",
+   "title": "The animals",
+   "cast": [
+    "hall",
+    "lily"
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "en": "Good morning! What a big cow.",
+     "fr": "Bonjour ! Quelle grosse vache.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Her name is Daisy. She is very gentle.",
+     "fr": "Elle s'appelle Daisy. Elle est très douce.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Can I help you this morning?",
+     "fr": "Est-ce que je peux vous aider ce matin ?",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Yes. Take this bucket to the hens.",
+     "fr": "Oui. Porte ce seau jusqu'aux poules.",
+     "v": "gb",
+     "p": "bucket"
+    },
+    {
+     "s": 1,
+     "en": "Look, there is an egg here!",
+     "fr": "Regardez, il y a un œuf ici !",
+     "v": "us",
+     "p": "egg"
+    },
+    {
+     "s": 0,
+     "en": "Well done. You can keep it.",
+     "fr": "Bravo. Tu peux le garder.",
+     "v": "gb"
+    }
+   ],
+   "q": {
+    "q": "What does Lily find?",
+    "o": [
+     "An egg",
+     "A feather",
+     "A key"
+    ],
+    "a": 0,
+    "why": "« Look, there is an egg here! » — « there is » pour signaler ce qu'on découvre."
    }
   }
  ],
@@ -12639,6 +13633,358 @@
     ],
     "a": 0,
     "why": "« Tomorrow at six. » Notez I am afraid, atténuation typique."
+   }
+  },
+  {
+   "id": "kit2",
+   "place": "kitchen",
+   "title": "Nobody did the washing-up",
+   "cast": [
+    "rose",
+    "sam"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "Sam, the kitchen is a complete mess.",
+     "fr": "Sam, la cuisine est un vrai désastre.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "I know. I was going to tidy up after breakfast.",
+     "fr": "Je sais. J'allais ranger après le petit-déjeuner.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "You said that yesterday as well.",
+     "fr": "Tu as dit la même chose hier.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Fair enough. I will do the washing-up now.",
+     "fr": "C'est vrai. Je vais faire la vaisselle tout de suite.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Thank you. And please switch off the oven.",
+     "fr": "Merci. Et éteins le four, s'il te plaît.",
+     "v": "gb",
+     "p": "egg"
+    },
+    {
+     "s": 1,
+     "en": "Already done. Would you like a cup of tea?",
+     "fr": "C'est déjà fait. Tu veux une tasse de thé ?",
+     "v": "us",
+     "p": "juice"
+    }
+   ],
+   "q": {
+    "q": "What has Sam already done?",
+    "o": [
+     "Switched off the oven",
+     "The washing-up",
+     "Tidied his room"
+    ],
+    "a": 0,
+    "why": "« Already done » répond à la demande d'éteindre le four. Le present perfect marque le résultat acquis."
+   }
+  },
+  {
+   "id": "doc2",
+   "place": "doctor",
+   "title": "The sprained ankle",
+   "cast": [
+    "hall",
+    "tom"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "So, Tom, how did this happen?",
+     "fr": "Alors, Tom, comment est-ce arrivé ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "I fell while I was playing football yesterday.",
+     "fr": "Je suis tombé pendant que je jouais au football hier.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "It is a sprain. Nothing is broken.",
+     "fr": "C'est une entorse. Rien n'est cassé.",
+     "v": "gb",
+     "p": "plaster"
+    },
+    {
+     "s": 1,
+     "en": "Will I be able to play again on Saturday?",
+     "fr": "Est-ce que je pourrai rejouer samedi ?",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "I am afraid not. You should rest for a week.",
+     "fr": "Je crains que non. Tu devrais te reposer une semaine.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "That is annoying, but I will be careful.",
+     "fr": "C'est agaçant, mais je ferai attention.",
+     "v": "us"
+    }
+   ],
+   "q": {
+    "q": "When will Tom be able to play again?",
+    "o": [
+     "Not on Saturday",
+     "On Saturday",
+     "Tomorrow"
+    ],
+    "a": 0,
+    "why": "« I am afraid not. You should rest for a week. » — « I am afraid not » est un refus poli."
+   }
+  },
+  {
+   "id": "sta2",
+   "place": "station",
+   "title": "The delayed train",
+   "cast": [
+    "rose",
+    "mia"
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "en": "Excuse me, has the train to Nice been delayed?",
+     "fr": "Excusez-moi, le train pour Nice a-t-il été retardé ?",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Yes, by about forty minutes, I am afraid.",
+     "fr": "Oui, de quarante minutes environ, j'en ai peur.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "I am going to miss my connection.",
+     "fr": "Je vais rater ma correspondance.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Show me your ticket and I will check.",
+     "fr": "Montrez-moi votre billet et je vais vérifier.",
+     "v": "gb",
+     "p": "ticket"
+    },
+    {
+     "s": 1,
+     "en": "Here it is. Is there a later train?",
+     "fr": "Le voici. Y a-t-il un train plus tard ?",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "There is one at six. Keep this map with you.",
+     "fr": "Il y en a un à six heures. Gardez ce plan avec vous.",
+     "v": "gb",
+     "p": "map"
+    }
+   ],
+   "q": {
+    "q": "How late is the train?",
+    "o": [
+     "About forty minutes",
+     "About fourteen minutes",
+     "About four hours"
+    ],
+    "a": 0,
+    "why": "« By about forty minutes. » — « by » exprime l'écart, ici le retard."
+   }
+  },
+  {
+   "id": "lib2",
+   "place": "library",
+   "title": "The essay",
+   "cast": [
+    "rose",
+    "sam"
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "en": "I have to write an essay about the environment.",
+     "fr": "Je dois écrire une dissertation sur l'environnement.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "When is the deadline?",
+     "fr": "Quelle est la date limite ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Next Friday, and I have not started yet.",
+     "fr": "Vendredi prochain, et je n'ai pas encore commencé.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Then you had better take notes today.",
+     "fr": "Alors tu ferais mieux de prendre des notes aujourd'hui.",
+     "v": "gb",
+     "p": "book"
+    },
+    {
+     "s": 1,
+     "en": "Could you suggest a reliable source?",
+     "fr": "Pourriez-vous me conseiller une source fiable ?",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "This one, but do not copy it word for word.",
+     "fr": "Celle-ci, mais ne la recopie pas mot pour mot.",
+     "v": "gb",
+     "p": "glasses"
+    }
+   ],
+   "q": {
+    "q": "What is Sam warned against?",
+    "o": [
+     "Copying word for word",
+     "Using the internet",
+     "Writing too much"
+    ],
+    "a": 0,
+    "why": "« Do not copy it word for word. » — l'impératif négatif pour un conseil ferme."
+   }
+  },
+  {
+   "id": "par2b",
+   "place": "party",
+   "title": "Who is coming?",
+   "cast": [
+    "mia",
+    "lily"
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "en": "How many people have you invited?",
+     "fr": "Combien de personnes as-tu invitées ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "About fifteen, but some of them cannot come.",
+     "fr": "Une quinzaine, mais certains ne peuvent pas venir.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Never mind. It will be great anyway.",
+     "fr": "Ce n'est pas grave. Ce sera très bien quand même.",
+     "v": "gb",
+     "p": "hat"
+    },
+    {
+     "s": 1,
+     "en": "I am looking forward to it, to be honest.",
+     "fr": "J'ai hâte d'y être, pour tout dire.",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "Shall I bring something to drink?",
+     "fr": "Est-ce que j'apporte quelque chose à boire ?",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "That would be very kind of you.",
+     "fr": "Ce serait très gentil de ta part.",
+     "v": "us",
+     "p": "cake"
+    }
+   ],
+   "q": {
+    "q": "Why will some guests not come?",
+    "o": [
+     "They cannot",
+     "They were not invited",
+     "They are late"
+    ],
+    "a": 0,
+    "why": "« Some of them cannot come. » — « some of them » désigne une partie du groupe."
+   }
+  },
+  {
+   "id": "far2",
+   "place": "farm",
+   "title": "A long day",
+   "cast": [
+    "hall",
+    "tom"
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "en": "You start very early, do you not?",
+     "fr": "Vous commencez très tôt, n'est-ce pas ?",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "At five. The animals do not wait for anyone.",
+     "fr": "À cinq heures. Les bêtes n'attendent personne.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Has the farm been in your family long?",
+     "fr": "La ferme est-elle dans votre famille depuis longtemps ?",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "For four generations. My grandfather built the barn.",
+     "fr": "Depuis quatre générations. Mon grand-père a bâti la grange.",
+     "v": "gb"
+    },
+    {
+     "s": 1,
+     "en": "Would you ever do anything else?",
+     "fr": "Feriez-vous autre chose un jour ?",
+     "v": "us"
+    },
+    {
+     "s": 0,
+     "en": "I doubt it. I would miss all this.",
+     "fr": "J'en doute. Tout cela me manquerait.",
+     "v": "gb",
+     "p": "apple"
+    }
+   ],
+   "q": {
+    "q": "How long has the farm been in the family?",
+    "o": [
+     "Four generations",
+     "Four years",
+     "Since last year"
+    ],
+    "a": 0,
+    "why": "« For four generations. » — « for » + durée avec le present perfect."
    }
   }
  ]

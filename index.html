@@ -220,7 +220,23 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;font-f
 .prop{opacity:0;transform-box:fill-box;transform-origin:center bottom;
   transform:scale(.4) translateY(10px);transition:opacity .3s,transform .35s cubic-bezier(.3,1.5,.5,1)}
 .prop.on{opacity:1;transform:scale(1) translateY(0)}
-@media (prefers-reduced-motion:reduce){.talking .mouth,.eyes{animation:none}}
+/* mouvements de fond des décors */
+.sway{transform-box:fill-box;transform-origin:center top;
+  animation:sway 3.6s infinite alternate ease-in-out}
+@keyframes sway{from{transform:rotate(-2deg)}to{transform:rotate(2deg)}}
+.bob{transform-box:fill-box;animation:bob 2.8s infinite alternate ease-in-out}
+@keyframes bob{from{transform:translateY(0)}to{transform:translateY(-6px)}}
+.drift{animation:drift 34s linear infinite}
+@keyframes drift{from{transform:translateX(-90px)}to{transform:translateX(470px)}}
+.steam{transform-box:fill-box;transform-origin:center bottom;
+  animation:steam 3s infinite ease-in-out}
+@keyframes steam{0%{opacity:0;transform:translateY(6px) scale(.7)}
+  45%{opacity:.8}100%{opacity:0;transform:translateY(-20px) scale(1.3)}}
+.tick{transform-box:fill-box;transform-origin:bottom center;
+  animation:tick 12s steps(12) infinite}
+@keyframes tick{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.talking .mouth,.eyes,
+  .sway,.bob,.drift,.steam,.tick{animation:none}}
 
 .dline{margin-top:13px;border-radius:17px;background:var(--panel);border:2px solid var(--edge);padding:14px 15px}
 .dline .who{font-size:12px;font-weight:800;color:var(--cyan);margin-bottom:5px}
@@ -1008,6 +1024,183 @@ food:{label:'The food shop',emo:'🥖',
  props:{bread:`<ellipse cx="150" cy="190" rx="24" ry="13" fill="#D9974F" stroke="#A3692C" stroke-width="2.5"/><path d="M136 184h28" stroke="#A3692C" stroke-width="2.5" stroke-linecap="round"/>`,
         apples:`<g><circle cx="212" cy="186" r="12" fill="#E8604F"/><path d="M212 174v-6" stroke="#6B4226" stroke-width="2.5"/>
  <circle cx="240" cy="186" r="12" fill="#8CC56F"/><path d="M240 174v-6" stroke="#6B4226" stroke-width="2.5"/></g>`}}
+,
+kitchen:{label:'The kitchen',emo:'🍳',
+ at:[[108,244,1.06],[288,246,1.1]],
+ bg:`<rect width="400" height="280" fill="#F6EBD8"/>
+ <rect y="186" width="400" height="94" fill="#D8C7A8"/>
+ <g fill="#CDB998"><rect y="186" width="400" height="5"/></g>
+ <g stroke="#C2AE8C" stroke-width="2"><path d="M40 196v84M120 196v84M200 196v84M280 196v84M360 196v84M0 232h400"/></g>
+ <rect x="236" y="26" width="118" height="84" rx="8" fill="#A8DCF0" stroke="#A8865A" stroke-width="6"/>
+ <path d="M236 92c18-20 34-20 52 0M300 92c16-16 30-16 46 0" fill="#8CC56F"/>
+ <circle cx="340" cy="46" r="9" fill="#FFE07A"/>
+ <path d="M295 26v84" stroke="#A8865A" stroke-width="5"/>
+ <rect x="18" y="26" width="150" height="56" rx="6" fill="#C98F5A" stroke="#A8702F" stroke-width="4"/>
+ <path d="M93 26v56" stroke="#A8702F" stroke-width="4"/>
+ <circle cx="80" cy="56" r="4" fill="#F4E3C8"/><circle cx="106" cy="56" r="4" fill="#F4E3C8"/>
+ <rect x="18" y="140" width="150" height="14" rx="4" fill="#B08A5E"/>
+ <rect x="24" y="112" width="26" height="28" rx="3" fill="#E8604F"/>
+ <rect x="58" y="118" width="20" height="22" rx="3" fill="#56B88A"/>
+ <rect x="88" y="108" width="16" height="32" rx="3" fill="#F2C14E"/>
+ <rect x="120" y="116" width="40" height="24" rx="4" fill="#9AA4AA"/>
+ <ellipse cx="140" cy="116" rx="21" ry="5" fill="#7E888E"/>
+ <g class="steam" opacity=".7"><ellipse cx="134" cy="104" rx="7" ry="10" fill="#FFF"/></g>
+ <g class="steam" style="animation-delay:1.3s" opacity=".55"><ellipse cx="147" cy="108" rx="5" ry="8" fill="#FFF"/></g>
+ <rect x="336" y="122" width="54" height="80" rx="6" fill="#D5DCE0" stroke="#A8B2B8" stroke-width="4"/>
+ <path d="M336 160h54" stroke="#A8B2B8" stroke-width="4"/>
+ <rect x="378" y="140" width="5" height="14" rx="2" fill="#8A959C"/>`,
+ fg:`<rect x="118" y="196" width="168" height="12" rx="4" fill="#C9955B"/>
+ <rect x="126" y="208" width="152" height="40" fill="#A87140"/>
+ <rect x="136" y="220" width="30" height="4" rx="2" fill="#8A5A30"/>`,
+ props:{toast:`<rect x="186" y="176" width="32" height="20" rx="5" fill="#E0B070"/><rect x="192" y="182" width="20" height="9" rx="3" fill="#C98F4A"/>`,
+        juice:`<rect x="226" y="166" width="20" height="30" rx="4" fill="#FFB347" opacity=".92"/><rect x="226" y="166" width="20" height="7" rx="3" fill="#FFF" opacity=".5"/>`,
+        egg:`<ellipse cx="164" cy="188" rx="14" ry="10" fill="#FFF8EC"/><circle cx="164" cy="188" r="5.5" fill="#FFC14D"/>`}},
+
+doctor:{label:"The doctor's",emo:'🩺',
+ at:[[108,244,1.04],[292,246,1.1]],
+ bg:`<rect width="400" height="280" fill="#E4EFE8"/>
+ <rect y="198" width="400" height="82" fill="#BFCBC2"/><rect y="198" width="400" height="5" fill="#9FAFA4"/>
+ <rect x="18" y="30" width="86" height="104" rx="5" fill="#FBF6EC" stroke="#9FAFA4" stroke-width="4"/>
+ <circle cx="61" cy="62" r="16" fill="#F0C9A8"/>
+ <path d="M61 78v34M61 86l-16 12M61 86l16 12M61 112l-12 20M61 112l12 20" stroke="#5E7A6C" stroke-width="4" stroke-linecap="round"/>
+ <circle cx="312" cy="62" r="30" fill="#FBF6EC" stroke="#9FAFA4" stroke-width="5"/>
+ <path d="M312 62V42" stroke="#3A4A42" stroke-width="4" stroke-linecap="round" class="tick"/>
+ <circle cx="312" cy="62" r="3.5" fill="#3A4A42"/>
+ <rect x="148" y="150" width="128" height="14" rx="6" fill="#7FB8E0"/>
+ <rect x="154" y="164" width="116" height="36" rx="4" fill="#E8EEF2"/>
+ <rect x="148" y="136" width="42" height="16" rx="7" fill="#FBF6EC"/>
+ <g stroke="#B0BEB4" stroke-width="5"><path d="M160 200v-36M264 200v-36"/></g>
+ <rect x="348" y="150" width="34" height="48" rx="4" fill="#C98F5A"/>
+ <ellipse cx="365" cy="138" rx="24" ry="20" fill="#4E9B4A"/>
+ <ellipse cx="352" cy="146" rx="16" ry="13" fill="#5CAE56"/>`,
+ fg:`<rect x="186" y="212" width="112" height="11" rx="4" fill="#C9955B"/>
+ <rect x="194" y="223" width="96" height="36" fill="#A87140"/>`,
+ props:{thermometer:`<rect x="156" y="192" width="38" height="9" rx="4" fill="#F2F6F8" stroke="#9FAFA4" stroke-width="2"/><rect x="158" y="194" width="20" height="5" rx="2" fill="#E8604F"/>`,
+        plaster:`<rect x="202" y="186" width="32" height="15" rx="7" fill="#E8C9A0" transform="rotate(-12 218 193)"/><circle cx="218" cy="193" r="4" fill="#C9A87A"/>`,
+        bottle:`<rect x="240" y="174" width="19" height="27" rx="4" fill="#A8DCC0"/><rect x="244" y="168" width="11" height="7" rx="2" fill="#7FB89A"/>`}},
+
+station:{label:'The station',emo:'🚆',
+ at:[[104,250,1.02],[262,252,1.04]],
+ bg:`<rect width="400" height="280" fill="#CFE4EE"/>
+ <rect y="152" width="400" height="36" fill="#8A95A0"/>
+ <rect y="188" width="400" height="92" fill="#C2BDB2"/><rect y="188" width="400" height="5" fill="#9E9A90"/>
+ <g fill="#F2C14E"><rect y="200" width="400" height="4"/></g>
+ <rect x="286" y="78" width="118" height="112" rx="12" fill="#D8544A"/>
+ <rect x="296" y="94" width="42" height="38" rx="5" fill="#A8DCF0" stroke="#A33C34" stroke-width="3"/>
+ <rect x="350" y="94" width="42" height="38" rx="5" fill="#A8DCF0" stroke="#A33C34" stroke-width="3"/>
+ <rect x="286" y="146" width="118" height="10" fill="#A33C34"/>
+ <circle cx="312" cy="190" r="14" fill="#3A3A42"/><circle cx="312" cy="190" r="5" fill="#8A8A92"/>
+ <circle cx="372" cy="190" r="14" fill="#3A3A42"/><circle cx="372" cy="190" r="5" fill="#8A8A92"/>
+ <rect x="20" y="52" width="92" height="56" rx="6" fill="#2E3A44" stroke="#8A95A0" stroke-width="4"/>
+ <path d="M32 70h54M32 84h66M32 96h40" stroke="#6FE8C0" stroke-width="4" stroke-linecap="round" opacity=".9"/>
+ <circle cx="196" cy="74" r="26" fill="#FBF3E4" stroke="#8A95A0" stroke-width="5"/>
+ <path d="M196 74V56" stroke="#3A3A42" stroke-width="3.5" stroke-linecap="round" class="tick"/>
+ <circle cx="196" cy="74" r="3" fill="#3A3A42"/>
+ <g stroke="#8A95A0" stroke-width="7"><path d="M152 152V74M240 152V74"/></g>`,
+ fg:`<rect y="262" width="400" height="18" fill="#A8A296"/>`,
+ props:{ticket:`<rect x="140" y="214" width="42" height="25" rx="4" fill="#FBF3E4" stroke="#C2A878" stroke-width="2.5"/><path d="M148 224h26M148 232h16" stroke="#8A7A5A" stroke-width="3"/>`,
+        suitcase:`<rect x="190" y="214" width="40" height="31" rx="5" fill="#8A5A30"/><rect x="190" y="225" width="40" height="5" fill="#6B4322"/><rect x="202" y="206" width="16" height="9" rx="4" fill="none" stroke="#6B4322" stroke-width="4"/>`,
+        map:`<rect x="238" y="212" width="40" height="30" rx="3" fill="#FBF3E4" stroke="#C2A878" stroke-width="2.5"/><path d="M245 229c8-8 16 6 26-5" stroke="#56B88A" stroke-width="3" fill="none"/>`}},
+
+library:{label:'The library',emo:'📚',
+ at:[[106,242,1.04],[290,244,1.1]],
+ bg:`<rect width="400" height="280" fill="#F2E8D6"/>
+ <rect y="196" width="400" height="84" fill="#A8794A"/><rect y="196" width="400" height="5" fill="#8A5F36"/>
+ <rect x="10" y="26" width="128" height="170" rx="5" fill="#8A5A30"/>
+ <g>
+  <rect x="18" y="36" width="112" height="7" fill="#6B4322"/>
+  <rect x="18" y="86" width="112" height="7" fill="#6B4322"/>
+  <rect x="18" y="136" width="112" height="7" fill="#6B4322"/>
+  <rect x="18" y="186" width="112" height="7" fill="#6B4322"/>
+ </g>
+ <g>
+  <rect x="24" y="48" width="12" height="38" fill="#E8604F"/><rect x="40" y="52" width="10" height="34" fill="#56B88A"/>
+  <rect x="54" y="46" width="14" height="40" fill="#F2C14E"/><rect x="72" y="54" width="11" height="32" fill="#7A6FD9"/>
+  <rect x="87" y="50" width="13" height="36" fill="#E8884F"/><rect x="104" y="56" width="10" height="30" fill="#4BA3D9"/>
+  <rect x="24" y="100" width="13" height="36" fill="#7A6FD9"/><rect x="41" y="96" width="11" height="40" fill="#E8604F"/>
+  <rect x="56" y="104" width="14" height="32" fill="#56B88A"/><rect x="74" y="98" width="10" height="38" fill="#F2C14E"/>
+  <rect x="88" y="106" width="12" height="30" fill="#D98CC4"/><rect x="104" y="100" width="12" height="36" fill="#4BA3D9"/>
+  <rect x="26" y="150" width="11" height="36" fill="#E8884F"/><rect x="41" y="154" width="13" height="32" fill="#4BA3D9"/>
+  <rect x="58" y="148" width="10" height="38" fill="#E8604F"/><rect x="72" y="152" width="14" height="34" fill="#56B88A"/>
+ </g>
+ <rect x="268" y="24" width="112" height="88" rx="8" fill="#BFE4F2" stroke="#A8794A" stroke-width="6"/>
+ <path d="M324 24v88M268 68h112" stroke="#A8794A" stroke-width="5"/>
+ <rect x="170" y="36" width="76" height="34" rx="6" fill="#FBF3E4" stroke="#A8794A" stroke-width="4"/>
+ <text x="208" y="59" font-family="system-ui,sans-serif" font-size="19" font-weight="800" fill="#8A5F36" text-anchor="middle">SHH</text>`,
+ fg:`<rect x="146" y="210" width="124" height="12" rx="4" fill="#C9955B"/>
+ <rect x="154" y="222" width="108" height="38" fill="#A87140"/>
+ <rect x="156" y="182" width="10" height="28" rx="4" fill="#8A6A46"/>
+ <path d="M149 182h24l-5-18h-14z" fill="#F2C14E"/>`,
+ props:{book:`<rect x="178" y="190" width="42" height="20" rx="3" fill="#4BA3D9"/><rect x="178" y="190" width="42" height="6" rx="2" fill="#3A84B0"/>`,
+        card:`<rect x="228" y="194" width="34" height="21" rx="3" fill="#FBF3E4" stroke="#C2A878" stroke-width="2.5"/><path d="M235 205h20" stroke="#8A7A5A" stroke-width="3"/>`,
+        glasses:`<g stroke="#3A3A42" stroke-width="3" fill="none"><circle cx="190" cy="176" r="8.5"/><circle cx="214" cy="176" r="8.5"/><path d="M198.5 176h7"/></g>`}},
+
+party:{label:'The birthday party',emo:'🎂',
+ at:[[106,248,1.06],[290,250,1.1]],
+ bg:`<rect width="400" height="280" fill="#FBEAF2"/>
+ <rect y="206" width="400" height="74" fill="#D8B8C8"/><rect y="206" width="400" height="5" fill="#BE9AAE"/>
+ <path d="M0 34c70 34 140 34 200 0s130-34 200 0" stroke="#C97AA8" stroke-width="4" fill="none"/>
+ <g class="sway">
+  <path d="M34 44l18 2-6 22z" fill="#E8604F"/><path d="M86 56l18 2-6 22z" fill="#F2C14E"/>
+  <path d="M142 64l18 2-6 22z" fill="#56B88A"/><path d="M200 66l18 2-6 22z" fill="#4BA3D9"/>
+  <path d="M258 62l18 2-6 22z" fill="#B065A8"/><path d="M314 52l18 2-6 22z" fill="#EE8C3C"/>
+ </g>
+ <g class="bob">
+  <ellipse cx="42" cy="124" rx="19" ry="23" fill="#E8604F"/><path d="M42 147v34" stroke="#C97AA8" stroke-width="2.5"/>
+  <ellipse cx="78" cy="106" rx="16" ry="20" fill="#4BA3D9"/><path d="M78 126v40" stroke="#C97AA8" stroke-width="2.5"/>
+ </g>
+ <g class="bob" style="animation-delay:1.1s">
+  <ellipse cx="354" cy="118" rx="19" ry="23" fill="#F2C14E"/><path d="M354 141v36" stroke="#C97AA8" stroke-width="2.5"/>
+  <ellipse cx="318" cy="100" rx="15" ry="19" fill="#56B88A"/><path d="M318 119v42" stroke="#C97AA8" stroke-width="2.5"/>
+ </g>
+ <g opacity=".75" fill="#C97AA8">
+  <rect x="132" y="104" width="7" height="7" rx="2" transform="rotate(20 135 107)"/>
+  <rect x="186" y="128" width="6" height="6" rx="2" transform="rotate(-30 189 131)"/>
+  <rect x="244" y="110" width="7" height="7" rx="2" transform="rotate(40 247 113)"/>
+ </g>`,
+ fg:`<rect x="140" y="218" width="130" height="12" rx="4" fill="#E8DCE4"/>
+ <rect x="148" y="230" width="114" height="36" fill="#C9AFBE"/>`,
+ props:{cake:`<rect x="176" y="194" width="52" height="24" rx="5" fill="#F8D9E4"/><rect x="176" y="194" width="52" height="8" rx="4" fill="#E8A8C4"/>
+        <rect x="200" y="176" width="4" height="18" fill="#FFF"/><ellipse cx="202" cy="172" rx="4" ry="6" fill="#FFC14D"/>`,
+        gift:`<rect x="234" y="194" width="32" height="26" rx="4" fill="#4BA3D9"/><rect x="246" y="194" width="9" height="26" fill="#F2C14E"/><rect x="234" y="203" width="32" height="8" fill="#F2C14E"/>`,
+        hat:`<path d="M146 220l14-32 14 32z" fill="#E8604F"/><circle cx="160" cy="186" r="5" fill="#F2C14E"/>`}},
+
+farm:{label:'The farm',emo:'🐄',
+ at:[[112,248,1.04],[288,250,1.08]],
+ bg:`<rect width="400" height="280" fill="#BFE4F2"/>
+ <g class="drift" opacity=".9">
+  <ellipse cx="60" cy="46" rx="26" ry="15" fill="#FFF"/><ellipse cx="84" cy="50" rx="19" ry="12" fill="#FFF"/>
+ </g>
+ <g class="drift" style="animation-delay:-13s" opacity=".75">
+  <ellipse cx="40" cy="92" rx="20" ry="11" fill="#FFF"/><ellipse cx="58" cy="95" rx="15" ry="9" fill="#FFF"/>
+ </g>
+ <circle cx="352" cy="46" r="21" fill="#FFE07A"/>
+ <rect y="170" width="400" height="110" fill="#7FBE5E"/>
+ <path d="M0 188h400v-10H0z" fill="#6AA94C" opacity=".55"/>
+ <path d="M196 170h148v-54l-74-36-74 36z" fill="#D8544A"/>
+ <path d="M196 116l74-36 74 36" fill="none" stroke="#A33C34" stroke-width="6"/>
+ <rect x="248" y="122" width="44" height="48" rx="4" fill="#8A4A42"/>
+ <path d="M270 122v48M248 146h44" stroke="#6B332C" stroke-width="4"/>
+ <path d="M300 92l-14 8v-18z" fill="#F2C14E"/>
+ <g stroke="#C9A878" stroke-width="7" stroke-linecap="round">
+  <path d="M14 170v-28M58 170v-28M102 170v-28"/>
+ </g>
+ <g stroke="#C9A878" stroke-width="5"><path d="M6 150h104M6 162h104"/></g>
+ <ellipse cx="46" cy="206" rx="28" ry="18" fill="#FBF6EC"/>
+ <ellipse cx="34" cy="200" rx="10" ry="7" fill="#3A3028"/><ellipse cx="58" cy="212" rx="8" ry="6" fill="#3A3028"/>
+ <circle cx="74" cy="194" r="12" fill="#FBF6EC"/>
+ <circle cx="70" cy="192" r="2.3" fill="#3A3028"/><circle cx="79" cy="192" r="2.3" fill="#3A3028"/>
+ <ellipse cx="76" cy="200" rx="6.5" ry="4.5" fill="#F0B8B0"/>
+ <g stroke="#C9B8A0" stroke-width="5"><path d="M32 222v14M60 222v14"/></g>
+ <g class="bob" style="animation-duration:1.6s">
+  <ellipse cx="338" cy="214" rx="12" ry="9" fill="#FBF6EC"/><circle cx="348" cy="206" r="6" fill="#FBF6EC"/>
+  <path d="M353 205l6 2-6 3z" fill="#F2A03C"/><circle cx="350" cy="204" r="1.6" fill="#3A3028"/>
+  <path d="M347 199l3-6 3 6z" fill="#E8604F"/>
+ </g>`,
+ fg:``,
+ props:{egg:`<ellipse cx="160" cy="224" rx="11" ry="14" fill="#FFF8EC" stroke="#E0D2BC" stroke-width="2"/>`,
+        bucket:`<path d="M186 208h32l-5 26h-22z" fill="#9AA4AA"/><path d="M186 208h32" stroke="#7E888E" stroke-width="4"/><path d="M190 208c6-11 22-11 24 0" fill="none" stroke="#7E888E" stroke-width="3"/>`,
+        apple:`<circle cx="240" cy="220" r="12" fill="#E8604F"/><path d="M240 208v-7" stroke="#6B4322" stroke-width="3"/><ellipse cx="246" cy="203" rx="6" ry="3.5" fill="#56B88A"/>`}},
 };
 
 
@@ -1142,7 +1335,7 @@ document.getElementById('modes').onclick=e=>{
   if(!exosOuverts(me())){                       /* la séance du jour d'abord */
     b.classList.add('shake'); sfxBad();
     setTimeout(()=>b.classList.remove('shake'),400);
-    const min=S.get('goalMin',10)|0;
+    const min=S.get('goalMin',15)|0;
     toastCourt(`Fais d'abord <b>Mes ${min} minutes</b>.`);
     return;
   }
@@ -2777,7 +2970,7 @@ function toastCourt(html){
 function renderModes(){
   const p=me(), g=document.getElementById('modes'), n=document.getElementById('modesNote');
   if(!g||!n) return;
-  const ouvert = exosOuverts(p), min = S.get('goalMin',10)|0;
+  const ouvert = exosOuverts(p), min = S.get('goalMin',15)|0;
   g.classList.toggle('ferme', !ouvert);
   n.style.display = ouvert ? 'none' : 'block';
   if(!ouvert) n.innerHTML = `Les exercices libres s'ouvrent après <b>Mes ${min} minutes</b>.`;
@@ -2786,7 +2979,7 @@ function renderModes(){
 function renderSess(){
   const el = document.getElementById('sessBox');
   if(!el) return;
-  const p = me(), j = day(p), min = S.get('goalMin',10)|0;
+  const p = me(), j = day(p), min = S.get('goalMin',15)|0;
   const fait = goalDone(p);
   el.innerHTML = `<button class="sess${fait?' done':''}" id="sessGo">
       <span class="em">${fait ? '✅' : '▶️'}</span>
@@ -2815,7 +3008,7 @@ function day(p){
   if(!p.day || p.day.d !== t) p.day = {d:t, sec:0, ok:0, free:false};
   return p.day;
 }
-function goalSec(){ return (S.get('goalMin', 10)|0) * 60; }
+function goalSec(){ return (S.get('goalMin', 15)|0) * 60; }
 function goalDone(p){ const j = day(p); return j.sec >= goalSec(); }
 function arcadeOpen(p){ return S.get('noLock', false) || goalDone(p) || day(p).free; }
 /* Les exercices libres suivent la même règle que les jeux : d'abord la séance
@@ -4506,7 +4699,7 @@ function renderSettings(){
   document.querySelectorAll('[data-lv]').forEach(sel=>sel.onchange=()=>{
     P[+sel.dataset.lv].level=+sel.value;save();});
 
-  const g=S.get('goalMin',10), libre=S.get('noLock',false);
+  const g=S.get('goalMin',15), libre=S.get('noLock',false);
   document.getElementById('goalForm').innerHTML=`
     <div class="field">
       <label>Objectif de travail quotidien</label>
@@ -4537,6 +4730,13 @@ document.getElementById('resetAll').onclick=()=>{
 /* ========================================================= */
 /* Démarrage                                                 */
 /* ========================================================= */
+/* L'objectif passe de 10 à 15 minutes. Ceux qui avaient le réglage d'origine
+   sont déplacés une fois ; après quoi tout nouveau choix est respecté. */
+if(!S.get('goal15',false)){
+  if((S.get('goalMin',15)|0) === 10) S.set('goalMin',15);
+  S.set('goal15',true);
+}
+
 document.addEventListener('touchstart',unlockAudio,{once:true,passive:true});
 document.addEventListener('click',unlockAudio,{once:true});
 
